@@ -5,38 +5,53 @@ import { FaCheckCircle, FaTv, FaTabletAlt } from 'react-icons/fa';
 const Iptvsection = () => {
   return (
     <section className="iptv-container">
+      {/* Hero Section */}
       <div className="iptv-hero">
         <div className="iptv-image">
-          <img src="/iptvsection.jpg" alt="Family watching TV" />
+          <img src="./iptvservice.jpg" alt="Family watching IPTV" />
         </div>
         <div className="iptv-content">
-          <h5>No More Expensive Cable Bills</h5>
-          <h2>BEST IPTV SERVICE IN UK</h2>
-          {/* <ul className="iptv-features">
+          <h5>Say Goodbye to Cable Bills</h5>
+          <h2>Top-Rated IPTV Service in the UK</h2>
+          <p className="subtitle">Stream thousands of HD channels, live events & on-demand shows at your fingertips.</p>
+
+          <ul className="iptv-features">
             <li><FaCheckCircle className="icon-blue" /> No More Expensive Cable Bills</li>
             <li><FaCheckCircle className="icon-blue" /> No Hardware to Install</li>
-            <li><FaCheckCircle className="icon-blue" /> You Get Over 5000 Channels</li>
-            <li><FaCheckCircle className="icon-blue" /> You Get 24/7 Unlimited Access</li>
-            <li><FaCheckCircle className="icon-blue" /> You Get Auto Channel Updates</li>
-            <li><FaCheckCircle className="icon-blue" /> Watch it on all your Devices</li>
-            <li><FaCheckCircle className="icon-blue" /> 30 Days Risk-Free</li>
-          </ul> */}
+            <li><FaCheckCircle className="icon-blue" /> 5000+ Live Channels Included</li>
+            <li><FaCheckCircle className="icon-blue" /> Unlimited 24/7 Streaming Access</li>
+            <li><FaCheckCircle className="icon-blue" /> Auto Channel & Content Updates</li>
+            <li><FaCheckCircle className="icon-blue" /> Compatible with All Devices</li>
+            <li><FaCheckCircle className="icon-blue" /> 30 Days Risk-Free Guarantee</li>
+          </ul>
+
           <button className="iptv-button">Get My IPTV Access Now</button>
         </div>
       </div>
 
-      {/* <div className="iptv-bottom">
+      {/* Feature Boxes */}
+      <div className="iptv-bottom">
         <div className="box white-box">
           <FaTv className="box-icon" />
-          <h3>THOUSAND OF CHANNELS</h3>
-          <p>We cover all your favorite channels. With more than 5000, you won’t be disappointed.</p>
+          <h3>Thousands of Channels</h3>
+          <p>Enjoy premium channels including sports, movies, kids, international, and more.</p>
         </div>
         <div className="box blue-box">
           <FaTabletAlt className="box-icon" />
-          <h3>MULTI DEVICES</h3>
-          <p>Enjoy your IPTV across all devices. Phones, tablets, or TVs — all supported!</p>
+          <h3>Stream on Any Device</h3>
+          <p>Watch on Smart TVs, Firesticks, Android/iOS devices, PCs, and more.</p>
         </div>
-      </div> */}
+         <div className="box white-box">
+          <FaTv className="box-icon" />
+          <h3>Thousands of Channels</h3>
+          <p>Enjoy premium channels including sports, movies, kids, international, and more.</p>
+        </div>
+          <div className="box blue-box">
+          <FaTabletAlt className="box-icon" />
+          <h3>Stream on Any Device</h3>
+          <p>Watch on Smart TVs, Firesticks, Android/iOS devices, PCs, and more.</p>
+        </div>
+      </div>
     </section>
   );
 };

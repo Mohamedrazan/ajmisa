@@ -1,11 +1,12 @@
 .iptv-container {
   font-family: 'Segoe UI', sans-serif;
-  padding: 50px 20px;
+  padding: 60px 20px;
   background: #f9f9f9;
   color: #333;
   animation: fadeIn 1s ease-in-out;
 }
 
+/* Hero Section */
 .iptv-hero {
   display: flex;
   flex-wrap: wrap;
@@ -17,20 +18,28 @@
 
 .iptv-image img {
   max-width: 400px;
-  height:400px;
+  height: auto;
   border-radius: 10px;
-
   animation: slideInLeft 1s ease-out;
 }
 
 .iptv-content h5 {
   color: #6c63ff;
   font-size: 16px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .iptv-content h2 {
-  font-size: 32px;
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #666;
   margin-bottom: 20px;
 }
 
@@ -45,7 +54,7 @@
   align-items: center;
   font-size: 16px;
   margin-bottom: 10px;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .iptv-features li:hover {
@@ -55,6 +64,7 @@
 .icon-blue {
   color: #007bff;
   margin-right: 10px;
+  font-size: 18px;
 }
 
 .iptv-button {
@@ -72,6 +82,7 @@
   background-color: #0056b3;
 }
 
+/* Feature Boxes */
 .iptv-bottom {
   display: flex;
   flex-wrap: wrap;
@@ -126,6 +137,7 @@
 
   .iptv-button {
     width: 100%;
+    margin-top: 15px;
   }
 
   .iptv-bottom {
