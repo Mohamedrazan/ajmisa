@@ -1,7 +1,7 @@
 .iptv-container {
   font-family: 'Segoe UI', sans-serif;
   padding: 60px 20px;
-  background: #f9f9f9;
+  background: #f7f4fb;
   color: #333;
   animation: fadeIn 1s ease-in-out;
 }
@@ -19,30 +19,34 @@
 .iptv-image img {
   max-width: 400px;
   height: auto;
-  border-radius: 10px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(178, 135, 248, 0.25);
   animation: slideInLeft 1s ease-out;
 }
 
 .iptv-content h5 {
-  color: #6c63ff;
+  color: #b287f8;
   font-size: 16px;
   margin-bottom: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 .iptv-content h2 {
-  font-size: 36px;
-  margin-bottom: 10px;
+  font-size: 38px;
+  margin-bottom: 12px;
   font-weight: bold;
+  color: #5e35b1;
 }
 
 .subtitle {
-  font-size: 16px;
+  font-size: 17px;
   color: #666;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+  line-height: 1.5;
 }
 
+/* Features */
 .iptv-features {
   list-style: none;
   padding: 0;
@@ -52,34 +56,37 @@
 .iptv-features li {
   display: flex;
   align-items: center;
-  font-size: 16px;
-  margin-bottom: 10px;
+  font-size: 17px;
+  margin-bottom: 12px;
   transition: transform 0.3s ease;
 }
 
 .iptv-features li:hover {
-  transform: translateX(5px);
+  transform: translateX(8px);
 }
 
-.icon-blue {
-  color: #007bff;
+.icon-purple {
+  color: #8a4ef3;
   margin-right: 10px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
+/* Button */
 .iptv-button {
-  background-color: #007bff;
+  background-color: #8a4ef3;
   color: white;
-  padding: 12px 25px;
-  font-size: 16px;
+  padding: 14px 28px;
+  font-size: 17px;
   border: none;
-  border-radius: 25px;
+  border-radius: 30px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 6px 18px rgba(138, 78, 243, 0.3);
 }
 
 .iptv-button:hover {
-  background-color: #0056b3;
+  background-color: #6c30dc;
+  transform: translateY(-3px);
 }
 
 /* Feature Boxes */
@@ -105,16 +112,18 @@
 
 .white-box {
   background: white;
+  border: 1px solid #eee;
 }
 
-.blue-box {
-  background: #007bff;
+.purple-box {
+  background: #8a4ef3;
   color: white;
 }
 
 .box-icon {
-  font-size: 36px;
-  margin-bottom: 15px;
+  font-size: 40px;
+  margin-bottom: 18px;
+  color: inherit;
 }
 
 /* Animations */
@@ -142,5 +151,9 @@
 
   .iptv-bottom {
     flex-direction: column;
+  }
+
+  .iptv-image img {
+    max-width: 100%;
   }
 }

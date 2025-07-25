@@ -16,13 +16,13 @@ const Iptvsection = () => {
           <p className="subtitle">Stream thousands of HD channels, live events & on-demand shows at your fingertips.</p>
 
           <ul className="iptv-features">
-            <li><FaCheckCircle className="icon-blue" /> No More Expensive Cable Bills</li>
-            <li><FaCheckCircle className="icon-blue" /> No Hardware to Install</li>
-            <li><FaCheckCircle className="icon-blue" /> 5000+ Live Channels Included</li>
-            <li><FaCheckCircle className="icon-blue" /> Unlimited 24/7 Streaming Access</li>
-            <li><FaCheckCircle className="icon-blue" /> Auto Channel & Content Updates</li>
-            <li><FaCheckCircle className="icon-blue" /> Compatible with All Devices</li>
-            <li><FaCheckCircle className="icon-blue" /> 30 Days Risk-Free Guarantee</li>
+            <li><FaCheckCircle className="icon-purple" /> No More Expensive Cable Bills</li>
+            <li><FaCheckCircle className="icon-purple" /> No Hardware to Install</li>
+            <li><FaCheckCircle className="icon-purple" /> 5000+ Live Channels Included</li>
+            <li><FaCheckCircle className="icon-purple" /> Unlimited 24/7 Streaming Access</li>
+            <li><FaCheckCircle className="icon-purple" /> Auto Channel & Content Updates</li>
+            <li><FaCheckCircle className="icon-purple" /> Compatible with All Devices</li>
+            <li><FaCheckCircle className="icon-purple" /> 30 Days Risk-Free Guarantee</li>
           </ul>
 
           <button className="iptv-button">Get My IPTV Access Now</button>
