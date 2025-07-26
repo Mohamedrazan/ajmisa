@@ -1,0 +1,113 @@
+.iptv-section {
+  background: #f9f9fc;
+  padding: 80px 20px 40px;
+  color: #333;
+  position: relative;
+  text-align: center;
+}
+
+.iptv-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+.feature-left,
+.feature-right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex: 1;
+  min-width: 250px;
+}
+
+.feature-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.circle-image {
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, #d1b3ff 0%, #f3e5f5 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle-image img {
+  max-width: 70%;
+  height: auto;
+}
+
+/* Feature box */
+.iptv-feature {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+.icon {
+  background: #7e57c2;
+  color: white;
+  padding: 12px;
+  font-size: 22px;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+.text h4 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.text p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Heading */
+.iptv-heading {
+  margin-top: 40px;
+}
+.iptv-heading .badge {
+  display: inline-block;
+  background: #ede7f6;
+  color: #7e57c2;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.iptv-heading h2 {
+  font-size: 28px;
+  max-width: 700px;
+  margin: 10px auto 0;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .iptv-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  .feature-left,
+  .feature-right {
+    align-items: center;
+  }
+  .iptv-feature {
+    justify-content: center;
+    text-align: center;
+  }
+  .iptv-feature .text {
+    text-align: center;
+  }
+}
