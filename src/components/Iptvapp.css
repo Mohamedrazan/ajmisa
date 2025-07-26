@@ -1,0 +1,83 @@
+.iptv-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 30px;
+  background-color: #f5f3f8;
+  color: #333;
+  margin-left: 230px;
+}
+
+.iptv-text {
+  max-width: 520px;
+  flex: 1 1 400px;
+}
+
+.tag {
+  background: #a855f7;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.headline {
+  font-size: 36px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.headline span {
+  color: #7b1fa2;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  color: #666;
+}
+
+.benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  color: #10b981;
+  font-weight: 600;
+}
+
+.download-btn {
+  background-color: #7b1fa2;
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #9333ea;
+}
+
+.iptv-images {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 400px;
+}
+
+.phone-img {
+  height: 480px;
+  width: auto;
+  border-radius: 20px;
+  /* box-shadow: 0 10px 20px rgba(123, 31, 162, 0.2); */
+}

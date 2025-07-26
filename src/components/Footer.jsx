@@ -20,7 +20,7 @@ const Footer = () => {
                         desc: 'Fast, reliable delivery to global destinations.'
                     },
                     {
-                        img: '/support-icon.png',
+                        img: './icon3.png',
                         title: '24/7 Support',
                         desc: 'Our team is here for you anytime, anywhere.'
                     }

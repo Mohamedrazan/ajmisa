@@ -4,6 +4,7 @@ import Iptvsection from './components/Iptvsection'
 import Channel from './components/Channel'
 import Footer from './components/Footer'
 import Iptvfeatures from './components/Iptvfeatures'
+import Iptvapp from './components/Iptvapp'
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
         <Iptvsection/>
         <Iptvfeatures/>
         <Channel/>
+                <Iptvapp/>
+
         <Footer/>
     </div>
   )
