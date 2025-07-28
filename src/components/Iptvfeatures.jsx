@@ -5,6 +5,11 @@ import './Iptvfeatures.css';
 const Iptvfeatures = () => {
   return (
     <section className="iptv-section">
+      <div className="iptv-heading">
+        <span className="badge">Why Choose IPTV 🔥</span>
+        <h2>Our IPTV Service Is Perfect For Families, Businesses & Travelers</h2>
+      </div>
+
       <div className="iptv-wrapper">
         <div className="feature-left">
           <Feature icon={<FaTv />} title="Ultra HD Streaming" desc="Enjoy 4K and Full HD live channels anytime." />
@@ -23,11 +28,6 @@ const Iptvfeatures = () => {
           <Feature icon={<FaShareAlt />} title="Multi-Device Access" desc="Stream on smart TVs, mobiles, tablets." />
           <Feature icon={<FaKeyboard />} title="Remote Customization" desc="Create shortcuts with your own remote." />
         </div>
-      </div>
-
-      <div className="iptv-heading">
-        {/* <span className="badge">Why Choose IPTV 🔥</span> */}
-        <h2 style={{marginLeft:"350px"}}>Our IPTV Service Is Perfect For Families, Businesses & Travelers</h2>
       </div>
     </section>
   );

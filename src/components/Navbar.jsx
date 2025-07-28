@@ -72,10 +72,10 @@ const Navbar = () => {
 
       {/* Platform Wrapper */}
       <div className="platform-wrapper">
-        <img src="./android.png" alt="Android" className="platform-icon" />
-        <img src="./amazontv1.png" alt="Amazon TV" className="platform-icon" />
-        <img src="./appletv.png" alt="Apple TV" className="platform-icon" />
-        <img src="./windows.png" alt="Windows" className="platform-icon" />
+        <img src="./android1.png" alt="Android" className="platform-icon" />
+        <img src="./amazontv3.png" alt="Amazon TV" className="platform-icon" />
+        <img src="./appletv1.png" alt="Apple TV" className="platform-icon" />
+        <img src="./windows1.png" alt="Windows" className="platform-icon" />
       </div>
     </>
   );

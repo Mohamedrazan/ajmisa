@@ -1,22 +1,50 @@
+/* SECTION STYLING */
 .iptv-section {
   background: #f9f9fc;
-  padding: 80px 20px 40px;
+  padding: 60px 20px 40px;
   color: #333;
-  position: relative;
   text-align: center;
 }
 
+/* HEADING */
+.iptv-heading {
+  margin-bottom: 50px;
+  margin-left: 290px;
+}
+
+.iptv-heading .badge {
+  display: inline-block;
+  background: #ede7f6;
+  color: #7e57c2;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.iptv-heading h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #222;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+/* WRAPPER */
 .iptv-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
   max-width: 1200px;
-  margin: auto;
-  padding-bottom: 40px;
-  margin-left: 220px;
+  margin: 0 auto;
+  margin-left: 160px;
 }
 
+/* COLUMN LAYOUT */
 .feature-left,
 .feature-right {
   display: flex;
@@ -24,15 +52,19 @@
   gap: 40px;
   flex: 1;
   min-width: 250px;
+  max-width: 350px;
 }
 
 .feature-center {
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 30px;
+  max-width: 350px;
 }
 
+/* CIRCLE IMAGE */
 .circle-image {
   width: 280px;
   height: 280px;
@@ -52,13 +84,13 @@
   display: block;
 }
 
-
-/* Feature box */
+/* FEATURE BLOCKS */
 .iptv-feature {
   display: flex;
   align-items: center;
   text-align: left;
 }
+
 .icon {
   background: #7e57c2;
   color: white;
@@ -66,55 +98,95 @@
   font-size: 22px;
   border-radius: 10px;
   margin-right: 15px;
+  flex-shrink: 0;
 }
+
 .text h4 {
   margin: 0 0 6px;
   font-size: 18px;
   font-weight: 600;
 }
+
 .text p {
   margin: 0;
   color: #666;
   font-size: 14px;
 }
 
-/* Heading */
-.iptv-heading {
-  margin-top: 40px;
-}
-.iptv-heading .badge {
-  display: inline-block;
-  background: #ede7f6;
-  color: #7e57c2;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-.iptv-heading h2 {
-  font-size: 28px;
-  max-width: 700px;
-  margin: 10px auto 0;
-  font-weight: bold;
-  color: #222;
+/* RESPONSIVE DESIGN */
+@media (max-width: 1200px) {
+  .iptv-heading {
+    padding: 0 20px;
+  }
+
+  .iptv-wrapper {
+    margin-left: 0;
+    padding: 0 20px;
+    justify-content: center;
+  }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .iptv-wrapper {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+    gap: 50px;
   }
+
   .feature-left,
-  .feature-right {
+  .feature-right,
+  .feature-center {
+    width: 100%;
+    max-width: 100%;
     align-items: center;
   }
+
   .iptv-feature {
     justify-content: center;
     text-align: center;
+    flex-direction: column;
   }
+
+  .iptv-feature .icon {
+    margin: 0 auto 10px;
+  }
+
   .iptv-feature .text {
     text-align: center;
+  }
+
+  .circle-image {
+    width: 240px;
+    height: 240px;
+  }
+
+  .iptv-heading h2 {
+    font-size: 24px;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .circle-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .iptv-heading h2 {
+    font-size: 20px;
+    padding: 0 10px;
+  }
+
+  .text h4 {
+    font-size: 16px;
+  }
+
+  .text p {
+    font-size: 13px;
+  }
+
+  .icon {
+    font-size: 20px;
+    padding: 10px;
   }
 }

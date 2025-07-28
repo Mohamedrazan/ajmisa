@@ -1,3 +1,4 @@
+/* MAIN SECTION */
 .iptv-section {
   display: flex;
   flex-wrap: wrap;
@@ -7,8 +8,10 @@
   background-color: #f5f3f8;
   color: #333;
   margin-left: 230px;
+  gap: 40px;
 }
 
+/* TEXT BLOCK */
 .iptv-text {
   max-width: 520px;
   flex: 1 1 400px;
@@ -41,6 +44,7 @@
   color: #666;
 }
 
+/* BENEFITS LIST */
 .benefits {
   list-style: none;
   padding: 0;
@@ -52,6 +56,7 @@
   font-weight: 600;
 }
 
+/* DOWNLOAD BUTTON */
 .download-btn {
   background-color: #7b1fa2;
   color: white;
@@ -67,6 +72,7 @@
   background-color: #9333ea;
 }
 
+/* IMAGE SECTION */
 .iptv-images {
   display: flex;
   gap: 20px;
@@ -79,5 +85,73 @@
   height: 480px;
   width: auto;
   border-radius: 20px;
-  /* box-shadow: 0 10px 20px rgba(123, 31, 162, 0.2); */
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+
+/* TABLETS */
+@media (max-width: 1024px) {
+  .iptv-section {
+    margin-left: 0;
+    padding: 40px 20px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .iptv-text,
+  .iptv-images {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .headline {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .benefits {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .phone-img {
+    height: 400px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+  .iptv-section {
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 15px;
+  }
+
+  .headline {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .phone-img {
+    height: 300px;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .download-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .benefits {
+    font-size: 14px;
+    gap: 8px;
+  }
 }
