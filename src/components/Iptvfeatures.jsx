@@ -16,13 +16,13 @@ const Iptvfeatures = () => {
           <Feature icon={<FaBell />} title="Smart Notifications" desc="Get alerts for new episodes and matches." />
           <Feature icon={<FaFileVideo />} title="Video Recording" desc="Record and rewatch your favorite shows." />
         </div>
-
+        
         <div className="feature-center">
           <div className="circle-image">
             <img src="./iptv4.jpg" alt="IPTV Box" />
           </div>
         </div>
-
+       
         <div className="feature-right">
           <Feature icon={<FaComments />} title="Live Chat Support" desc="24/7 support via chat & WhatsApp." />
           <Feature icon={<FaShareAlt />} title="Multi-Device Access" desc="Stream on smart TVs, mobiles, tablets." />

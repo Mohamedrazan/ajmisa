@@ -2,6 +2,11 @@ import React from 'react';
 import './Footer.css';
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { SiGoogleplay, SiAppstore } from 'react-icons/si';
+import paypal from '../../public/paypal.png';
+import visa from '../../public/visa.png';
+import mastercard from '../../public/mastercard.png';
+
+
 
 const Footer = () => {
     return (
@@ -103,9 +108,9 @@ const Footer = () => {
                 <div className="footer-bottom">
                     <p>© 2025 IPTV Live Today. All Rights Reserved.</p>
                     <div className="payment-icons">
-                        <img src="/paypal.png" alt="PayPal" />
-                        <img src="/visa.png" alt="Visa" />
-                        <img src="/mastercard.png" alt="MasterCard" />
+                        <img src={paypal} alt="PayPal" />
+                        <img src={visa} alt="visa" />
+                        <img src={mastercard} alt="mastercard" />
                     </div>
                 </div>
             </footer>

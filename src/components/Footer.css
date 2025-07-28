@@ -165,7 +165,7 @@ body {
 
 /* BOTTOM FOOTER */
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  /* border-top: 1px solid rgba(255, 255, 255, 0.2); */
   margin-top: 30px;
   padding-top: 20px;
   display: flex;
@@ -179,7 +179,6 @@ body {
 .payment-icons img {
   height: 28px;
   margin-left: 14px;
-  filter: grayscale(100%);
   transition: filter 0.3s;
 }
 .payment-icons img:hover {
