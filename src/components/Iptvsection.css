@@ -138,22 +138,47 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .iptv-hero {
     flex-direction: column;
     text-align: center;
+    gap: 30px;
+  }
+
+  .iptv-content {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .iptv-content h2 {
+    font-size: 32px;
+  }
+
+  .iptv-image img {
+    max-width: 90%;
+    margin: 0 auto;
   }
 
   .iptv-button {
     width: 100%;
-    margin-top: 15px;
+    max-width: 320px;
+    margin-top: 20px;
+    display: block;
   }
 
   .iptv-bottom {
     flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
   }
 
-  .iptv-image img {
-    max-width: 100%;
+  .box {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .iptv-container {
+    padding: 40px 15px;
   }
 }

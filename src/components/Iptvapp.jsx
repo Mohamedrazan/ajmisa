@@ -8,7 +8,7 @@ const Iptvapp = () => {
     <section className="iptv-section">
       <div className="iptv-text">
         <span className="tag">IPTV Advantage 🔥</span>
-        <h2 className="headline">Get Benefit By Using <span>MahiIPTV</span></h2>
+        <h2 className="headline">Get Benefit By Using <span>MAHIGO</span></h2>
         <p className="description">
           Enjoy a wide range of IPTV services with high-definition clarity, instant support,
           and a secure streaming experience. Say goodbye to buffering and hello to unlimited entertainment.

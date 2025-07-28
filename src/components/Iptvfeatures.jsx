@@ -27,7 +27,7 @@ const Iptvfeatures = () => {
 
       <div className="iptv-heading">
         {/* <span className="badge">Why Choose IPTV 🔥</span> */}
-        <h2 style={{marginLeft:"400px"}}>Our IPTV Service Is Perfect For Families, Businesses & Travelers</h2>
+        <h2 style={{marginLeft:"350px"}}>Our IPTV Service Is Perfect For Families, Businesses & Travelers</h2>
       </div>
     </section>
   );

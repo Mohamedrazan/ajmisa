@@ -13,8 +13,7 @@ function App() {
         <Iptvsection/>
         <Iptvfeatures/>
         <Channel/>
-                <Iptvapp/>
-
+        <Iptvapp/>
         <Footer/>
     </div>
   )
