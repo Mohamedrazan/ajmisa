@@ -80,7 +80,8 @@ body {
 
 /* FOOTER */
 .footer {
-  background: linear-gradient(135deg, #8e24aa, #7b1fa2);
+  /* background-color: #1e1e1e;  */
+  background-color: #333;
   color: white;
   padding: 60px 20px 40px;
 }
@@ -122,7 +123,7 @@ body {
   transition: color 0.3s, transform 0.3s;
 }
 .link-group ul li:hover {
-  color: #e0f7fa;
+  color: #7b1fa2;
   transform: translateX(6px);
 }
 
@@ -143,7 +144,7 @@ body {
 }
 .social-icons > *:hover {
   transform: scale(1.2);
-  color: #00e1ff;
+  color: #7b1fa2;
 }
 .app-links a {
   display: flex;
@@ -159,7 +160,7 @@ body {
   transition: background 0.3s;
 }
 .app-links a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: #7b1fa2;
 }
 
 /* BOTTOM FOOTER */
