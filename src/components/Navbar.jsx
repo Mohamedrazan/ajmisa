@@ -14,7 +14,7 @@ const Navbar = () => {
         {/* Navbar */}
         <div className="navbar">
           <div className="logo">
-            <img src="./ajmisalogo.png" alt="Logo" />
+            <img src="./logo.png" alt="Logo" />
           </div>
 
           {/* Hamburger icon */}
