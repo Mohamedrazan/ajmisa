@@ -3,6 +3,7 @@ import './Navbar.css';
 import bg from '../../public/bg2.jpg';
 import { FaCheckCircle } from 'react-icons/fa';
 import { FiMenu, FiX } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -23,10 +24,11 @@ const Navbar = () => {
 
           {/* Nav Links - Desktop */}
           <ul className="nav-links">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Our Services</li>
-            <li>Contact Us</li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/services">Our Services</Link></li>
+            <li><Link to="/contact">Contact Us</Link></li>
+            <li><Link to="/certificates">Certificates</Link></li>
           </ul>
 
           {/* Nav Links - Mobile Popup */}
@@ -37,6 +39,8 @@ const Navbar = () => {
                 <li onClick={() => setIsMobileMenuOpen(false)}>About Us</li>
                 <li onClick={() => setIsMobileMenuOpen(false)}>Our Services</li>
                 <li onClick={() => setIsMobileMenuOpen(false)}>Contact Us</li>
+                <li onClick={() => setIsMobileMenuOpen(false)}>Certificates</li>
+
               </ul>
             </div>
           )}

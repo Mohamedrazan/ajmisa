@@ -48,20 +48,52 @@
 /* Nav Links */
 .nav-links {
   display: flex;
-  gap: 30px;
+  gap: 32px;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
 }
 
 .nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
   font-size: 16px;
   font-weight: 600;
-  cursor: pointer;
+  padding: 8px 4px;
   transition: color 0.3s ease;
 }
 
-.nav-links li:hover {
+/* Hover underline animation */
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #ffb6ff;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.nav-links li a:hover {
   color: #ffb6ff;
 }
+
+/* Active link effect (optional) */
+.nav-links li a.active {
+  color: #ffb6ff;
+  font-weight: 700;
+}
+
 
 /* Platform Wrapper */
 .platform-wrapper {
