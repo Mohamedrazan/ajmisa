@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-import bg from '../../public/bg2.jpg';
+import bg from '../../public/homepage.jpg';
 import { FaCheckCircle } from 'react-icons/fa';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
@@ -10,6 +10,7 @@ const Navbar = () => {
 
   return (
     <>
+    <br /><br /><br />
       <div className="hero" style={{ backgroundImage: `url(${bg})` }}>
         {/* Navbar */}
         <div className="navbar">
@@ -30,7 +31,6 @@ const Navbar = () => {
             <li><Link to="/contact">Contact Us</Link></li>
             <li><Link to="/certificates">Certificates</Link></li>
           </ul>
-
           {/* Nav Links - Mobile Popup */}
           {isMobileMenuOpen && (
             <div className="mobile-menu">
@@ -47,7 +47,7 @@ const Navbar = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="content">
+        {/* <div className="content">
           <p className="offer-text">Limited Time Offer</p>
           <h1 className="main-heading">
             12 MONTHS IPTV - <span>60% OFF</span>
@@ -71,16 +71,16 @@ const Navbar = () => {
             <br />
             <button className="cta-button">Get My IPTV Access Now</button>
           </ul>
-        </div>
+        </div> */}
       </div>
 
       {/* Platform Wrapper */}
-      <div className="platform-wrapper">
+      {/* <div className="platform-wrapper">
         <img src="./android1.png" alt="Android" className="platform-icon" />
         <img src="./amazontv1.png" alt="Amazon TV" className="platform-icon" />
         <img src="./appletv1.png" alt="Apple TV" className="platform-icon" />
         <img src="./windows1.png" alt="Windows" className="platform-icon" />
-      </div>
+      </div> */}
     </>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Splashscreen.css';
-import logo from '../../public/ajmisalogo1.png'; 
+import logo from '../../public/logo.png'; 
 
 const Splashscreen = () => {
   const [hideSplash, setHideSplash] = useState(false);
@@ -8,7 +8,7 @@ const Splashscreen = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setHideSplash(true);
-    }, 4000); // hides splash after 3 seconds
+    }, 4000); 
 
     return () => clearTimeout(timer);
   }, []);
