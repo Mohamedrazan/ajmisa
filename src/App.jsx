@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Navbar from './components/Navbar';
+// import Navbar from './components/Navbar';
 import Iptvsection from './components/Iptvsection';
 import Channel from './components/Channel';
 import Footer from './components/Footer';
@@ -9,12 +9,14 @@ import Iptvfeatures from './components/Iptvfeatures';
 import Iptvapp from './components/Iptvapp';
 import Splashscreen from './components/Splashscreen';
 import Certificates from './components/Certificates';
+import Herosection from './components/Herosection';
 
 function HomePage() {
   return (
     <>
       <Splashscreen />
-      <Navbar />
+      <Herosection/>
+      {/* <Navbar /> */}
       <Iptvsection />
       <Iptvfeatures />
       <Channel />
