@@ -1,49 +1,52 @@
 import React from "react";
-import "./Mainherosection.css";
 import { Link } from "react-router-dom";
-import bgImage from "../../public/resort.jpg";
-import logo from "../../public/logo.png"
-
+import "./Mainherosection.css";
 
 const icons = [
-  { name: "TV Channels", route: "/tv-channels", image: "/assets/icons/tv.png" },
-  { name: "Movies", route: "/movies", image: "/assets/icons/movies.png" },
-  { name: "Hotel TV", route: "/hotel-tv", image: "/assets/icons/hotel.png" },
-  { name: "Hotel Info", route: "/hotel-info", image: "/assets/icons/info.png" },
-  { name: "Room Service", route: "/room-service", image: "/assets/icons/room.png" },
-  { name: "Guest Info", route: "/guest-info", image: "/assets/icons/guest.png" },
+  { name: "TV Channels", route: "/tv-channels", icon: "./tvchannel.png" },
+  { name: "Movies", route: "/movies", icon: "./movies.png" },
+  { name: "Hotel TV", route: "/hotel-tv", icon: "./hotel.png" },
+  { name: "Hotel Info", route: "/hotel-info", icon: "./info.png" },
+  { name: "Room Service", route: "/room-service", icon: "./room.png" },
+  { name: "Hotel Guest Info", route: "/guest-info", icon: "./guest.png" },
 ];
-
 
 export default function Mainherosection() {
   return (
-    <div className="iptv-dashboard" style={{ backgroundImage: `url(${bgImage})` }}>
-      <div className="header">
-        <img src={logo} alt="Logo" className="logo" />
+    <div className="dashboard">
+      <div className="navbar">
+        <div className="logo-placeholder">
+          <img src="./macvisionmainlogo.png" alt="Logo" className="logo-image" />
+        </div>
       </div>
 
-      <div className="welcome-text">
-        <h2>Mr. John Doe, Welcome</h2>
-        <p>
-          We hope you enjoy your stay at our hotel. Feel free to explore our
-          services for entertainment and relaxation.
-        </p>
-      </div>
+     <div className="hero-section">
+  <div className="hero-overlay">
+    <div className="hero-text">
+      <h2>IPTV Hospitality Solutions</h2>
+      <p className="welcome">Smart In-Room Experience</p>
+      <p className="desc">
+        Our IPTV system transforms traditional hotel TV into a personalized guest experience.
+        Stream live channels, access movies on demand, order room service, and explore hotel
+        facilities — all from the comfort of the guest room, using an intuitive and engaging interface.
+      </p>
+    </div>
+  </div>
+</div>
 
-      <div className="iptv-description">
-        <p>
-          IPTV brings you seamless access to live TV, on-demand movies, hotel
-          services, and personalized content—all from the comfort of your room.
-        </p>
-      </div>
 
-      <div className="icon-grid">
-        {icons.map((icon, idx) => (
-          <Link to={icon.route} className="icon-button" key={idx}>
-            {icon.name}
+      <div className="icon-row">
+        {icons.map((icon, index) => (
+          <Link to={icon.route} key={index} className="icon-box">
+            <img src={icon.icon} alt={icon.name} className="icon-image" />
+            <span className="icon-label">{icon.name}</span>
           </Link>
         ))}
       </div>
+
+      {/* <div className="recommendation">
+        <h3>Recommended TV Channels</h3>
+      </div> */}
     </div>
   );
 }
