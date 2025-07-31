@@ -9,14 +9,16 @@ import Iptvfeatures from './components/Iptvfeatures';
 import Iptvapp from './components/Iptvapp';
 import Splashscreen from './components/Splashscreen';
 import Certificates from './components/Certificates';
-import Herosection from './components/Herosection';
+import Mainherosection from './components/Mainherosection';
+// import Herosection from './components/Herosection';
 
 function HomePage() {
   return (
     <>
       <Splashscreen />
-      <Herosection/>
+      {/* <Herosection/> */}
       {/* <Navbar /> */}
+      <Mainherosection/>
       <Iptvsection />
       <Iptvfeatures />
       <Channel />

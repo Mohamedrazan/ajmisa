@@ -1,0 +1,88 @@
+.iptv-dashboard {
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 10px;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.welcome-text {
+  text-align: left;
+  margin-top: 30px;
+  max-width: 1870px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.iptv-description {
+  text-align: left;
+  max-width: 600px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.icon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.icon-button {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  text-align: center;
+  flex: 1 1 150px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.icon-button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+  .icon-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .iptv-description,
+  .welcome-text {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .icon-grid {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1025px) {
+  .icon-grid {
+    justify-content: flex-start;
+  }
+}
