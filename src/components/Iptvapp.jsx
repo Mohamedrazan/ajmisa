@@ -1,13 +1,13 @@
 import React from 'react';
 import './Iptvapp.css';
-import phone1 from '../assets/iptvapp1.png'; // replace with your image
-import phone2 from '../assets/iptvapp2.png';
+import phone1 from '../assets/mobile1.png'; 
+// import phone2 from '../assets/mobile1.png';
 
 const Iptvapp = () => {
   return (
     <section className="iptv-section">
       <div className="iptv-text">
-        <span className="tag">IPTV Advantage 🔥</span>
+        <span className="tag">IPTV Advantage </span>
         <h2 className="headline">Get Benefit By Using <span>MAHIGO</span></h2>
         <p className="description">
           Enjoy a wide range of IPTV services with high-definition clarity, instant support,
@@ -24,7 +24,7 @@ const Iptvapp = () => {
 
       <div className="iptv-images">
         <img src={phone1} alt="IPTV App Screen 1" className="phone-img" />
-        <img src={phone2} alt="IPTV App Screen 2" className="phone-img" />
+        {/* <img src={phone2} alt="IPTV App Screen 2" className="phone-img" /> */}
       </div>
     </section>
   );

@@ -2,6 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Mainherosection.css";
 
+const navLinks = [
+  { label: "Products", path: "/products" },
+  { label: "Our Services", path: "/services" },
+  { label: "Our Client", path: "/client" },
+  { label: "Certificates", path: "/certificates" },
+  { label: "Contact Us", path: "/contact" }
+];
+
 const icons = [
   { name: "TV Channels", route: "/tv-channels", icon: "./tvchannel.png" },
   { name: "Movies", route: "/movies", icon: "./movies.png" },
@@ -18,22 +26,28 @@ export default function Mainherosection() {
         <div className="logo-placeholder">
           <img src="./macvisionmainlogo.png" alt="Logo" className="logo-image" />
         </div>
+        <div className="nav-links">
+          {navLinks.map((link, i) => (
+            <Link key={i} to={link.path} className="nav-link">
+              {link.label}
+            </Link>
+          ))}
+        </div>
       </div>
 
-     <div className="hero-section">
-  <div className="hero-overlay">
-    <div className="hero-text">
-      <h2>IPTV Hospitality Solutions</h2>
-      <p className="welcome">Smart In-Room Experience</p>
-      <p className="desc">
-        Our IPTV system transforms traditional hotel TV into a personalized guest experience.
-        Stream live channels, access movies on demand, order room service, and explore hotel
-        facilities — all from the comfort of the guest room, using an intuitive and engaging interface.
-      </p>
-    </div>
-  </div>
-</div>
-
+      <div className="hero-section">
+        <div className="hero-overlay">
+          <div className="hero-text">
+            <h2>IPTV Hospitality Solutions</h2>
+            <p className="welcome">Smart In-Room Experience</p>
+            <p className="desc">
+              Our IPTV system transforms traditional hotel TV into a personalized guest experience.
+              Stream live channels, access movies on demand, order room service, and explore hotel
+              facilities — all from the comfort of the guest room, using an intuitive and engaging interface.
+            </p>
+          </div>
+        </div>
+      </div>
 
       <div className="icon-row">
         {icons.map((icon, index) => (
@@ -43,10 +57,6 @@ export default function Mainherosection() {
           </Link>
         ))}
       </div>
-
-      {/* <div className="recommendation">
-        <h3>Recommended TV Channels</h3>
-      </div> */}
     </div>
   );
 }

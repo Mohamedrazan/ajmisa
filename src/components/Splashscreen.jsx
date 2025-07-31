@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Splashscreen.css';
-import logo from '../../public/logo.png'; 
+import logo from '../../public/macvisionmainlogo.png'; 
 
 const Splashscreen = () => {
   const [hideSplash, setHideSplash] = useState(false);

@@ -6,8 +6,6 @@ import paypal from '../../public/paypal.png';
 import visa from '../../public/visa.png';
 import mastercard from '../../public/mastercard.png';
 
-
-
 const Footer = () => {
     return (
         <>
@@ -58,11 +56,12 @@ const Footer = () => {
                         </h2>
                         <br /><br />
                         <address>
-                            8724 NW 100th St, Miami Gardens<br />
-                            FL 33016, USA<br />
-                            Tel: +1 786-320-6579<br />
-                            Email: globaliptvworld@gmail.com<br />
-                            Hours: Mon-Sat 10am-9pm, Sun Closed
+                            P.O Box 40637,<br />
+                            Markaz Hail, Hail Street
+                            Jeddah 21511, Saudi Arabia<br />
+                            Tel: +966 553011362<br />
+                            Email: www.ajmi@ajmisa.com<br />
+                            Hours: Mon-Sat 9am-6pm, friday Closed
                         </address>
                     </div>
 
@@ -88,9 +87,9 @@ const Footer = () => {
                     </div>
 
                     <div className="footer-right">
-                        <h4>Hotline</h4>
-                        <p>Call Us Toll-Free</p>
-                        <p className="hotline">+1 786-320-6570</p>
+                        <h4>Contact</h4>
+                        <p>Call Us On : </p>
+                        <p className="hotline">+966 553011362</p>
                         <p>Follow Us</p>
                         <div className="social-icons">
                             <FaFacebook />

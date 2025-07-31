@@ -5,8 +5,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 60px 30px;
-  background-color: #f5f3f8;
-  color: #333;
+  background-color: #f5f5f5;
+  color: #1a1a1a;
   margin-left: 230px;
   gap: 40px;
 }
@@ -18,7 +18,7 @@
 }
 
 .tag {
-  background: #a855f7;
+  background: #1a1a1a;
   color: white;
   padding: 6px 12px;
   border-radius: 20px;
@@ -34,14 +34,14 @@
 }
 
 .headline span {
-  color: #7b1fa2;
+  color: #000;
 }
 
 .description {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 24px;
-  color: #666;
+  color: #555;
 }
 
 /* BENEFITS LIST */
@@ -52,13 +52,13 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  color: #10b981;
+  color: #0d9488;
   font-weight: 600;
 }
 
 /* DOWNLOAD BUTTON */
 .download-btn {
-  background-color: #7b1fa2;
+  background-color: #1a1a1a;
   color: white;
   padding: 14px 28px;
   border: none;
@@ -69,7 +69,7 @@
 }
 
 .download-btn:hover {
-  background-color: #9333ea;
+  background-color: #000;
 }
 
 /* IMAGE SECTION */

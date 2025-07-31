@@ -8,7 +8,7 @@ const Iptvsection = () => {
       {/* Hero Section */}
       <div className="iptv-hero">
         <div className="iptv-image">
-          <img src="./iptvservice.jpg" alt="Family watching IPTV" />
+          <img src="./tvwatch1.jpg" alt="Family watching IPTV" />
         </div>
         <div className="iptv-content">
           <h5>Say Goodbye to Cable Bills</h5>
