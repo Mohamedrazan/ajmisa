@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Needed for <Link>
+import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { SiGoogleplay, SiAppstore } from 'react-icons/si';
 import paypal from '../assets/paypal.png';
@@ -11,6 +11,14 @@ import cert1 from '../assets/certificate_1.jpg';
 import cert2 from '../assets/certificate_2.jpg';
 import cert3 from '../assets/certificate_3.jpg';
 import cert4 from '../assets/certificate_4.jpg';
+
+const navLinks = [
+  { label: "Products", path: "/products" },
+  { label: "Our Services", path: "/services" },
+  { label: "Our Client", path: "/client" },
+  { label: "Certificates", path: "/certificates" },
+  { label: "Contact Us", path: "/contact" }
+];
 
 const Certificates = () => {
   const [lightboxImage, setLightboxImage] = useState(null);
@@ -28,17 +36,20 @@ const Certificates = () => {
   return (
     <>
       {/* Navbar */}
-      {/* <nav className="navbar">
-        <ul className="nav-links">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About Us</Link></li>
-          <li><Link to="/services">Our Services</Link></li>
-          <li><Link to="/contact">Contact Us</Link></li>
-          <li><Link to="/certificates">Certificates</Link></li>
-        </ul>
-      </nav> */}
+      <div className="navbar">
+        <div className="logo-placeholder">
+          <img src="./macvisionmainlogo.png" alt="Logo" className="logo-image" />
+        </div>
+        <div className="nav-links">
+          {navLinks.map((link, i) => (
+            <Link key={i} to={link.path} className="nav-link">
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      </div>
 
-      {/* Certificate Section */}
+      {/* Certificates Section */}
       <div className="cert-section">
         <h1 className="section-title">Certificates of Appreciation</h1>
 
@@ -71,11 +82,12 @@ const Certificates = () => {
             </h2>
             <br /><br />
             <address>
-              8724 NW 100th St, Miami Gardens<br />
-              FL 33016, USA<br />
-              Tel: +1 786-320-6579<br />
-              Email: globaliptvworld@gmail.com<br />
-              Hours: Mon-Sat 10am-9pm, Sun Closed
+              P.O Box 40637,<br />
+              Markaz Hail, Hail Street<br />
+              Jeddah 21511, Saudi Arabia<br />
+              Tel: +966 553011362<br />
+              Email: www.ajmi@ajmisa.com<br />
+              Hours: Mon-Sat 9am-6pm, Friday Closed
             </address>
           </div>
 
@@ -101,9 +113,9 @@ const Certificates = () => {
           </div>
 
           <div className="footer-right">
-            <h4>Hotline</h4>
-            <p>Call Us Toll-Free</p>
-            <p className="hotline">+1 786-320-6570</p>
+            <h4>Contact</h4>
+            <p>Call Us On:</p>
+            <p className="hotline">+966 553011362</p>
             <p>Follow Us</p>
             <div className="social-icons">
               <FaFacebook />
