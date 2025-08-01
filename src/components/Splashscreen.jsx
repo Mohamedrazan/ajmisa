@@ -8,7 +8,7 @@ const Splashscreen = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setHideSplash(true);
-    }, 4000); 
+    }, 2000); 
 
     return () => clearTimeout(timer);
   }, []);

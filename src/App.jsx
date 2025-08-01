@@ -12,6 +12,8 @@ import Mainherosection from './components/Mainherosection';
 import Channelpage from './components/Channelpage';
 import ContactUs from './components/Contact';
 import Contact from './components/Contact';
+import Iptvmovie from './components/Iptvmovie';
+import Iptvhotel from './components/Iptvhotel';
 // import Herosection from './components/Herosection';
 
 function HomePage() {
@@ -46,8 +48,11 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/certificates" element={<CertificatesPage />} />
-         <Route path="/tv-channels" element={<Channelpage/>} />
-                  <Route path="/contact" element={<Contact/>} />
+        <Route path="/tv-channels" element={<Channelpage/>} />
+        <Route path="/contact" element={<Contact/>} />
+        <Route path="/movies" element={<Iptvmovie/>} />
+        <Route path="/hotel-tv" element={<Iptvhotel/>} />
+
 
 
       </Routes>

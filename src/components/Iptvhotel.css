@@ -1,0 +1,85 @@
+.hotel-tv-container {
+  background-color: #000;
+  color: #fff;
+  padding: 3rem 2rem;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.hotel-tv-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hotel-tv-header h1 {
+  font-size: 2.8rem;
+  color: #ffffff;
+}
+
+.hotel-tv-header p {
+  font-size: 1.2rem;
+  color: #cccccc;
+  margin-top: 0.5rem;
+}
+
+.hotel-tv-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.hotel-tv-text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+}
+
+.hotel-tv-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hotel-tv-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #cccccc;
+  margin-bottom: 1rem;
+}
+
+.hotel-tv-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hotel-tv-text li {
+  background: #111;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.6rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.hotel-tv-text li:hover {
+  background: #222;
+}
+
+.hotel-tv-image {
+  flex: 1;
+  text-align: center;
+  min-width: 280px;
+}
+
+.hotel-tv-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .hotel-tv-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
