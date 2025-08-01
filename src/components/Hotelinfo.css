@@ -1,0 +1,58 @@
+.hotel-info-container {
+  background-color: #000;
+  color: #fff;
+  padding: 3rem 2rem;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.hotel-info-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hotel-info-header h1 {
+  font-size: 2.8rem;
+  color: #ffffff;
+}
+
+.hotel-info-header p {
+  font-size: 1.2rem;
+  color: #cccccc;
+  margin-top: 0.5rem;
+}
+
+.hotel-info-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.hotel-info-card {
+  background-color: #111;
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+}
+
+.hotel-info-card h2 {
+  font-size: 1.5rem;
+  color: #00aced;
+  margin-bottom: 1rem;
+}
+
+.hotel-info-card p,
+.hotel-info-card ul {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.hotel-info-card ul {
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.hotel-info-card li {
+  margin-bottom: 0.5rem;
+}

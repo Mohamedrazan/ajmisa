@@ -1,0 +1,141 @@
+.room-service-container {
+  background-color: #000;
+  color: #fff;
+  padding: 3rem 2rem;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.room-service-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.room-service-header h1 {
+  font-size: 2.8rem;
+  color: #00aced;
+}
+
+.room-service-header p {
+  font-size: 1.1rem;
+  color: #cccccc;
+  margin-top: 0.5rem;
+}
+
+/* Show 5 cards per row on large screens */
+.room-service-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1400px) {
+  .room-service-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1100px) {
+  .room-service-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .room-service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .room-service-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.room-service-card {
+  background-color: #111;
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.room-service-card h2 {
+  font-size: 1.3rem;
+  color: #00aced;
+  margin-bottom: 0.5rem;
+}
+
+.room-service-card p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.room-service-card .price {
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.order-button {
+  background-color: #c3d0d4;
+  color: #000;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: #00bcd4;
+}
+
+.food-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: #111;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.close-button {
+  margin-top: 1rem;
+  background-color: #00e0ff;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-weight: bold;
+}

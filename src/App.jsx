@@ -14,6 +14,8 @@ import ContactUs from './components/Contact';
 import Contact from './components/Contact';
 import Iptvmovie from './components/Iptvmovie';
 import Iptvhotel from './components/Iptvhotel';
+import Hotelinfo from './components/Hotelinfo';
+import Roomservice from './components/Roomservice';
 // import Herosection from './components/Herosection';
 
 function HomePage() {
@@ -52,6 +54,8 @@ function App() {
         <Route path="/contact" element={<Contact/>} />
         <Route path="/movies" element={<Iptvmovie/>} />
         <Route path="/hotel-tv" element={<Iptvhotel/>} />
+        <Route path="/hotel-info" element={<Hotelinfo/>} />
+        <Route path="/room-service" element={<Roomservice/>} />
 
 
 
