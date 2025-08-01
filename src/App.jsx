@@ -16,6 +16,7 @@ import Iptvmovie from './components/Iptvmovie';
 import Iptvhotel from './components/Iptvhotel';
 import Hotelinfo from './components/Hotelinfo';
 import Roomservice from './components/Roomservice';
+import Guestinfo from './components/Guestinfo';
 // import Herosection from './components/Herosection';
 
 function HomePage() {
@@ -56,6 +57,7 @@ function App() {
         <Route path="/hotel-tv" element={<Iptvhotel/>} />
         <Route path="/hotel-info" element={<Hotelinfo/>} />
         <Route path="/room-service" element={<Roomservice/>} />
+        <Route path="/guest-info" element={<Guestinfo/>} />
 
 
 
