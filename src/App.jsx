@@ -17,6 +17,7 @@ import Iptvhotel from './components/Iptvhotel';
 import Hotelinfo from './components/Hotelinfo';
 import Roomservice from './components/Roomservice';
 import Guestinfo from './components/Guestinfo';
+import Iptvpromo from './components/Iptvpromo';
 // import Herosection from './components/Herosection';
 
 function HomePage() {
@@ -29,6 +30,7 @@ function HomePage() {
       <br /><br />
       <Iptvsection />
       {/* <Iptvfeatures /> */}
+      <Iptvpromo/>
       <Iptvapp />
       <Footer />
     </>
