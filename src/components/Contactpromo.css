@@ -1,0 +1,149 @@
+/* Contactpromo.css - Refined Black/White Card Style with Light Background */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f7f4fb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-promo {
+  background-color: white;
+  color: black;
+  padding: 50px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  max-width: 1230px;
+  min-width: 300px;
+  min-height: 400px;
+  margin: 80px auto;
+  animation: fadeIn 1.2s ease;
+}
+
+.promo-left {
+  flex: 1 1 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideInLeft 1.4s ease;
+}
+
+.promo-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.promo-img:hover {
+  transform: scale(1.05);
+}
+
+.promo-right {
+  flex: 1 1 350px;
+  text-align: center;
+  animation: slideInRight 1.4s ease;
+}
+
+.headline {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.subtext {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: lightgray;
+  color: #000;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
+}
+
+.btn:hover {
+  background-color: #444;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .contact-promo {
+    flex-direction: column;
+    padding: 30px 20px;
+    max-width: 90%;
+  }
+
+  .headline {
+    font-size: 1.8rem;
+  }
+
+  .subtext {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+
+  .promo-img {
+    max-width: 250px;
+  }
+}

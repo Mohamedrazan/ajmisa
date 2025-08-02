@@ -5,7 +5,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Iptvsection from './components/Iptvsection';
 import Footer from './components/Footer';
 // import Iptvfeatures from './components/Iptvfeatures';
-import Iptvapp from './components/Iptvapp';
+// import Iptvapp from './components/Iptvapp';
 import Splashscreen from './components/Splashscreen';
 import Certificates from './components/Certificates';
 import Mainherosection from './components/Mainherosection';
@@ -18,6 +18,8 @@ import Hotelinfo from './components/Hotelinfo';
 import Roomservice from './components/Roomservice';
 import Guestinfo from './components/Guestinfo';
 import Iptvpromo from './components/Iptvpromo';
+import Review from './components/Review';
+import ContactPromo from './components/Contactpromo';
 // import Herosection from './components/Herosection';
 
 function HomePage() {
@@ -29,9 +31,12 @@ function HomePage() {
       <Mainherosection/>
       <br /><br />
       <Iptvsection />
+       <ContactPromo/>
+      <Review/>
       {/* <Iptvfeatures /> */}
       <Iptvpromo/>
-      <Iptvapp />
+      <br />
+      {/* <Iptvapp /> */}
       <Footer />
     </>
   );

@@ -47,7 +47,7 @@
 
 .service-card h2 {
   font-size: 22px;
-  color: #00ffd5;
+  color: #00aced;
   margin-bottom: 16px;
 }
 
@@ -90,4 +90,20 @@
   .service-card {
     padding: 20px;
   }
+}
+
+.icon {
+  width: 100%;
+  max-width: 300px;       /* Limits size for large screens */
+  height: 300px;           /* Keeps original image aspect ratio */
+  object-fit: cover;      /* Better visual fill than contain */
+  border-radius: 12px;    /* Rounded corners for a classy feel */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Elegant shadow */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.95;
+}
+
+.icon:hover {
+  transform: scale(1.05);  /* Slight zoom on hover */
+  opacity: 1;
 }
