@@ -11,11 +11,11 @@ const navLinks = [
 ];
 
 const icons = [
-  { name: "TV Channels", route: "/tv-channels", icon: "./tvchannel.png" },
-  { name: "Movies", route: "/movies", icon: "./movies.png" },
-  { name: "Hotel TV", route: "/hotel-tv", icon: "./hotel.png" },
+  { name: "Hotel TV ", route: "/tv-channels", icon: "./channel.png" },
+  { name: "VoD", route: "/movies", icon: "./movies.png" },
+  { name: "Room Service", route: "/room-service", icon: "./roomservice1.png" },
   { name: "Hotel Info", route: "/hotel-info", icon: "./info.png" },
-  { name: "Room Service", route: "/room-service", icon: "./room.png" },
+  { name: "Menu", route: "/menu", icon: "./room.png" },
   { name: "Hotel Guest Info", route: "/guest-info", icon: "./guest.png" },
 ];
 

@@ -11,15 +11,15 @@ const Iptvsection = () => {
           <img src="./tvwatch1.jpg" alt="Family watching IPTV" />
         </div>
         <div className="iptv-content">
-          <h5>Say Goodbye to Cable Bills</h5>
-          <h2>Top-Rated IPTV Service in the UK</h2>
-          <p className="subtitle">Stream thousands of HD channels, live events & on-demand shows at your fingertips.</p>
+          <h5>Say Goodbye to IPTV set-top Boxes</h5>
+          <h2>Premium 4K Streaming</h2>
+          <p className="subtitle">Compatible with all major Smart TV Platforms</p>
 
           <ul className="iptv-features">
-            <li><FaCheckCircle className="icon-purple" /> No More Expensive Cable Bills</li>
-            <li><FaCheckCircle className="icon-purple" /> No Hardware to Install</li>
-            <li><FaCheckCircle className="icon-purple" /> 5000+ Live Channels Included</li>
-            <li><FaCheckCircle className="icon-purple" /> Unlimited 24/7 Streaming Access</li>
+            <li><FaCheckCircle className="icon-purple" /> Android Smart TVs</li>
+            <li><FaCheckCircle className="icon-purple" /> LG WebOS</li>
+            <li><FaCheckCircle className="icon-purple" /> Samsung Tizen</li>
+            <li><FaCheckCircle className="icon-purple" /> </li>
             <li><FaCheckCircle className="icon-purple" /> Auto Channel & Content Updates</li>
             <li><FaCheckCircle className="icon-purple" /> Compatible with All Devices</li>
             <li><FaCheckCircle className="icon-purple" /> 30 Days Risk-Free Guarantee</li>

@@ -1,8 +1,16 @@
 /* Dashboard.css */
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body, html {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -149,8 +157,8 @@ body, html {
 }
 
 .icon-box {
-  width: 150px;
-  height: 150px;
+  width: 190px;
+  height: 190px;
   margin: 1rem;
   background-color: #1a1a1a;
   border-radius: 10px;

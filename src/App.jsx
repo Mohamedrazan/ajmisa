@@ -56,9 +56,9 @@ function App() {
         <Route path="/tv-channels" element={<Channelpage/>} />
         <Route path="/contact" element={<Contact/>} />
         <Route path="/movies" element={<Iptvmovie/>} />
-        <Route path="/hotel-tv" element={<Iptvhotel/>} />
+        <Route path="/room-service" element={<Iptvhotel/>} />
         <Route path="/hotel-info" element={<Hotelinfo/>} />
-        <Route path="/room-service" element={<Roomservice/>} />
+        <Route path="/menu" element={<Roomservice/>} />
         <Route path="/guest-info" element={<Guestinfo/>} />
 
 

@@ -19,7 +19,7 @@ const Splashscreen = () => {
     <div className="splash-screen">
       <div className="splash-content">
         <img src={logo} alt="IPTV Logo" className="splash-logo" />
-        <h1 className="splash-title">Wlcome to IPTV HUB</h1>
+        <h1 className="splash-title">Welcome to IPTV HUB</h1>
         <div className="pulse-ring"></div>
       </div>
     </div>
