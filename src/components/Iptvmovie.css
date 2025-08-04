@@ -176,3 +176,24 @@ body, html {
   transform: scale(1.05);
   filter: brightness(1.2);
 }
+
+
+.back-button {
+  background-color: transparent;
+  /* border: 2px solid #91a0a5; */
+  color: #00aced;
+  padding: 6px 16px;
+  /* margin-right: 880px; */
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: transparent;
+  color: white;
+}
+
+
+

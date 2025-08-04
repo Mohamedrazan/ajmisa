@@ -1,6 +1,6 @@
 import React from 'react';
 import './Iptvmovie.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { SiGoogleplay, SiAppstore } from 'react-icons/si';
 import paypal from '../assets/paypal.png';
@@ -22,8 +22,6 @@ import movie12 from '../assets/movie12.jpg';
 import movie13 from '../assets/movie13.jpg';
 import movie14 from '../assets/movie14.jpg';
 
-
-
 const navLinks = [
   { label: "Products", path: "/products" },
   { label: "Our Services", path: "/services" },
@@ -34,30 +32,35 @@ const navLinks = [
 
 const movieData = [
   { id: 1, title: "The Grand Adventure", image: movie1 },
-  { id: 2, title: "Ocean's Whisper", image:movie2 },
-  { id: 3, title: "Silent Code", image:movie3 },
-  { id: 4, title: "Future Frontline", image:movie4 },
-  { id: 5, title: "Neon Skies", image:movie5},
-  { id: 6, title: "Empire's Echo", image:movie6 },
-  { id: 7, title: "Future Frontline", image:movie7 },
-
+  { id: 2, title: "Ocean's Whisper", image: movie2 },
+  { id: 3, title: "Silent Code", image: movie3 },
+  { id: 4, title: "Future Frontline", image: movie4 },
+  { id: 5, title: "Neon Skies", image: movie5 },
+  { id: 6, title: "Empire's Echo", image: movie6 },
+  { id: 7, title: "Future Frontline", image: movie7 },
   { id: 8, title: "The Grand Adventure", image: movie8 },
-  { id: 9, title: "Ocean's Whisper", image:movie9 },
-  { id: 10, title: "Silent Code", image:movie10 },
-  { id: 11, title: "Future Frontline", image:movie11 },
-  { id: 12, title: "Neon Skies", image:movie12},
-  { id: 13, title: "Empire's Echo", image:movie13 },
-  { id: 14, title: "Future Frontline", image:movie14 },
-
+  { id: 9, title: "Ocean's Whisper", image: movie9 },
+  { id: 10, title: "Silent Code", image: movie10 },
+  { id: 11, title: "Future Frontline", image: movie11 },
+  { id: 12, title: "Neon Skies", image: movie12 },
+  { id: 13, title: "Empire's Echo", image: movie13 },
+  { id: 14, title: "Future Frontline", image: movie14 },
 ];
 
 const Iptvmovie = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="movie-page">
       {/* Navbar */}
       <div className="navbar">
-        <div className="logo-placeholder">
-          <img src="./macvisionmainlogo.png" alt="Logo" className="logo-image" />
+        <div className="nav-left">
+          <button className="back-button" onClick={() => navigate('/')}>
+            ← 
+          </button>
+          <div className="logo-placeholder">
+            <img src="./macvisionmainlogo.png" alt="Logo" className="logo-image" />
+          </div>
         </div>
         <div className="nav-links">
           {navLinks.map((link, i) => (
@@ -67,6 +70,7 @@ const Iptvmovie = () => {
           ))}
         </div>
       </div>
+
 
       {/* Hero Section */}
       <section className="hero">

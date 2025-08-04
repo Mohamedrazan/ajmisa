@@ -57,8 +57,8 @@ const Footer = () => {
                         <br /><br />
                         <address>
                             P.O Box 40637,<br />
-                            Markaz Hail, Hail Street
-                            Jeddah 21511, Saudi Arabia<br />
+                            Markaz Hail,Hail Street
+                            Jeddah 21511,Saudi Arabia<br />
                             Tel: +966 553011362<br />
                             Email: www.ajmi@ajmisa.com<br />
                             Hours: Mon-Sat 9am-6pm, friday Closed

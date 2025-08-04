@@ -8,7 +8,7 @@ const Iptvsection = () => {
       {/* Hero Section */}
       <div className="iptv-hero">
         <div className="iptv-image">
-          <img src="./tvwatch1.jpg" alt="Family watching IPTV" />
+          <img src="./maintvwatch.jpg" alt="Family watching IPTV" />
         </div>
         <div className="iptv-content">
           <h5>Say Goodbye to IPTV set-top Boxes</h5>
@@ -19,10 +19,10 @@ const Iptvsection = () => {
             <li><FaCheckCircle className="icon-purple" /> Android Smart TVs</li>
             <li><FaCheckCircle className="icon-purple" /> LG WebOS</li>
             <li><FaCheckCircle className="icon-purple" /> Samsung Tizen</li>
-            <li><FaCheckCircle className="icon-purple" /> </li>
-            <li><FaCheckCircle className="icon-purple" /> Auto Channel & Content Updates</li>
+            <li><FaCheckCircle className="icon-purple" /> Smart OS and more </li>
+            {/* <li><FaCheckCircle className="icon-purple" /> Auto Channel & Content Updates</li>
             <li><FaCheckCircle className="icon-purple" /> Compatible with All Devices</li>
-            <li><FaCheckCircle className="icon-purple" /> 30 Days Risk-Free Guarantee</li>
+            <li><FaCheckCircle className="icon-purple" /> 30 Days Risk-Free Guarantee</li> */}
           </ul>
 
           <button className="iptv-button">Get My IPTV Access Now</button>

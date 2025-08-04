@@ -22,6 +22,7 @@
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(26, 26, 26, 0.25);
   animation: slideInLeft 1s ease-out;
+  margin-right: 160px;
 }
 
 .iptv-content h5 {

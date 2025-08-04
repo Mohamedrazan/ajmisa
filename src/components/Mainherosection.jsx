@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Mainherosection.css";
 
@@ -7,11 +7,11 @@ const navLinks = [
   { label: "Our Services", path: "/services" },
   { label: "Our Client", path: "/client" },
   { label: "Certificates", path: "/certificates" },
-  { label: "Contact Us", path: "/contact" }
+  { label: "Contact Us", path: "/contact" },
 ];
 
 const icons = [
-  { name: "Hotel TV ", route: "/tv-channels", icon: "./channel.png" },
+  { name: "Hotel TV", route: "/tv-channels", icon: "./channel.png" },
   { name: "VoD", route: "/movies", icon: "./movies.png" },
   { name: "Room Service", route: "/room-service", icon: "./roomservice1.png" },
   { name: "Hotel Info", route: "/hotel-info", icon: "./info.png" },
@@ -20,15 +20,18 @@ const icons = [
 ];
 
 export default function Mainherosection() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="dashboard">
       <div className="navbar">
-        <div className="logo-placeholder">
-          <img src="./macvisionmainlogo.png" alt="Logo" className="logo-image" />
+        <img src="./macvisionmainlogo.png" alt="Logo" className="logo-image" />
+        <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+          ☰
         </div>
-        <div className="nav-links">
+        <div className={`nav-links ${menuOpen ? "open" : ""}`}>
           {navLinks.map((link, i) => (
-            <Link key={i} to={link.path} className="nav-link">
+            <Link key={i} to={link.path} className="nav-link" onClick={() => setMenuOpen(false)}>
               {link.label}
             </Link>
           ))}
