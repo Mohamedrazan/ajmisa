@@ -10,8 +10,9 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background: linear-gradient(135deg, #0f0f0f, #2c2c2c); /* modern black gradient */
-  color: white;
+  /* background: linear-gradient(135deg, #0f0f0f, #2c2c2c); modern black gradient */
+  background-color: #f7f4fb;
+  color: black;
   padding: 50px 20px;
   gap: 30px;
 }
@@ -23,6 +24,8 @@ body {
   border-radius: 10px;
   padding: 20px;
   background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+
 }
 
 .feature-box img {
@@ -32,13 +35,12 @@ body {
 
 .feature-box:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 
 /* SUBSCRIPTION SECTION */
 .subscription-section {
-  background: #fff;
+  background: #f7f4fb;
   text-align: center;
   padding: 60px 20px;
   color: #333;
@@ -169,7 +171,6 @@ body {
 
 /* BOTTOM FOOTER */
 .footer-bottom {
-  /* border-top: 1px solid rgba(255, 255, 255, 0.2); */
   margin-top: 30px;
   padding-top: 20px;
   display: flex;

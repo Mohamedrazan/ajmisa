@@ -20,6 +20,7 @@ import Guestinfo from './components/Guestinfo';
 import Iptvpromo from './components/Iptvpromo';
 import Review from './components/Review';
 import ContactPromo from './components/Contactpromo';
+import IPTVDetails from './components/IPTVDetails';
 // import Herosection from './components/Herosection';
 
 function HomePage() {
@@ -29,6 +30,8 @@ function HomePage() {
       {/* <Herosection/> */}
       {/* <Navbar /> */}
       <Mainherosection/>
+             <IPTVDetails/>
+
       <br /><br />
       <Iptvsection />
        <ContactPromo/>
