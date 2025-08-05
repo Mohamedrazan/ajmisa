@@ -27,12 +27,12 @@ const Footer = () => {
                         title: '24/7 Support',
                         desc: 'Our team is here for you anytime, anywhere.'
                     },
-                     {
+                    {
                         img: './icon1.png',
                         title: 'Worldwide Delivery',
                         desc: 'We ship to 195+ countries, all regions.'
                     },
-                     {
+                    {
                         img: './icon2.png',
                         title: 'Express Shipping',
                         desc: 'Fast, reliable delivery to global destinations.'
@@ -76,22 +76,32 @@ const Footer = () => {
                     </div>
 
                     <div className="footer-links">
-                        <div className="link-group">
-                            <h4>Quick Menu</h4>
+                      
+                        {/* <div className="link-group">
+                            <h4>Hotel Services</h4>
                             <ul>
-                                <li>How it works</li>
-                                <li>Refund Policy</li>
-                                <li>New Products</li>
+                                <li>Room Service Integration</li>
+                                <li>Hotel Information</li>
+                                <li>Guest Messaging</li>
+                                <li>Service Requests</li>
+                            </ul>
+                        </div> */}
+                        <div className="link-group">
+                            <h4>Company</h4>
+                            <ul>
                                 <li>About Us</li>
+                                <li>Our Partners</li>
+                                <li>Careers</li>
+                                <li>Contact Support</li>
                             </ul>
                         </div>
                         <div className="link-group">
-                            <h4>Customer Support</h4>
+                            <h4>Support</h4>
                             <ul>
-                                <li>My Account</li>
-                                <li>Track Order</li>
-                                <li>Returns/Exchange</li>
+                                <li>Help Center</li>
+                                <li>Installation Guide</li>
                                 <li>FAQs</li>
+                                <li>Privacy Policy</li>
                             </ul>
                         </div>
                     </div>
