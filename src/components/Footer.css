@@ -108,7 +108,7 @@ body {
 .footer-left h2 {
   font-size: 32px;
   margin-bottom: 20px;
-  color: #c0c0c0; /* Modern heading */
+  color: #c0c0c0;
 }
 
 .footer-left address {
@@ -117,7 +117,7 @@ body {
 }
 
 .live {
-  color: #3db9c6; /* Soft cyan */
+  color: #3db9c6; 
 }
 
 .tv {
@@ -212,12 +212,9 @@ body {
   height: 28px;
   margin-left: 14px;
   transition: filter 0.3s;
-  filter: grayscale(100%);
 }
 
-.payment-icons img:hover {
-  filter: none;
-}
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {

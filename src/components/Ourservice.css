@@ -1,0 +1,116 @@
+/* OurServices.css - Black Theme with Animation */
+
+.services-wrapper {
+  /* background-color: #000; */
+  background-image: url('../../public//background1.png');
+  color: #fff;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 70vh;
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.services-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: #333;
+  animation: slideDown 0.8s ease;
+}
+
+.services-header p {
+  font-size: 1.2rem;
+  color: #aaa;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  animation: fadeInUp 1s ease;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 0 10px;
+}
+
+.service-card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 30px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.15);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: #00aced;
+  margin-bottom: 15px;
+  animation: rotateIn 1s ease;
+}
+
+.service-title {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.service-description {
+  font-size: 1rem;
+  color: #bbb;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotate(-180deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .services-header h1 {
+    font-size: 2rem;
+  }
+
+  .services-header p {
+    font-size: 1rem;
+  }
+}

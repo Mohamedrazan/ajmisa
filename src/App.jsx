@@ -21,6 +21,9 @@ import Iptvpromo from './components/Iptvpromo';
 import Review from './components/Review';
 import ContactPromo from './components/Contactpromo';
 import IPTVDetails from './components/IPTVDetails';
+import Ourclient from './components/Ourclient';
+import OurServices from './components/Ourservice';
+import Product from './components/Product';
 // import Herosection from './components/Herosection';
 
 function HomePage() {
@@ -68,6 +71,12 @@ function App() {
         <Route path="/hotel-info" element={<Hotelinfo/>} />
         <Route path="/menu" element={<Roomservice/>} />
         <Route path="/guest-info" element={<Guestinfo/>} />
+        <Route path="/client" element={<Ourclient/>} />
+        <Route path="/services" element={<OurServices/>} />
+        <Route path="/products" element={<Product/>} />
+
+
+
 
 
 
