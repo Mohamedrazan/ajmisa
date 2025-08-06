@@ -9,11 +9,14 @@ import { SiGoogleplay, SiAppstore } from 'react-icons/si';
 
 
 import tvIcon from '../../public/tvicon.png';
-// import stbIcon from '../assets/stb.png';
-// import middlewareIcon from '../../public/middleware.png';
-// import remoteIcon from '../../public/remotecntrl.png';
-// import mobileIcon from '../../public/compapp.png';
-// import appIcon from '../../public/customapp.png'
+import stbIcon from '../../public/setofbox.png';
+import middlewareIcon from '../../public/middleware.png';
+import remoteIcon from '../../public/remotecntrl.png';
+import mobileIcon from '../../public/compapp.png';
+import appIcon from '../../public/customapp.png'
+import interactiveIcon from '../../public/interactive.png'
+import videoIcon from '../../public/videolibrary.png'
+
 
 
 const navLinks = [
@@ -32,30 +35,37 @@ const products = [
   },
   {
     title: 'IPTV Set-Top Box',
+    icon:stbIcon,
     description: 'Compact and powerful STBs supporting 4K streaming, remote updates, and hotel-specific features.',
   },
   {
     title: 'Middleware Platform',
+    icon:middlewareIcon,
     description: 'Centralized IPTV middleware to manage content, analytics, and remote configurations.',
   },
   {
     title: 'RF/Wi-Fi Remote Control',
+    icon:remoteIcon,
     description: 'Modern remotes designed for hotels, easy-to-clean and compatible with IPTV devices.',
   },
   {
     title: 'Mobile Companion App',
+    icon:mobileIcon,
     description: 'Guests can stream, order room service, or explore hotel info through this mobile app.',
   },
   {
     title: 'Custom IPTV App',
+    icon:appIcon,
     description: 'Branded Android/iOS app for guest control of room services, streaming, and more.',
   },
   {
     title: 'Interactive Guest Portal',
+    icon:interactiveIcon,
     description: 'A user-friendly interface on TV allowing guests to access hotel services, check bills, order food, and request housekeeping.',
   },
   {
     title: 'Video-on-Demand Library',
+    icon:videoIcon,
     description: 'Premium movie and entertainment library with multi-language options, curated for hotels with licensing support.',
   }
 ];
