@@ -1,19 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './IPTVDetails.css';
 
 const IPTVDetails = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in ms
+      once: true, // Run animation only once
+      easing: 'ease-in-out', // Smooth effect
+    });
+  }, []);
+
   return (
-    
     <div className="iptv-details-wrapper">
       {/* Header Section */}
-      <header className="iptv-details-header">
-        <h1>IPTV Hospitality Solution</h1>
+      <header className="iptv-details-header" data-aos="fade-up">
+        <h1>IPTV Hospitality Solutions</h1>
         <p>Smart In-Room Technology for Modern Hotels</p>
       </header>
 
       {/* Info Boxes */}
       <div className="iptv-grid">
-        <section className="iptv-box fade-in">
+        <section className="iptv-box" data-aos="fade-up">
           <img src="./maintvwatch2.jpg" alt="What is IPTV" className="iptv-card-image" />
           <h2>What is IPTV Hospitality?</h2>
           <p>
@@ -23,8 +32,8 @@ const IPTVDetails = () => {
           </p>
         </section>
 
-        <section className="iptv-box slide-in-left">
-          <img src="./iptv4.jpg" alt="Top Features" className="iptv-card-image" />
+        <section className="iptv-box" data-aos="fade-right">
+          <img src="./11.jpg" alt="Top Features" className="iptv-card-image" />
           <h2>Top Features</h2>
           <ul>
             <li>Full HD & 4K Streaming</li>
@@ -35,8 +44,8 @@ const IPTVDetails = () => {
           </ul>
         </section>
 
-        <section className="iptv-box slide-in-right">
-          <img src="./hotelbenefits.jpg" alt="Benefits for Hotels" className="iptv-card-image" />
+        <section className="iptv-box" data-aos="fade-left">
+          <img src="./22.webp" alt="Benefits for Hotels" className="iptv-card-image" />
           <h2>Benefits for Hotels</h2>
           <p>
             Maximize guest satisfaction and increase revenue by promoting services directly through
@@ -45,8 +54,8 @@ const IPTVDetails = () => {
           </p>
         </section>
 
-        <section className="iptv-box fade-in">
-          <img src="./devicecomp.jpg" alt="Device Compatibility" className="iptv-card-image" />
+        <section className="iptv-box" data-aos="zoom-in">
+          <img src="./33.png" alt="Device Compatibility" className="iptv-card-image" />
           <h2>Device Compatibility</h2>
           <p>
             Our IPTV system is compatible with all major smart TV platforms: Android TV, LG webOS,

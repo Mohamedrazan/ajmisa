@@ -24,16 +24,20 @@ import IPTVDetails from './components/IPTVDetails';
 import Ourclient from './components/Ourclient';
 import OurServices from './components/Ourservice';
 import Product from './components/Product';
+import Solutions from './components/Solutions';
+import HowItWorksPage from './components/HowItWorksPage';
 // import Herosection from './components/Herosection';
 
 function HomePage() {
   return (
     <>
-      <Splashscreen />
+      {/* <Splashscreen /> */}
       {/* <Herosection/> */}
       {/* <Navbar /> */}
       <Mainherosection/>
-             <IPTVDetails/>
+      <IPTVDetails/>
+      <Solutions/>
+      <HowItWorksPage/>
 
       <br /><br />
       <Iptvsection />

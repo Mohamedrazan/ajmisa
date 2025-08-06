@@ -25,6 +25,12 @@ body, html {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  opacity: 0;
+}
+
+.animate-navbar {
+  animation: fadeDown 0.8s ease forwards;
+  animation-delay: 0.2s;
 }
 
 .logo-image {
@@ -71,7 +77,14 @@ body, html {
 
 .hero-text {
   max-width: 700px;
+  opacity: 0;
 }
+
+.animate-hero {
+  animation: fadeUp 0.9s ease forwards;
+  animation-delay: 0.8s;
+}
+
 .hero-text h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -109,7 +122,8 @@ body, html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease, background 0.3s ease;
+  opacity: 0;
+  transform: scale(0.8);
 }
 
 .icon-box:hover {
@@ -129,32 +143,35 @@ body, html {
   font-weight: 700; 
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .hero-text h2 {
-    font-size: 2rem;
-  }
+/* Sequential Icon Animations */
+.icon-animate-1 { animation: zoomIn 0.6s ease forwards; animation-delay: 1.4s; }
+.icon-animate-2 { animation: zoomIn 0.6s ease forwards; animation-delay: 1.55s; }
+.icon-animate-3 { animation: zoomIn 0.6s ease forwards; animation-delay: 1.7s; }
+.icon-animate-4 { animation: zoomIn 0.6s ease forwards; animation-delay: 1.85s; }
+.icon-animate-5 { animation: zoomIn 0.6s ease forwards; animation-delay: 2s; }
+.icon-animate-6 { animation: zoomIn 0.6s ease forwards; animation-delay: 2.15s; }
 
-  .icon-box {
-    width: 120px;
-    height: 120px;
-  }
-
-  .icon-image {
-    width: 50px;
-    height: 50px;
-  }
-
-  .icon-label {
-    font-size: 0.85rem;
-  }
+/* Animations */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
-
   .nav-links {
     display: none;
     flex-direction: column;
@@ -167,66 +184,32 @@ body, html {
     border-radius: 8px;
     z-index: 1000;
   }
-
   .nav-links.open {
     display: flex;
   }
-
   .hero-section {
     height: 280px;
   }
-
   .hero-overlay {
     padding: 1rem;
     justify-content: center;
     text-align: center;
   }
-
   .hero-text h2 {
     font-size: 1.5rem;
   }
-
   .hero-text .desc {
     font-size: 0.9rem;
   }
-
-  .icon-row {
-    justify-content: center;
-    gap: 1rem;
-  }
-
   .icon-box {
     width: 42%;
     height: 100px;
   }
-
   .icon-image {
     width: 40px;
     height: 40px;
   }
-
   .icon-label {
     font-size: 0.75rem;
-    font-weight: 600;
-  }
-}
-
-@media (max-width: 480px) {
-  .icon-box {
-    width: 45%;
-    height: 90px;
-  }
-
-  .icon-image {
-    width: 30px;
-    height: 30px;
-  }
-
-  .icon-label {
-    font-size: 0.7rem;
-  }
-
-  .hero-text .desc {
-    font-size: 0.85rem;
   }
 }

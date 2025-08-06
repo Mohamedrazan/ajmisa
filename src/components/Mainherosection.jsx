@@ -24,23 +24,30 @@ export default function Mainherosection() {
 
   return (
     <div className="dashboard">
-      <div className="navbar">
+      {/* Navbar */}
+      <div className="navbar animate-navbar">
         <img src="./macvisionmainlogo.png" alt="Logo" className="logo-image" />
         <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
           ☰
         </div>
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
           {navLinks.map((link, i) => (
-            <Link key={i} to={link.path} className="nav-link" onClick={() => setMenuOpen(false)}>
+            <Link
+              key={i}
+              to={link.path}
+              className="nav-link"
+              onClick={() => setMenuOpen(false)}
+            >
               {link.label}
             </Link>
           ))}
         </div>
       </div>
 
+      {/* Hero Section */}
       <div className="hero-section">
         <div className="hero-overlay">
-          <div className="hero-text">
+          <div className="hero-text animate-hero">
             <h2>IPTV Hospitality Solutions</h2>
             <p className="welcome">Smart In-Room Experience</p>
             <p className="desc">
@@ -52,9 +59,14 @@ export default function Mainherosection() {
         </div>
       </div>
 
+      {/* Icon Row */}
       <div className="icon-row">
         {icons.map((icon, index) => (
-          <Link to={icon.route} key={index} className="icon-box">
+          <Link
+            to={icon.route}
+            key={index}
+            className={`icon-box icon-animate-${index + 1}`}
+          >
             <img src={icon.icon} alt={icon.name} className="icon-image" />
             <span className="icon-label">{icon.name}</span>
           </Link>

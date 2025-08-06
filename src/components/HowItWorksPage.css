@@ -1,0 +1,105 @@
+.howitworks-wrapper {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f7f4fb;
+  color: #111;
+  padding: 4rem 2rem;
+}
+
+/* Animation states */
+.animate-hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Steps Section */
+.steps-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.step-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.step-icon {
+  font-size: 2.5rem;
+  color: #00aced;
+  margin-bottom: 1rem;
+}
+
+.step-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.step-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.arrow {
+  position: absolute;
+  right: -1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: #00aced;
+}
+
+/* How It Works Section */
+.how-section {
+  text-align: center;
+}
+
+.how-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.how-section p {
+  color: #555;
+  margin-bottom: 3rem;
+}
+
+.how-icons {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  font-size: 2.5rem;
+}
+
+.how-icon {
+  color: #00aced;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .steps-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .how-icons {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
