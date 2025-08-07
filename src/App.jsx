@@ -27,6 +27,9 @@ import Product from './components/Product';
 import Solutions from './components/Solutions';
 import HowItWorksPage from './components/HowItWorksPage';
 import FAQ from './components/FAQ';
+import FAQPage from './components/FAQPage';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsAndConditions from './components/TermsAndConditions';
 // import Herosection from './components/Herosection';
 
 function HomePage() {
@@ -79,11 +82,9 @@ function App() {
         <Route path="/guest-info" element={<Guestinfo/>} />
         <Route path="/client" element={<Ourclient/>} />
         <Route path="/services" element={<OurServices/>} />
-        <Route path="/products" element={<Product/>} />
-
-
-
-
+        <Route path="/faq" element={<FAQPage/>} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
+        <Route path="/terms-conditions" element={<TermsAndConditions/>} />
 
 
       </Routes>
