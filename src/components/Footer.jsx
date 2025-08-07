@@ -48,7 +48,7 @@ const Footer = () => {
             {/* SUBSCRIPTION SECTION */}
             <section className="subscription-section">
                 <div className="subscription">
-                    <h3>Get Qoute now</h3>
+                    <h3>Get Quote now</h3>
                     <p>Subscribe to receive exclusive offers, deals & latest updates.</p>
                     <div className="subscribe-form">
                         <input type="email" placeholder="Enter your email address" />
@@ -67,25 +67,15 @@ const Footer = () => {
                         <br /><br />
                         <address>
                             P.O Box 40637,<br />
-                            Markaz Hail,Hail Street
-                            Jeddah 21511,Saudi Arabia<br />
+                            Markaz Hail, Hail Street<br />
+                            Jeddah 21511, Saudi Arabia<br />
                             Tel: +966 553011362<br />
                             Email: www.ajmi@ajmisa.com<br />
-                            Hours: Mon-Sat 9am-6pm, friday Closed
+                            Hours: Mon-Sat 9am-6pm, Friday Closed
                         </address>
                     </div>
 
                     <div className="footer-links">
-                      
-                        {/* <div className="link-group">
-                            <h4>Hotel Services</h4>
-                            <ul>
-                                <li>Room Service Integration</li>
-                                <li>Hotel Information</li>
-                                <li>Guest Messaging</li>
-                                <li>Service Requests</li>
-                            </ul>
-                        </div> */}
                         <div className="link-group">
                             <h4>Company</h4>
                             <ul>
@@ -108,7 +98,7 @@ const Footer = () => {
 
                     <div className="footer-right">
                         <h4>Contact</h4>
-                        <p>Call Us On : </p>
+                        <p>Call Us On:</p>
                         <p className="hotline">+966 553011362</p>
                         <p>Follow Us</p>
                         <div className="social-icons">
@@ -128,8 +118,8 @@ const Footer = () => {
                     <p>© 2025 IPTV Live Today. All Rights Reserved.</p>
                     <div className="payment-icons">
                         <img src={paypal} alt="PayPal" />
-                        <img src={visa} alt="visa" />
-                        <img src={mastercard} alt="mastercard" />
+                        <img src={visa} alt="Visa" />
+                        <img src={mastercard} alt="MasterCard" />
                     </div>
                 </div>
             </footer>

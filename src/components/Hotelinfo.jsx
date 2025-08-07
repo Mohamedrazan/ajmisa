@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
@@ -17,23 +17,30 @@ const navLinks = [
   { label: "Contact Us", path: "/contact" }
 ];
 
-
-const Hotelinfo = () => {
+  export default function Hotelinfo() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
    <>
    {/* Navbar */}
-      <div className="navbar">
-        <div className="logo-placeholder">
-          <img src="./macvisionmainlogo.png" alt="Logo" className="logo-image" />
-        </div>
-        <div className="nav-links">
-          {navLinks.map((link, i) => (
-            <Link key={i} to={link.path} className="nav-link">
-              {link.label}
-            </Link>
-          ))}
-        </div>
-      </div>
+         <div className="navbar animate-navbar">
+           <img src="./macvisionmainlogo.png" alt="Logo" className="logo-image" />
+           <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+             ☰
+           </div>
+           <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+             {navLinks.map((link, i) => (
+               <Link
+                 key={i}
+                 to={link.path}
+                 className="nav-link"
+                 onClick={() => setMenuOpen(false)}
+               >
+                 {link.label}
+               </Link>
+             ))}
+           </div>
+         </div>
+   
 
     <div className="hotel-info-container">
       <motion.div
@@ -175,4 +182,3 @@ const Hotelinfo = () => {
   );
 };
 
-export default Hotelinfo;

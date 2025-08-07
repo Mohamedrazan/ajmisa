@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Contact.css';
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
@@ -14,23 +14,29 @@ const navLinks = [
   { label: "Certificates", path: "/certificates" },
   { label: "Contact Us", path: "/contact" }
 ];
-
-const Contact = () => {
+  export default function Contact() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <>
       {/* Navbar */}
-      <div className="navbar">
-        <div className="logo-placeholder">
-          <img src="./macvisionmainlogo.png" alt="Logo" className="logo-image" />
-        </div>
-        <div className="nav-links">
-          {navLinks.map((link, i) => (
-            <Link key={i} to={link.path} className="nav-link">
-              {link.label}
-            </Link>
-          ))}
-        </div>
-      </div>
+            <div className="navbar animate-navbar">
+              <img src="./macvisionmainlogo.png" alt="Logo" className="logo-image" />
+              <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+                ☰
+              </div>
+              <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+                {navLinks.map((link, i) => (
+                  <Link
+                    key={i}
+                    to={link.path}
+                    className="nav-link"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
 
       {/* Contact Section */}
       <div className="contact-container">
@@ -136,4 +142,3 @@ const Contact = () => {
   );
 };
 
-export default Contact;

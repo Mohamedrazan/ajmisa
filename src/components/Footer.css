@@ -47,7 +47,7 @@ body {
 .subscription h3 {
   font-size: 28px;
   margin-bottom: 10px;
-  color: #c0c0c0; /* Modern silver heading */
+  color: #c0c0c0;
 }
 
 .subscribe-form {
@@ -116,14 +116,6 @@ body {
   font-style: normal;
 }
 
-.live {
-  color: #3db9c6; 
-}
-
-.tv {
-  color: white;
-}
-
 .footer-links {
   display: flex;
   flex-direction: column;
@@ -148,7 +140,7 @@ body {
 }
 
 .link-group ul li:hover {
-  color: #1fa2ff; /* Modern hover */
+  color: #1fa2ff;
   transform: translateX(6px);
 }
 
@@ -213,8 +205,6 @@ body {
   margin-left: 14px;
   transition: filter 0.3s;
 }
-
-
 
 /* RESPONSIVE */
 @media (max-width: 768px) {

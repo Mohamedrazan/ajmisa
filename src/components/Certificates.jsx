@@ -5,12 +5,12 @@ import { SiGoogleplay, SiAppstore } from 'react-icons/si';
 import paypal from '../assets/paypal.png';
 import visa from '../assets/visa.png';
 import mastercard from '../assets/mastercard.png';
-
-import './Certificates.css';
 import cert1 from '../assets/certificate_1.jpg';
 import cert2 from '../assets/certificate_2.jpg';
 import cert3 from '../assets/certificate_3.jpg';
 import cert4 from '../assets/certificate_4.jpg';
+
+import './Certificates.css';
 
 const navLinks = [
   { label: "Products", path: "/products" },
@@ -21,6 +21,7 @@ const navLinks = [
 ];
 
 const Certificates = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
   const [lightboxImage, setLightboxImage] = useState(null);
 
   const openLightbox = (imgSrc) => setLightboxImage(imgSrc);
@@ -36,13 +37,19 @@ const Certificates = () => {
   return (
     <>
       {/* Navbar */}
-      <div className="navbar">
-        <div className="logo-placeholder">
-          <img src="./macvisionmainlogo.png" alt="Logo" className="logo-image" />
+      <div className="navbar animate-navbar">
+        <img src="./macvisionmainlogo.png" alt="Logo" className="logo-image" />
+        <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+          ☰
         </div>
-        <div className="nav-links">
+        <div className={`nav-links ${menuOpen ? "open" : ""}`}>
           {navLinks.map((link, i) => (
-            <Link key={i} to={link.path} className="nav-link">
+            <Link
+              key={i}
+              to={link.path}
+              className="nav-link"
+              onClick={() => setMenuOpen(false)}
+            >
               {link.label}
             </Link>
           ))}

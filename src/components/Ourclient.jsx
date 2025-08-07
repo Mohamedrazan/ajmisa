@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Ourclient.css';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -66,23 +66,29 @@ const navLinks = [
     { label: "Certificates", path: "/certificates" },
     { label: "Contact Us", path: "/contact" }
 ];
-
-const Ourclient = () => {
+  export default function Ourclient() {
+  const [menuOpen, setMenuOpen] = useState(false);
     return (
         <>
-            {/* Navbar */}
-            <div className="navbar">
-                <div className="logo-placeholder">
+             {/* Navbar */}
+                  <div className="navbar animate-navbar">
                     <img src="./macvisionmainlogo.png" alt="Logo" className="logo-image" />
-                </div>
-                <div className="nav-links">
-                    {navLinks.map((link, i) => (
-                        <Link key={i} to={link.path} className="nav-link">
-                            {link.label}
+                    <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+                      ☰
+                    </div>
+                    <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+                      {navLinks.map((link, i) => (
+                        <Link
+                          key={i}
+                          to={link.path}
+                          className="nav-link"
+                          onClick={() => setMenuOpen(false)}
+                        >
+                          {link.label}
                         </Link>
-                    ))}
-                </div>
-            </div>
+                      ))}
+                    </div>
+                  </div>
 
             {/* Clients Section with animation */}
             <motion.section
@@ -185,4 +191,3 @@ const Ourclient = () => {
     );
 };
 
-export default Ourclient;

@@ -7,7 +7,10 @@ const Iptvpromo = () => {
       <div className="macvision-iptv-box">
         <img src="./middleware2.jpg" alt="IPTV Promo" className="macvision-iptv-full-image" />
       </div>
+      
     </div>
+    
+
   );
 };
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { SiGoogleplay, SiAppstore } from 'react-icons/si';
@@ -81,22 +81,29 @@ const navLinks = [
 
 const Roomservice = () => {
     const [selectedItem, setSelectedItem] = useState(null);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     return (
         <>
             {/* Navbar */}
-            <div className="navbar">
-                <div className="logo-placeholder">
-                    <img src="./macvisionmainlogo.png" alt="Logo" className="logo-image" />
-                </div>
-                <div className="nav-links">
-                    {navLinks.map((link, i) => (
-                        <Link key={i} to={link.path} className="nav-link">
-                            {link.label}
-                        </Link>
-                    ))}
-                </div>
-            </div>
+                 <div className="navbar animate-navbar">
+                   <img src="./macvisionmainlogo.png" alt="Logo" className="logo-image" />
+                   <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+                     ☰
+                   </div>
+                   <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+                     {navLinks.map((link, i) => (
+                       <Link
+                         key={i}
+                         to={link.path}
+                         className="nav-link"
+                         onClick={() => setMenuOpen(false)}
+                       >
+                         {link.label}
+                       </Link>
+                     ))}
+                   </div>
+                 </div>
 
             <div className="room-service-container">
                 <motion.div

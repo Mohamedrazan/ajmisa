@@ -26,6 +26,7 @@ import OurServices from './components/Ourservice';
 import Product from './components/Product';
 import Solutions from './components/Solutions';
 import HowItWorksPage from './components/HowItWorksPage';
+import FAQ from './components/FAQ';
 // import Herosection from './components/Herosection';
 
 function HomePage() {
@@ -38,6 +39,7 @@ function HomePage() {
       <IPTVDetails/>
       <Solutions/>
       <HowItWorksPage/>
+      <FAQ/>
 
       <br /><br />
       <Iptvsection />

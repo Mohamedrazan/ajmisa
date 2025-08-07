@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Channelpage.css';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { SiGoogleplay, SiAppstore } from 'react-icons/si';
 
-// Payment icons (update paths as needed)
 import paypal from '../assets/paypal.png';
 import visa from '../assets/visa.png';
 import mastercard from '../assets/mastercard.png';
@@ -49,7 +48,9 @@ const navLinks = [
   { label: "Contact Us", path: "/contact" }
 ];
 
-const Channelpage = () => {
+export default function Channelpage() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const demoLogos = [
     logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10,
     logo11, logo12, logo13, logo14, logo15, logo16, logo17, logo18, logo19, logo20
@@ -60,13 +61,19 @@ const Channelpage = () => {
   return (
     <div className="channel-container">
       {/* Navbar */}
-      <div className="navbar">
-        <div className="logo-placeholder">
-          <img src="./macvisionmainlogo.png" alt="Logo" className="logo-image" />
+      <div className="navbar animate-navbar">
+        <img src="./macvisionmainlogo.png" alt="Logo" className="logo-image" />
+        <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+          ☰
         </div>
-        <div className="nav-links">
+        <div className={`nav-links ${menuOpen ? "open" : ""}`}>
           {navLinks.map((link, i) => (
-            <Link key={i} to={link.path} className="nav-link">
+            <Link
+              key={i}
+              to={link.path}
+              className="nav-link"
+              onClick={() => setMenuOpen(false)}
+            >
               {link.label}
             </Link>
           ))}
@@ -104,8 +111,8 @@ const Channelpage = () => {
           </div>
         </div>
       </div>
-      <br />
-      {/* Footer Section */}
+
+      {/* Footer */}
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-left">
@@ -115,11 +122,11 @@ const Channelpage = () => {
             <br /><br />
             <address>
               P.O Box 40637,<br />
-              Markaz Hail, Hail Street
+              Markaz Hail, Hail Street<br />
               Jeddah 21511, Saudi Arabia<br />
               Tel: +966 553011362<br />
               Email: www.ajmi@ajmisa.com<br />
-              Hours: Mon-Sat 9am-6pm, friday Closed
+              Hours: Mon-Sat 9am-6pm, Friday Closed
             </address>
           </div>
 
@@ -146,7 +153,7 @@ const Channelpage = () => {
 
           <div className="footer-right">
             <h4>Contact</h4>
-            <p>Call Us On : </p>
+            <p>Call Us On:</p>
             <p className="hotline">+966 553011362</p>
             <p>Follow Us</p>
             <div className="social-icons">
@@ -166,13 +173,11 @@ const Channelpage = () => {
           <p>© 2025 IPTV Live Today. All Rights Reserved.</p>
           <div className="payment-icons">
             <img src={paypal} alt="PayPal" />
-            <img src={visa} alt="visa" />
-            <img src={mastercard} alt="mastercard" />
+            <img src={visa} alt="Visa" />
+            <img src={mastercard} alt="MasterCard" />
           </div>
         </div>
       </footer>
     </div>
   );
-};
-
-export default Channelpage;
+}

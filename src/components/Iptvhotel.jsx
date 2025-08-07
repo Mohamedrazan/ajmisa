@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Iptvhotel.css';
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { SiGoogleplay, SiAppstore } from 'react-icons/si';
@@ -16,23 +16,29 @@ const navLinks = [
   { label: "Certificates", path: "/certificates" },
   { label: "Contact Us", path: "/contact" }
 ];
-
-const Iptvhotel = () => {
+  export default function Iptvhotel() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
   <>
-  {/* Navbar */}
-      <div className="navbar">
-        <div className="logo-placeholder">
+   {/* Navbar */}
+        <div className="navbar animate-navbar">
           <img src="./macvisionmainlogo.png" alt="Logo" className="logo-image" />
+          <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+            ☰
+          </div>
+          <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+            {navLinks.map((link, i) => (
+              <Link
+                key={i}
+                to={link.path}
+                className="nav-link"
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
         </div>
-        <div className="nav-links">
-          {navLinks.map((link, i) => (
-            <Link key={i} to={link.path} className="nav-link">
-              {link.label}
-            </Link>
-          ))}
-        </div>
-      </div>
 
     <div className="room-service-wrapper">
       <h1 className="page-heading">Room Service</h1>
@@ -190,4 +196,3 @@ const Iptvhotel = () => {
   );
 };
 
-export default Iptvhotel;

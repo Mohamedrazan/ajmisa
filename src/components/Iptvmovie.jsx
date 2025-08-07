@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Iptvmovie.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
@@ -49,28 +49,30 @@ const movieData = [
 
 const Iptvmovie = () => {
   const navigate = useNavigate();
+    const [menuOpen, setMenuOpen] = useState(false);
+  
 
   return (
     <div className="movie-page">
-      {/* Navbar */}
-      <div className="navbar">
-        <div className="nav-left">
-          <button className="back-button" onClick={() => navigate('/')}>
-            ← 
-          </button>
-          <div className="logo-placeholder">
+     {/* Navbar */}
+          <div className="navbar animate-navbar">
             <img src="./macvisionmainlogo.png" alt="Logo" className="logo-image" />
+            <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+              ☰
+            </div>
+            <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+              {navLinks.map((link, i) => (
+                <Link
+                  key={i}
+                  to={link.path}
+                  className="nav-link"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="nav-links">
-          {navLinks.map((link, i) => (
-            <Link key={i} to={link.path} className="nav-link">
-              {link.label}
-            </Link>
-          ))}
-        </div>
-      </div>
-
 
       {/* Hero Section */}
       <section className="hero">
