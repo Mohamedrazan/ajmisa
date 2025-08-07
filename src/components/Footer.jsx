@@ -31,7 +31,7 @@ const Footer = () => {
         {/* Middle Section */}
         <div className="footer-column">
           <div className="footer-links">
-            <div>
+            {/* <div>
               <h4>Quick Menu</h4>
               <ul>
                 <li>How it works</li>
@@ -39,11 +39,11 @@ const Footer = () => {
                 <li>New Products</li>
                 <li>About Us</li>
               </ul>
-            </div>
+            </div> */}
             <div>
               <h4>Customer Support</h4>
               <ul>
-                <li>Help Center</li>
+          <li><Link to="/help-center">Help Center</Link></li>
           <li><Link to="/terms-conditions">Terms & Conditions</Link></li>
           <li><Link to="/privacy-policy">Privacy Policy</Link></li>
           <li><Link to="/faq">FAQ</Link></li>

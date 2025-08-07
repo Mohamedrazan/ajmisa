@@ -1,10 +1,12 @@
+/* Footer Wrapper */
 .footer-wrapper {
   background-color: #000;
   color: #fff;
-  padding: 40px 20px;
+  padding: 60px 30px 30px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Footer Container */
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -14,64 +16,79 @@
   margin: auto;
 }
 
+/* Each Column */
 .footer-column {
-  flex: 1 1 300px;
+  flex: 1 1 250px;
+  min-width: 220px;
 }
 
+/* Logo */
 .footer-logo {
-  width: 180px;
+  width: 280px;
+  max-width: 100%;
+  max-height: 80px;
+  object-fit: contain;
   margin-bottom: 20px;
 }
 
+/* Address Text */
 .footer-address {
-  line-height: 1.7;
-  font-size: 20px;
+  line-height: 1.6;
+  font-size: 16px;
   color: #ccc;
-  font-weight: 700;
+  font-weight: 400;
 }
 
+/* Link Section Wrapper */
 .footer-links {
   display: flex;
-  gap: 50px;
-  color: inherit;
-  text-decoration: none;
-}
-.footer-links a:visited {
-  color: inherit; /* Prevents purple */
-  text-decoration: none;
+  flex-direction: column;
+  gap: 25px;
 }
 
+/* Link Section Titles */
 .footer-links h4 {
-  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
   color: #fff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
+/* UL Styles */
 .footer-links ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+/* List Items with Links */
 .footer-links ul li {
-  margin-bottom: 8px;
-  color: #bbb;
+  margin-bottom: 10px;
+}
+
+/* Anchor Links inside List Items */
+.footer-links ul li a {
   font-size: 14px;
-  cursor: pointer;
-  transition: color 0.3s;
-
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.footer-links ul li:hover {
-  color: cyan;
+/* Hover Effect for Links */
+.footer-links ul li a:hover {
+  color: #f5deb3; /* Vintage cream */
 }
 
+/* Hotline */
 .footer-hotline {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
-  color: cyan;
-  margin: 5px 0 15px;
+  color: #f5deb3;
+  margin: 10px 0 20px;
 }
 
+/* Social Icons */
 .footer-social {
   display: flex;
   gap: 15px;
@@ -79,34 +96,83 @@
   margin-bottom: 20px;
 }
 
+/* Icon Hover */
+.footer-social i,
+.footer-social svg {
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-social i:hover,
+.footer-social svg:hover {
+  color: #f5deb3;
+  transform: scale(1.1);
+}
+
+/* App Store / Play Store Links */
 .footer-apps a {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   color: #fff;
   margin-bottom: 10px;
   font-size: 14px;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .footer-apps a:hover {
-  color: cyan;
+  color: #f5deb3;
 }
 
+/* Footer Bottom Bar */
 .footer-bottom {
-  margin-top: 40px;
-  border-top: 1px solid #444;
+  margin-top: 50px;
   padding-top: 20px;
+  border-top: 1px solid #333;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  font-size: 14px;
+  font-size: 13px;
   color: #aaa;
 }
 
+/* Links in Bottom */
+.footer-bottom a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+  color: #f5deb3;
+}
+
+/* Payment Logos */
 .footer-payments img {
-  width: 50px;
-  margin-left: 10px;
+  width: 40px;
+  height: auto;
+  margin-left: 12px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.footer-payments img:hover {
+  filter: grayscale(0%);
+}
+
+/* Responsive - Tablet & Below */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
 }
