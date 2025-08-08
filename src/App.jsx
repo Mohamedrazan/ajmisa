@@ -33,6 +33,7 @@ import TermsAndConditions from './components/TermsAndConditions';
 import HelpCenter from './components/HelpCenter';
 import Help from './components/Help';
 import RequestDemo from './components/RequestDemo';
+import TestimonialPage from './components/TestimonialPage';
 // import Herosection from './components/Herosection';
 
 function HomePage() {
@@ -47,6 +48,7 @@ function HomePage() {
       <HowItWorksPage/>
       <FAQ/>
       <Help/>
+      <TestimonialPage/>
 
       <br /><br />
       <Iptvsection />
