@@ -55,7 +55,7 @@ function HomePage() {
        <ContactPromo/>
       <Review/>
       {/* <Iptvfeatures /> */}
-      <Iptvpromo/>
+      {/* <Iptvpromo/> */}
       <br />
       {/* <Iptvapp /> */}
       <Footer />
