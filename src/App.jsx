@@ -31,6 +31,8 @@ import FAQPage from './components/FAQPage';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsAndConditions from './components/TermsAndConditions';
 import HelpCenter from './components/HelpCenter';
+import Help from './components/Help';
+import RequestDemo from './components/RequestDemo';
 // import Herosection from './components/Herosection';
 
 function HomePage() {
@@ -44,6 +46,7 @@ function HomePage() {
       <Solutions/>
       <HowItWorksPage/>
       <FAQ/>
+      <Help/>
 
       <br /><br />
       <Iptvsection />
@@ -86,7 +89,8 @@ function App() {
         <Route path="/faq" element={<FAQPage/>} />
         <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
         <Route path="/terms-conditions" element={<TermsAndConditions/>} />
-                <Route path="/help-center" element={<HelpCenter/>} />
+        <Route path="/help-center" element={<HelpCenter/>} />
+        <Route path="/request-demo" element={<RequestDemo/>} />
 
 
 

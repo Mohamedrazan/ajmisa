@@ -1,0 +1,110 @@
+.iptv-container {
+  font-family: 'Segoe UI', sans-serif;
+  /* background: linear-gradient(to bottom, #ffffff, #f5deb3); */
+  background-color: #f7f4fb;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  text-align: center;
+}
+
+.custom-solution,
+.our-solutions {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.custom-solution h2,
+.our-solutions h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+}
+
+.custom-solution p,
+.our-solutions p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.demo-button,
+.subscribe-button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  background-color: #2d2da8;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+
+}
+
+.demo-button:visited,
+.subscribe-button:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.demo-button:hover,
+.subscribe-button:hover {
+  background-color: #1f1f80;
+}
+
+.subscribe-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.subscribe-container input {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 250px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #333;
+  font-size: 20px;
+  transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #2d2da8;
+}
+
+@media (max-width: 768px) {
+  .custom-solution h2,
+  .our-solutions h2 {
+    font-size: 1.6rem;
+  }
+
+  .demo-button,
+  .subscribe-button {
+    width: 100%;
+  }
+
+  .subscribe-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subscribe-container input {
+    width: 100%;
+    max-width: 300px;
+  }
+}
