@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Solutions.css";
 import { FaTv, FaPlayCircle, FaLaptop, FaChartLine, FaCloud, FaHeadset } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Solutions = () => {
   useEffect(() => {
@@ -10,12 +11,12 @@ const Solutions = () => {
   }, []);
 
   const solutions = [
-    { icon: <FaTv />, title: "IPTV", desc: "Deliver live TV channels and on-demand content" },
-    { icon: <FaPlayCircle />, title: "VOD", desc: "Provide users with access to an extensive video library" },
-    { icon: <FaLaptop />, title: "Digital Signage", desc: "Manage content across multiple displays" },
-    { icon: <FaChartLine />, title: "Analytics", desc: "Gain insights through in-depth data analysis" },
-    { icon: <FaCloud />, title: "Cloud/Hybrid", desc: "Deploy solutions in the cloud or hybrid environment" },
-    { icon: <FaHeadset />, title: "Support", desc: "Offer 24/7 technical assistance and customer care" },
+    { icon: <FaTv />, title: "IPTV", desc: "IPTV streams live and on-demand content over the internet, enhancing in-room entertainment for hotel guests.", link: "/iptv" },
+    { icon: <FaPlayCircle />, title: "VOD", desc: "VOD lets guests enjoy movies and shows anytime, providing flexible, personalized entertainment right in their rooms.", link: "/vod" },
+    { icon: <FaLaptop />, title: "Digital Signage", desc: "Digital signage transforms hotel spaces with dynamic screens that engage guests and streamline communication.", link: "/digital-signage" },
+    { icon: <FaChartLine />, title: "Analytics", desc: "Analytics provides insights from data to help hotels optimize guest experiences and improve business decisions.", link: "/analytics" },
+    { icon: <FaCloud />, title: "Cloud/Hybrid", desc: "Cloud/Hybrid solutions offer flexible, scalable IPTV deployment options tailored to hotel needs and infrastructure.", link: "/cloud-hybrid" },
+    { icon: <FaHeadset />, title: "Support", desc: "24/7 support ensures uninterrupted IPTV service with expert assistance whenever you need it.", link: "/support" },
   ];
 
   return (
@@ -32,6 +33,7 @@ const Solutions = () => {
             <div className="solution-icon">{sol.icon}</div>
             <h3>{sol.title}</h3>
             <p>{sol.desc}</p>
+            <Link to={sol.link} className="solution-btn">Learn More</Link>
           </div>
         ))}
       </div>

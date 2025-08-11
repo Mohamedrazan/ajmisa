@@ -30,6 +30,19 @@
   margin: auto;
 }
 
+/* Remove underline and keep color for links */
+.solution-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.solution-card-link:hover,
+.solution-card-link:focus,
+.solution-card-link:active {
+  text-decoration: none;
+}
+
 .solution-card {
   background: #fff;
   padding: 30px 20px;
@@ -75,3 +88,24 @@
     grid-template-columns: 1fr;
   }
 }
+
+.solution-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #d3d3d3; /* light grey */
+  color: #2d2da8;
+  border-radius: 6px;
+  text-decoration: none !important; /* force remove underline */
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.solution-btn:hover {
+  background-color: #b0b0b0;
+  color: #1e1e80;
+}
+
+

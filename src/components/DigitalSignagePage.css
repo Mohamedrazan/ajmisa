@@ -1,0 +1,192 @@
+.ds2-section {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2d2da8;
+    background: linear-gradient(135deg, #f7f4fb 55%, #ffffff 45%);
+
+  max-width: 900px;
+  margin: 60px auto 80px;
+  padding: 0 20px;
+}
+
+/* Hero Banner with overlay */
+.ds2-hero {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(45, 45, 168, 0.25);
+  margin-bottom: 45px;
+  cursor: pointer;
+  transition: transform 0.35s ease;
+}
+
+.ds2-hero img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.ds2-hero:hover {
+  transform: scale(1.03);
+}
+
+.ds2-hero-overlay {
+  position: absolute;
+  bottom: 25px;
+  left: 30px;
+  color: white;
+  text-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+.ds2-hero-overlay h1 {
+  font-size: 3.8rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.ds2-hero-overlay p {
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+/* Intro text */
+.ds2-intro {
+  font-size: 1.15rem;
+  color: #444;
+  margin-bottom: 50px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Features row */
+.ds2-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 60px;
+}
+
+.ds2-feature {
+  /* background: #f5deb3; */
+  background-color: white;
+  flex: 1 1 140px;
+  border-radius: 15px;
+  padding: 20px 15px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(45, 45, 168, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.ds2-feature:hover {
+  box-shadow: 0 12px 30px rgba(45, 45, 168, 0.3);
+  transform: translateY(-6px);
+}
+
+.ds2-icon {
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+  color: #2d2da8;
+}
+
+/* Feature titles and desc */
+.ds2-feature h3 {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: #2d2da8;
+}
+
+.ds2-feature p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* Detailed sections alternating backgrounds */
+.ds2-detail-section {
+  border-radius: 18px;
+  padding: 30px 25px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 30px rgba(45, 45, 168, 0.1);
+  color: #2d2da8;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.light-bg {
+  background: #f7f4fb;
+}
+
+.dark-bg {
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(45, 45, 168, 0.2);
+}
+
+.ds2-detail-section h2 {
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+/* Call to Action */
+.ds2-cta {
+  /* background: #f5deb3; */
+  background-color: white;
+  padding: 30px 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 38px rgba(45, 45, 168, 0.15);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #2d2da8;
+  user-select: none;
+}
+
+.ds2-btn {
+  margin-top: 20px;
+  background: #2d2da8;
+  color: white;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 14px;
+  font-size: 1.15rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.ds2-btn:hover {
+  background: #1e1e80;
+  transform: scale(1.07);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ds2-hero-overlay h1 {
+    font-size: 2.1rem;
+  }
+
+  .ds2-hero-overlay p {
+    font-size: 1rem;
+  }
+
+  .ds2-feature {
+    flex: 1 1 45%;
+  }
+
+  .ds2-detail-section {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ds2-hero-overlay h1 {
+    font-size: 1.7rem;
+  }
+
+  .ds2-feature {
+    flex: 1 1 100%;
+  }
+}

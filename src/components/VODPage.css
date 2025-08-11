@@ -1,0 +1,149 @@
+.vod-section {
+  background: linear-gradient(135deg, #f7f4fb 55%, #ffffff 45%);
+  padding: 80px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.vod-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.vod-image {
+  flex: 0 0 280px; /* fixed width for image */
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.vod-image:hover {
+  transform: scale(1.05);
+}
+
+.vod-img {
+  width: 100%;
+  height: 190px; /* smaller height */
+  object-fit: cover;
+  display: block;
+  border-radius: 14px;
+}
+
+.vod-text {
+  flex: 1;
+  min-width: 320px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.vod-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2d2da8;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.vod-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 5px;
+  background: #f5deb3;
+  margin-top: 10px;
+  border-radius: 3px;
+}
+
+.vod-intro {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.vod-description {
+  font-size: 1rem;
+  margin-bottom: 35px;
+  color: #444;
+}
+
+.vod-points {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.vod-point {
+  background: #fff;
+  padding: 20px 25px;
+  border-left: 6px solid #f5deb3;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(45, 45, 168, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vod-point:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 8px 30px rgba(45, 45, 168, 0.15);
+}
+
+.vod-point h3 {
+  margin-bottom: 8px;
+  color: #2d2da8;
+  font-size: 1.3rem;
+}
+
+.vod-point p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.vod-extra {
+  background: lightgray;
+  color: #2d2da8;
+  font-size: 1.1rem;
+  padding: 20px 25px;
+  border-radius: 14px;
+  line-height: 1.6;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.vod-casual {
+  font-style: italic;
+  font-size: 1.15rem;
+  color: #444;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .vod-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .vod-image {
+    order: 1;
+    width: 220px;
+    height: 150px;
+    margin-bottom: 25px;
+  }
+
+  .vod-img {
+    height: 150px;
+  }
+
+  .vod-text {
+    order: 2;
+    min-width: auto;
+  }
+
+  .vod-title {
+    font-size: 2.2rem;
+  }
+}

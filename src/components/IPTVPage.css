@@ -1,0 +1,149 @@
+.iptv-section {
+  background: linear-gradient(135deg, #f7f4fb 50%, #ffffff 50%);
+  padding: 80px 20px;
+}
+
+.iptv-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.iptv-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.iptv-title {
+  font-size: 2.5rem;
+  color: #2d2da8;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.iptv-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #f5deb3;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.iptv-subtitle {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.iptv-description {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.iptv-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.iptv-features li {
+  background: rgba(45, 45, 168, 0.05);
+  padding: 10px 15px;
+  border-left: 4px solid #2d2da8;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #000;
+  transition: background 0.3s ease;
+}
+
+.iptv-features li:hover {
+  background: rgba(45, 45, 168, 0.1);
+}
+
+.iptv-btn {
+  background: #2d2da8;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.iptv-btn:hover {
+  background: #1e1e80;
+  transform: scale(1.05);
+}
+
+.iptv-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.iptv-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Extra Info Section */
+.iptv-extra {
+  max-width: 1200px;
+  margin: 60px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.extra-box {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.extra-box h2 {
+  color: #2d2da8;
+  margin-bottom: 10px;
+}
+
+.extra-box p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.extra-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .iptv-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .iptv-text {
+    order: 2;
+  }
+
+  .iptv-image {
+    order: 1;
+  }
+}

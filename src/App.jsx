@@ -34,6 +34,12 @@ import HelpCenter from './components/HelpCenter';
 import Help from './components/Help';
 import RequestDemo from './components/RequestDemo';
 import TestimonialPage from './components/TestimonialPage';
+import IPTVPage from './components/IPTVPage';
+import VODPage from './components/VODPage';
+import DigitalSignagePage from './components/DigitalSignagePage';
+import AnalyticsPage from './components/AnalyticsPage';
+import CloudHybridPage from './components/CloudHybridPage';
+import SupportPage from './components/SupportPage';
 // import Herosection from './components/Herosection';
 
 function HomePage() {
@@ -93,6 +99,12 @@ function App() {
         <Route path="/terms-conditions" element={<TermsAndConditions/>} />
         <Route path="/help-center" element={<HelpCenter/>} />
         <Route path="/request-demo" element={<RequestDemo/>} />
+        <Route path="/iptv" element={<IPTVPage/>} />
+        <Route path="/vod" element={<VODPage/>} />
+        <Route path="/digital-signage" element={<DigitalSignagePage/>} />
+        <Route path="/analytics" element={<AnalyticsPage/>} />
+        <Route path="/cloud-hybrid" element={<CloudHybridPage/>} />
+        <Route path="/support" element={<SupportPage/>} />
 
 
 
