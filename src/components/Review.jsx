@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Review.css';
 
 const testimonials = [
@@ -33,11 +33,40 @@ const testimonials = [
 ];
 
 export default function Review() {
+    const sectionRef = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setIsVisible(true);
+                        observer.disconnect();
+                    }
+                });
+            },
+            { threshold: 0.2 }
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => {
+            if (sectionRef.current) observer.unobserve(sectionRef.current);
+        };
+    }, []);
+
     return (
-        <section className="testimonial-section">
+        <section
+            ref={sectionRef}
+            className={`testimonial-section ${isVisible ? 'animate' : ''}`}
+        >
             <div className="testimonial-header">
-                {/* <button className="client-btn">Clients</button> */}
-                <h2 style={{color:"black"}}>Thousands of satisfied <br />customers said:</h2>
+                <h2 style={{ color: "black" }}>
+                    Thousands of satisfied <br />customers said:
+                </h2>
             </div>
             <div className="testimonial-cards">
                 {testimonials.map((t, index) => (
@@ -61,10 +90,6 @@ export default function Review() {
                     </div>
                 ))}
             </div>
-            {/* <div className="nav-buttons">
-                <button>←</button>
-                <button>→</button>
-            </div> */}
         </section>
     );
 }

@@ -1,0 +1,77 @@
+.book-demo-wrapper {
+  background-color: #f7f4fb;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.book-demo-content {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.demo-title {
+  color: #2d2da8;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.demo-description {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.demo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.demo-form input,
+.demo-form textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.demo-form input:focus,
+.demo-form textarea:focus {
+  border-color: #2d2da8;
+  box-shadow: 0 0 6px rgba(45, 45, 168, 0.2);
+}
+
+.demo-btn {
+  background: #2d2da8;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.demo-btn:hover {
+  background: #f5deb3;
+  color: #2d2da8;
+}
+
+@media (max-width: 600px) {
+  .demo-title {
+    font-size: 1.5rem;
+  }
+}

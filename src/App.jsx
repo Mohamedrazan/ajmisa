@@ -10,7 +10,6 @@ import Splashscreen from './components/Splashscreen';
 import Certificates from './components/Certificates';
 import Mainherosection from './components/Mainherosection';
 import Channelpage from './components/Channelpage';
-import ContactUs from './components/Contact';
 import Contact from './components/Contact';
 import Iptvmovie from './components/Iptvmovie';
 import Iptvhotel from './components/Iptvhotel';
@@ -40,6 +39,9 @@ import DigitalSignagePage from './components/DigitalSignagePage';
 import AnalyticsPage from './components/AnalyticsPage';
 import CloudHybridPage from './components/CloudHybridPage';
 import SupportPage from './components/SupportPage';
+import GetIPTVAccess from './components/GetIPTVAccess';
+import ContactUs from './components/ContactUs';
+import BookDemo from './components/BookDemo';
 // import Herosection from './components/Herosection';
 
 function HomePage() {
@@ -59,6 +61,7 @@ function HomePage() {
       <br /><br />
       <Iptvsection />
        <ContactPromo/>
+        <BookDemo/>
       <Review/>
       {/* <Iptvfeatures /> */}
       {/* <Iptvpromo/> */}
@@ -105,6 +108,8 @@ function App() {
         <Route path="/analytics" element={<AnalyticsPage/>} />
         <Route path="/cloud-hybrid" element={<CloudHybridPage/>} />
         <Route path="/support" element={<SupportPage/>} />
+        <Route path="/get-iptv-access" element={<GetIPTVAccess />} />
+        <Route path="/contact-us" element={<ContactUs />} />
 
 
 

@@ -1,0 +1,107 @@
+.iptv-access-wrapper {
+  background-color: #f7f4fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  min-height: 100vh;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.iptv-access-wrapper.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.iptv-access-container {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: slideIn 1s ease forwards;
+}
+
+.access-title {
+  font-size: 2.2rem;
+  color: #2d2da8;
+  margin-bottom: 15px;
+}
+
+.access-description {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.access-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.feature-card {
+  /* background: #f5deb3; */
+  background-color: lightgrey;
+  color: #2d2da8;
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1 1 250px;
+  min-width: 220px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card h3 {
+  margin-bottom: 10px;
+}
+
+.access-btn {
+  background-color: #2d2da8;
+  color: white;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.access-btn:hover {
+  background-color: #1f1f85;
+  transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes slideIn {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .access-title {
+    font-size: 1.8rem;
+  }
+  .access-description {
+    font-size: 1rem;
+  }
+}

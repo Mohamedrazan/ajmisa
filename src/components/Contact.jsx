@@ -16,6 +16,8 @@ const navLinks = [
 ];
   export default function Contact() {
   const [menuOpen, setMenuOpen] = useState(false);
+      window.scrollTo(0, 0);
+
   return (
     <>
       {/* Navbar */}

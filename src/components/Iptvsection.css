@@ -16,34 +16,43 @@
 }
 
 .iptv-image img {
-  max-width: 700px;
+  max-width: 650px;
+  width: 100%;
   height: auto;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(26, 26, 26, 0.25);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Content Styling */
+.iptv-content {
+  max-width: 500px;
 }
 
 .iptv-content h5 {
   color: #2d2da8;
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   letter-spacing: 1px;
 }
 
 .iptv-content h2 {
-  font-size: 38px;
-  font-weight: bold;
+  font-size: 36px;
+  font-weight: 800;
   color: #1a1a1a;
   margin-bottom: 15px;
+  line-height: 1.3;
 }
 
 .subtitle {
-  font-size: 18px;
-  color: #444;
+  font-size: 17px;
+  color: #555;
   margin-bottom: 25px;
+  line-height: 1.5;
 }
 
-/* Features */
+/* Features List */
 .iptv-features {
   list-style: none;
   padding: 0;
@@ -53,31 +62,32 @@
 .iptv-features li {
   display: flex;
   align-items: center;
-  font-size: 17px;
+  font-size: 16px;
   margin-bottom: 12px;
   transition: transform 0.3s ease;
 }
-
+/* 
 .iptv-features li:hover {
   transform: translateX(8px);
-}
+} */
 
 .icon-purple {
   color: #2d2da8;
   margin-right: 10px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /* Button */
 .iptv-button {
   background-color: #2d2da8;
   color: white;
-  padding: 14px 30px;
+  padding: 14px 28px;
   font-size: 16px;
+  font-weight: 600;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
   box-shadow: 0 8px 20px rgba(45, 45, 168, 0.3);
 }
 
@@ -96,7 +106,7 @@
 }
 
 .box {
-  padding: 30px;
+  padding: 30px 25px;
   width: 300px;
   border-radius: 16px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -105,29 +115,30 @@
 }
 
 .box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }
 
 .white-box {
   border: 2px solid #f5deb3;
 }
 
-.cream-box {
-  background-color: #f5deb3;
-  color: #1a1a1a;
-  border: none;
-}
-
-.blue-box {
-  background-color: #2d2da8;
-  color: white;
-}
-
 .box-icon {
-  font-size: 40px;
-  margin-bottom: 18px;
+  font-size: 38px;
+  margin-bottom: 15px;
   color: inherit;
+}
+
+.box h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.box p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #555;
 }
 
 /* Responsive Design */
@@ -135,11 +146,11 @@
   .iptv-hero {
     flex-direction: column;
     text-align: center;
+    gap: 30px;
   }
 
   .iptv-content {
     max-width: 90%;
-    margin: 0 auto;
   }
 
   .iptv-image img {
@@ -150,7 +161,7 @@
   .iptv-button {
     width: 100%;
     max-width: 300px;
-    margin-top: 20px;
+    margin-top: 15px;
   }
 
   .iptv-bottom {
