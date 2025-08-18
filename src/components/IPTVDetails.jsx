@@ -1,70 +1,72 @@
-import React, { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import './IPTVDetails.css';
+import React from "react";
+import { motion } from "framer-motion";
+import "./IPTVDetails.css";
 
-const IPTVDetails = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // Animation duration in ms
-      once: true, // Run animation only once
-      easing: 'ease-in-out', // Smooth effect
-    });
-  }, []);
-
+export default function LandingPage() {
   return (
-    <div className="iptv-details-wrapper">
-      {/* Header Section */}
-      <header className="iptv-details-header" data-aos="fade-up">
-        <h1>IPTV Hospitality Solutions</h1>
-        <p>Smart In-Room Technology for Modern Hotels</p>
-      </header>
-
-      {/* Info Boxes */}
-      <div className="iptv-grid">
-        <section className="iptv-box" data-aos="fade-up">
-          <img src="./maintvwatch2.jpg" alt="What is IPTV" className="iptv-card-image" />
-          <h2>What is IPTV Hospitality?</h2>
-          <p>
-            IPTV Hospitality Solutions provide in-room entertainment for guests via smart TVs —
-            enabling access to live TV, on-demand movies, hotel services, and local information,
-            without any external hardware. It's the future of hotel guest engagement and satisfaction.
-          </p>
-        </section>
-
-        <section className="iptv-box" data-aos="fade-right">
-          <img src="./11.jpg" alt="Top Features" className="iptv-card-image" />
-          <h2>Top Features</h2>
-          <ul>
-            <li>Full HD & 4K Streaming</li>
-            <li>Custom Hotel Branding</li>
-            <li>Interactive Guest Interface</li>
-            <li>Smart Room Controls (AC, Lights, etc.)</li>
-            <li>Hotel Promotions & Service Booking</li>
-          </ul>
-        </section>
-
-        <section className="iptv-box" data-aos="fade-left">
-          <img src="./22.webp" alt="Benefits for Hotels" className="iptv-card-image" />
-          <h2>Benefits for Hotels</h2>
-          <p>
-            Maximize guest satisfaction and increase revenue by promoting services directly through
-            the TV interface. Integrated with Property Management Systems (PMS) and supports push
-            messaging, upselling, and feedback collection. No printed materials needed.
-          </p>
-        </section>
-
-        <section className="iptv-box" data-aos="zoom-in">
-          <img src="./33.png" alt="Device Compatibility" className="iptv-card-image" />
-          <h2>Device Compatibility</h2>
-          <p>
-            Our IPTV system is compatible with all major smart TV platforms: Android TV, LG webOS,
-            Samsung Tizen, and custom hospitality displays. No extra hardware or remotes required.
-          </p>
-        </section>
+    <section className="landing-section">
+      <div className="floating-shapes">
+        <motion.div
+          className="shape shape1"
+          animate={{ y: [0, -15, 0] }}
+          transition={{ repeat: Infinity, duration: 4 }}
+        ></motion.div>
+        <motion.div
+          className="shape shape2"
+          animate={{ x: [0, 15, 0] }}
+          transition={{ repeat: Infinity, duration: 5 }}
+        ></motion.div>
+        <motion.div
+          className="shape shape3"
+          animate={{ y: [0, 20, 0] }}
+          transition={{ repeat: Infinity, duration: 6 }}
+        ></motion.div>
       </div>
-    </div>
-  );
-};
 
-export default IPTVDetails;
+      <div className="landing-container">
+        {/* Left Image */}
+        <motion.div
+          className="landing-image"
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <img src="./macdesk.jpg" alt="Hero" />
+        </motion.div>
+
+        {/* Right Content */}
+        <motion.div
+          className="landing-content"
+          initial={{ opacity: 0, x: 60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
+          {/* <span className="tag">✨ About Our App</span> */}
+          <h1 className="title">
+            Simple Reports <br /> & Analytics Backdown As It
+          </h1>
+          <p className="description">
+            Experience smooth analytics and reports designed for the hospitality
+            industry. From business insights to guest experience, everything is
+            crafted to look attractive, feel intuitive, and perform powerfully.
+          </p>
+
+          <ul className="checklist">
+            <li> With our Technological and Marketing Solutions</li>
+            <li> Trusted by hotels worldwide</li>
+            <li> Start Your 14 Days Free Trial Today!</li>
+          </ul>
+
+          <motion.a
+            href="#"
+            className="cta-btn"
+            whileHover={{ scale: 1.08 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Discover More →
+          </motion.a>
+        </motion.div>
+      </div>
+    </section>
+  );
+}

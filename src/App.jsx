@@ -24,7 +24,6 @@ import Ourclient from './components/Ourclient';
 import OurServices from './components/Ourservice';
 import Product from './components/Product';
 import Solutions from './components/Solutions';
-import HowItWorksPage from './components/HowItWorksPage';
 import FAQ from './components/FAQ';
 import FAQPage from './components/FAQPage';
 import PrivacyPolicy from './components/PrivacyPolicy';
@@ -53,7 +52,6 @@ function HomePage() {
       <Mainherosection/>
       <IPTVDetails/>
       <Solutions/>
-      <HowItWorksPage/>
       <FAQ/>
       <Help/>
       <TestimonialPage/>
