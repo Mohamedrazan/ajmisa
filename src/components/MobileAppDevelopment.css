@@ -1,0 +1,199 @@
+.mad-section {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #005EB8;
+  background: linear-gradient(135deg, #f8faff 60%, #ffffff 40%);
+  max-width: 1000px;
+  margin: 60px auto 80px;
+  padding: 0 20px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.mad-section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero */
+.mad-hero {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0, 94, 184, 0.25);
+  margin-bottom: 45px;
+  transition: transform 0.35s ease;
+}
+
+.mad-hero img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.mad-hero:hover {
+  transform: scale(1.02);
+}
+
+.mad-hero-overlay {
+  position: absolute;
+  bottom: 25px;
+  left: 30px;
+  color: white;
+  text-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+.mad-hero-overlay h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+  animation: slideRight 1s ease forwards;
+}
+
+.mad-hero-overlay p {
+  font-size: 1.15rem;
+  font-weight: 600;
+  animation: slideRight 1.2s ease forwards;
+}
+
+@keyframes slideRight {
+  0% { opacity: 0; transform: translateX(-30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Intro */
+.mad-intro {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 50px;
+  line-height: 1.6;
+  text-align: center;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+/* Features */
+.mad-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 60px;
+}
+
+.mad-feature {
+  background: #ffffff;
+  flex: 1 1 200px;
+  border-radius: 15px;
+  padding: 20px 15px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 94, 184, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.mad-feature:nth-child(1) { animation-delay: 0.2s; }
+.mad-feature:nth-child(2) { animation-delay: 0.4s; }
+.mad-feature:nth-child(3) { animation-delay: 0.6s; }
+.mad-feature:nth-child(4) { animation-delay: 0.8s; }
+
+.mad-feature:hover {
+  box-shadow: 0 12px 30px rgba(0, 94, 184, 0.3);
+  transform: translateY(-6px);
+}
+
+.mad-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  color: #005EB8;
+}
+
+/* Section Details */
+.mad-detail-section {
+  border-radius: 18px;
+  padding: 30px 25px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 30px rgba(0, 94, 184, 0.1);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  animation: fadeUp 1s ease forwards;
+}
+
+.light-bg { background: #f0f6fb; }
+.dark-bg { background: #ffffff; box-shadow: 0 6px 18px rgba(0, 94, 184, 0.2); }
+
+.mad-detail-section h2 {
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #005EB8;
+}
+
+.mad-detail-section ul { margin-top: 10px; padding-left: 20px; }
+.mad-detail-section li { margin-bottom: 8px; color: #444; }
+
+/* Benefits */
+.mad-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 15px;
+  font-weight: 500;
+  color: #005EB8;
+}
+
+.mad-benefits div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* CTA */
+.mad-cta {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 38px rgba(0, 94, 184, 0.15);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #005EB8;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.mad-btn {
+  margin-top: 20px;
+  background: #005EB8;
+  color: white;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 14px;
+  font-size: 1.15rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.mad-btn:hover {
+  background: #004080;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mad-hero-overlay h1 { font-size: 2rem; }
+  .mad-feature { flex: 1 1 45%; }
+}
+
+@media (max-width: 480px) {
+  .mad-hero-overlay h1 { font-size: 1.6rem; }
+  .mad-feature { flex: 1 1 100%; }
+}

@@ -41,6 +41,8 @@ import SupportPage from './components/SupportPage';
 import GetIPTVAccess from './components/GetIPTVAccess';
 import ContactUs from './components/ContactUs';
 import BookDemo from './components/BookDemo';
+import MobileAppDevelopment from './components/MobileAppDevelopment';
+import WebDesigning from './components/WebDesigning';
 // import Herosection from './components/Herosection';
 
 function HomePage() {
@@ -108,8 +110,8 @@ function App() {
         <Route path="/support" element={<SupportPage/>} />
         <Route path="/get-iptv-access" element={<GetIPTVAccess />} />
         <Route path="/contact-us" element={<ContactUs />} />
-
-
+        <Route path="/mobile-app" element={<MobileAppDevelopment />} />
+        <Route path="/web-design" element={<WebDesigning />} />
 
       </Routes>
     </Router>

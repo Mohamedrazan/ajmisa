@@ -1,8 +1,9 @@
+/* CloudSection.css */
 .cloud-section {
-  background: linear-gradient(135deg, #f7f4fb 55%, #ffffff 45%);
+  background: linear-gradient(135deg, #f7faff 55%, #ffffff 45%);
   padding: 70px 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #2d2da8;
+  color: #005EB8;
 }
 
 .cloud-container {
@@ -25,6 +26,7 @@
   font-weight: 700;
   margin-bottom: 20px;
   position: relative;
+  color: #005EB8;
 }
 
 .cloud-title::after {
@@ -32,7 +34,7 @@
   display: block;
   width: 70px;
   height: 5px;
-  background: #f5deb3;
+  background: #005EB8;
   border-radius: 3px;
   margin-top: 10px;
 }
@@ -40,7 +42,7 @@
 .cloud-subtitle {
   font-size: 1.3rem;
   margin-bottom: 25px;
-  color: #2d2da8;
+  color: #005EB8;
   font-weight: 600;
 }
 
@@ -58,20 +60,20 @@
 }
 
 .cloud-features li {
-  background: rgba(213, 184, 131, 0.15); /* light wheat tone */
-  border-left: 5px solid #2d2da8;
+  background: rgba(0, 94, 184, 0.08); /* subtle #005EB8 tint */
+  border-left: 5px solid #005EB8;
   padding: 12px 18px;
   margin-bottom: 15px;
   border-radius: 8px;
   font-weight: 600;
   font-size: 1rem;
-  color: #2d2da8;
+  color: #005EB8;
   cursor: default;
   transition: background 0.3s ease;
 }
 
 .cloud-features li:hover {
-  background: rgba(213, 184, 131, 0.3);
+  background: rgba(0, 94, 184, 0.2);
 }
 
 .cloud-image {
@@ -79,8 +81,8 @@
   min-width: 320px;
   max-width: 480px;
   border-radius: 14px;
-  background: #f5deb3;
-  box-shadow: 0 6px 25px rgba(45, 45, 168, 0.15);
+  background: #f0f4ff;
+  box-shadow: 0 6px 25px rgba(0, 94, 184, 0.15);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -96,7 +98,7 @@
 
 .image-placeholder {
   font-size: 1.2rem;
-  color: #2d2da8;
+  color: #005EB8;
   font-weight: 700;
   text-align: center;
   padding: 0 15px;
@@ -109,14 +111,14 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
-  color: #2d2da8;
+  color: #005EB8;
 }
 
 .extra-box {
   background: white;
   border-radius: 14px;
   padding: 25px 30px;
-  box-shadow: 0 4px 20px rgba(45, 45, 168, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 94, 184, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -124,6 +126,7 @@
   margin-bottom: 15px;
   font-size: 1.4rem;
   font-weight: 700;
+  color: #005EB8;
 }
 
 .extra-box p {
@@ -134,7 +137,7 @@
 
 .extra-box:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 30px rgba(45, 45, 168, 0.2);
+  box-shadow: 0 8px 30px rgba(0, 94, 184, 0.25);
 }
 
 /* Responsive */

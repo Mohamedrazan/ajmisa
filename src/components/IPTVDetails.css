@@ -26,21 +26,21 @@
 .shape1 {
   width: 100px;
   height: 100px;
-  background: #00bfa6;
+  background: #005EB8; /* Royal Blue */
   top: 15%;
   left: 5%;
 }
 .shape2 {
   width: 80px;
   height: 80px;
-  background: #ffd89c;
+  background: #ffd89c; /* Beige Sand Accent */
   bottom: 10%;
   left: 45%;
 }
 .shape3 {
   width: 120px;
   height: 120px;
-  background: #0077b6;
+  background: #005EB8; /* Unified Royal Blue */
   top: 20%;
   right: 8%;
 }
@@ -65,14 +65,14 @@
 
 /* Content */
 .landing-content .tag {
-  background: linear-gradient(45deg, #00bfa6, #0077b6);
+  background: linear-gradient(45deg, #005EB8, #0077cc);
   color: #fff;
   padding: 6px 16px;
   border-radius: 20px;
   font-size: 14px;
   display: inline-block;
   margin-bottom: 16px;
-  box-shadow: 0px 4px 12px rgba(0, 119, 182, 0.3);
+  box-shadow: 0px 4px 12px rgba(0, 94, 184, 0.3);
 }
 
 .landing-content .title {
@@ -106,7 +106,7 @@
 }
 .checklist li::before {
   content: "✔";
-  color: #00bfa6;
+  color: #005EB8; /* Royal Blue */
   font-weight: bold;
   position: absolute;
   left: 0;
@@ -116,16 +116,16 @@
 .cta-btn {
   display: inline-block;
   padding: 15px 34px;
-  background: linear-gradient(45deg, #0077b6, #00bfa6);
+  background: linear-gradient(45deg, #005EB8, #0077cc);
   color: #fff;
   border-radius: 35px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0px 6px 20px rgba(0, 119, 182, 0.4);
+  box-shadow: 0px 6px 20px rgba(0, 94, 184, 0.4);
 }
 .cta-btn:hover {
-  background: linear-gradient(45deg, #00bfa6, #0077b6);
+  background: linear-gradient(45deg, #0077cc, #005EB8);
   transform: translateY(-3px);
 }
 

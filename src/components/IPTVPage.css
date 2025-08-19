@@ -20,7 +20,7 @@
 
 .iptv-title {
   font-size: 2.5rem;
-  color: #2d2da8;
+  color: #005EB8; /* Royal Blue */
   margin-bottom: 20px;
   position: relative;
 }
@@ -30,7 +30,7 @@
   display: block;
   width: 60px;
   height: 4px;
-  background: #f5deb3;
+  background: #f5deb3; /* Beige accent */
   margin-top: 8px;
   border-radius: 2px;
 }
@@ -56,9 +56,9 @@
 }
 
 .iptv-features li {
-  background: rgba(45, 45, 168, 0.05);
+  background: rgba(0, 94, 184, 0.05); /* Light Royal Blue bg */
   padding: 10px 15px;
-  border-left: 4px solid #2d2da8;
+  border-left: 4px solid #005EB8;
   margin-bottom: 10px;
   border-radius: 6px;
   font-size: 0.95rem;
@@ -67,11 +67,11 @@
 }
 
 .iptv-features li:hover {
-  background: rgba(45, 45, 168, 0.1);
+  background: rgba(0, 94, 184, 0.1); /* Slightly deeper hover */
 }
 
 .iptv-btn {
-  background: #2d2da8;
+  background: #005EB8;
   color: white;
   border: none;
   padding: 12px 25px;
@@ -82,7 +82,7 @@
 }
 
 .iptv-btn:hover {
-  background: #1e1e80;
+  background: #004080; /* Darker Royal Blue */
   transform: scale(1.05);
 }
 
@@ -117,7 +117,7 @@
 }
 
 .extra-box h2 {
-  color: #2d2da8;
+  color: #005EB8; /* Royal Blue Heading */
   margin-bottom: 10px;
 }
 

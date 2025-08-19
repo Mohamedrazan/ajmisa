@@ -1,6 +1,6 @@
 /* Page background & animation */
 .support-page {
-  background: linear-gradient(135deg, #f7f4fb, white);
+  background: linear-gradient(135deg, #f0f5ff, white);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -20,22 +20,22 @@
   background: white;
   padding: 40px;
   border-radius: 15px;
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
-  border-top: 8px solid #2d2da8;
+  box-shadow: 0px 6px 20px rgba(0, 94, 184, 0.08);
+  border-top: 8px solid #005EB8;
   animation: slideUp 1.2s ease;
 }
 
 /* Title & subtitle */
 .support-title {
   font-size: 2.5rem;
-  color: #2d2da8;
+  color: #005EB8;
   margin-bottom: 10px;
   text-align: center;
 }
 
 .support-subtitle {
   font-size: 1.2rem;
-  color: #555;
+  color: #005EB8;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -47,7 +47,7 @@
 
 .support-content h2 {
   font-size: 1.5rem;
-  color: #2d2da8;
+  color: #005EB8;
   margin-bottom: 10px;
 }
 
@@ -55,8 +55,7 @@
   color: #333;
   font-size: 1rem;
   line-height: 1.6;
-  /* background-color: #f5deb3; */
-  background-color: lightgrey;
+  background-color: rgba(0, 94, 184, 0.05); /* subtle #005EB8 tint */
   padding: 15px;
   border-radius: 8px;
 }
@@ -65,10 +64,10 @@
 .support-footer {
   margin-top: 20px;
   padding-top: 15px;
-  border-top: 2px dashed #2d2da8;
+  border-top: 2px dashed #005EB8;
   text-align: center;
   font-size: 0.95rem;
-  color: #2d2da8;
+  color: #005EB8;
 }
 
 /* Animation */
