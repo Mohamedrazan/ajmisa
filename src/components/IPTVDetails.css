@@ -1,6 +1,7 @@
+
 /* Section */
 .landing-section {
-  background-color: #f7f4fb;
+  background: var(--page);
   padding: 100px 7%;
   min-height: 100vh;
   display: flex;

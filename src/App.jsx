@@ -16,7 +16,6 @@ import Iptvhotel from './components/Iptvhotel';
 import Hotelinfo from './components/Hotelinfo';
 import Roomservice from './components/Roomservice';
 import Guestinfo from './components/Guestinfo';
-import Iptvpromo from './components/Iptvpromo';
 import Review from './components/Review';
 import ContactPromo from './components/Contactpromo';
 import IPTVDetails from './components/IPTVDetails';
@@ -43,6 +42,7 @@ import ContactUs from './components/ContactUs';
 import BookDemo from './components/BookDemo';
 import MobileAppDevelopment from './components/MobileAppDevelopment';
 import WebDesigning from './components/WebDesigning';
+import Iptvintro from './components/Iptvintro';
 // import Herosection from './components/Herosection';
 
 function HomePage() {
@@ -52,19 +52,21 @@ function HomePage() {
       {/* <Herosection/> */}
       {/* <Navbar /> */}
       <Mainherosection/>
+      <br />
+      <Iptvintro/>
       <IPTVDetails/>
       <Solutions/>
+             <ContactPromo/>
+
       <FAQ/>
       <Help/>
       <TestimonialPage/>
 
       <br /><br />
       <Iptvsection />
-       <ContactPromo/>
         <BookDemo/>
       <Review/>
       {/* <Iptvfeatures /> */}
-      {/* <Iptvpromo/> */}
       <br />
       {/* <Iptvapp /> */}
       <Footer />
