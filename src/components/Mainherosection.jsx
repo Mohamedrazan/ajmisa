@@ -59,6 +59,7 @@ export default function Mainherosection() {
         </div>
       </div>
 
+
       {/* Icon Row */}
       <div className="iptv-icon-row">
         {icons.map((icon, index) => (

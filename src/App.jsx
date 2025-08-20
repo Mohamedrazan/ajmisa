@@ -52,19 +52,19 @@ function HomePage() {
       {/* <Herosection/> */}
       {/* <Navbar /> */}
       <Mainherosection/>
-      <br />
       <Iptvintro/>
       <IPTVDetails/>
+      <Iptvsection />
+
       <Solutions/>
-             <ContactPromo/>
+      <ContactPromo/>
 
       <FAQ/>
-      <Help/>
+      {/* <Help/> */}
       <TestimonialPage/>
 
       <br /><br />
-      <Iptvsection />
-        <BookDemo/>
+        {/* <BookDemo/> */}
       <Review/>
       {/* <Iptvfeatures /> */}
       <br />

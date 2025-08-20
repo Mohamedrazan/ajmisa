@@ -1,7 +1,17 @@
+/* ====== Theme ====== */
+:root {
+  --primary: #005EB8;      /* Royal Blue */
+  --primary-dark: #004b91; /* Darker Blue */
+  --accent: #0077cc;       /* Accent Blue */
+  --text-dark: #222;       /* Strong text */
+  --text-light: #555;      /* Muted text */
+  --bg: #ffffff;           /* White background */
+  --shadow: rgba(0, 0, 0, 0.15);
+}
 
-/* Section */
+/* ====== Section ====== */
 .landing-section {
-  background: var(--page);
+  background: var(--bg);
   padding: 100px 7%;
   min-height: 100vh;
   display: flex;
@@ -10,7 +20,7 @@
   overflow: hidden;
 }
 
-/* Grid Container */
+/* ====== Grid Container ====== */
 .landing-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -18,41 +28,41 @@
   align-items: center;
 }
 
-/* Floating Shapes */
+/* ====== Floating Shapes ====== */
 .floating-shapes .shape {
   position: absolute;
   border-radius: 50%;
-  opacity: 0.25;
+  opacity: 0.18;
 }
 .shape1 {
-  width: 100px;
-  height: 100px;
-  background: #005EB8; /* Royal Blue */
-  top: 15%;
-  left: 5%;
+  width: 120px;
+  height: 120px;
+  background: var(--primary);
+  top: 12%;
+  left: 6%;
 }
 .shape2 {
-  width: 80px;
-  height: 80px;
-  background: #ffd89c; /* Beige Sand Accent */
-  bottom: 10%;
+  width: 90px;
+  height: 90px;
+  background: var(--accent);
+  bottom: 12%;
   left: 45%;
 }
 .shape3 {
-  width: 120px;
-  height: 120px;
-  background: #005EB8; /* Unified Royal Blue */
-  top: 20%;
+  width: 140px;
+  height: 140px;
+  background: var(--primary-dark);
+  top: 22%;
   right: 8%;
 }
 
-/* Image */
+/* ====== Image ====== */
 .landing-image img {
   width: 100%;
-  max-height: 450px;
+  max-height: 480px;
   object-fit: cover;
   border-radius: 24px;
-  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 15px 35px var(--shadow);
   animation: floatImg 6s ease-in-out infinite;
 }
 @keyframes floatImg {
@@ -60,81 +70,83 @@
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-12px);
+    transform: translateY(-14px);
   }
 }
 
-/* Content */
+/* ====== Content ====== */
 .landing-content .tag {
-  background: linear-gradient(45deg, #005EB8, #0077cc);
+  background: linear-gradient(45deg, var(--primary), var(--accent));
   color: #fff;
-  padding: 6px 16px;
-  border-radius: 20px;
+  padding: 6px 18px;
+  border-radius: 22px;
   font-size: 14px;
   display: inline-block;
-  margin-bottom: 16px;
-  box-shadow: 0px 4px 12px rgba(0, 94, 184, 0.3);
+  margin-bottom: 18px;
+  box-shadow: 0px 4px 12px rgba(0, 94, 184, 0.35);
 }
 
 .landing-content .title {
-  font-size: 42px;
+  font-size: 44px;
   font-weight: 800;
-  color: #333;
+  color: var(--text-dark);
   line-height: 1.3;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .landing-content .description {
-  color: #555;
-  font-size: 16px;
-  margin-bottom: 25px;
-  max-width: 500px;
+  color: var(--text-light);
+  font-size: 17px;
+  margin-bottom: 28px;
+  max-width: 520px;
+  line-height: 1.6;
 }
 
-/* Checklist */
+/* ====== Checklist ====== */
 .checklist {
   list-style: none;
   padding: 0;
   margin: 0 0 35px;
 }
 .checklist li {
-  margin-bottom: 14px;
+  margin-bottom: 15px;
   font-size: 16px;
-  color: #333;
+  color: var(--text-dark);
   position: relative;
-  padding-left: 30px;
+  padding-left: 32px;
   font-weight: 500;
 }
 .checklist li::before {
   content: "✔";
-  color: #005EB8; /* Royal Blue */
+  color: var(--primary);
   font-weight: bold;
   position: absolute;
   left: 0;
 }
 
-/* CTA Button */
+/* ====== CTA Button ====== */
 .cta-btn {
   display: inline-block;
-  padding: 15px 34px;
-  background: linear-gradient(45deg, #005EB8, #0077cc);
+  padding: 15px 36px;
+  background: linear-gradient(45deg, var(--primary), var(--accent));
   color: #fff;
   border-radius: 35px;
   text-decoration: none;
   font-weight: 600;
+  font-size: 16px;
   transition: all 0.3s ease;
-  box-shadow: 0px 6px 20px rgba(0, 94, 184, 0.4);
+  box-shadow: 0px 6px 20px rgba(0, 94, 184, 0.45);
 }
 .cta-btn:hover {
-  background: linear-gradient(45deg, #0077cc, #005EB8);
-  transform: translateY(-3px);
+  background: linear-gradient(45deg, var(--accent), var(--primary));
+  transform: translateY(-4px);
 }
 
-/* Responsive */
+/* ====== Responsive ====== */
 @media (max-width: 992px) {
   .landing-container {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 45px;
     text-align: center;
   }
 
@@ -147,10 +159,10 @@
   }
 
   .landing-content .description {
-    margin: 0 auto 20px;
+    margin: 0 auto 22px;
   }
 
   .checklist li {
-    padding-left: 20px;
+    padding-left: 22px;
   }
 }

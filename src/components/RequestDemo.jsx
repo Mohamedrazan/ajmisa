@@ -19,7 +19,10 @@ const RequestDemo = () => {
           <input type="email" placeholder="Email Address" required />
           <input type="tel" placeholder="Phone Number" required />
           <input type="text" placeholder="Hotel / Property Name" />
-          <input type="number" placeholder="Number of Rooms" />
+          <input type="number" placeholder="Number of Rooms and user" />
+          <input type="number" placeholder="Number of Facility" />
+          <input type="number" placeholder="Number of TV Channels" />
+
           <textarea placeholder="Your Message / Requirements" rows="4"></textarea>
 
           <button type="submit">Submit Request</button>

@@ -38,7 +38,7 @@ const Iptvsection = () => {
           </ul>
 
           <button className="iptv-button" onClick={handleGetAccess}>
-            Get My IPTV Access Now
+            Get Qoute Now
           </button>
         </div>
       </div>

@@ -51,21 +51,42 @@ a:active {
   display: none;
   font-size: 2rem;
   cursor: pointer;
-  color: #00aced;
+  color: #005EB8; /* Accent color for menu toggle */
 }
 
+/* Navbar Links Container */
 .iptv-nav-links {
   display: flex;
   gap: 2rem;
+  align-items: center;
 }
 
+/* Navbar Individual Links */
 .iptv-nav-link {
-  color: #00aced;
+  position: relative;
   font-weight: 600;
+  color: #fff;
+  transition: color 0.3s ease;
+  padding: 0.3rem 0;
+}
+
+.iptv-nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #005EB8;
+  transition: width 0.4s ease;
 }
 
 .iptv-nav-link:hover {
-  color: #fff;
+  color: #005EB8;
+}
+
+.iptv-nav-link:hover::after {
+  width: 100%;
 }
 
 /* Hero Section */
@@ -101,7 +122,7 @@ a:active {
 
 .iptv-welcome {
   font-size: 1.2rem;
-  color: #00aced;
+  color: #005EB8; /* Accent applied */
   margin-bottom: 0.5rem;
 }
 
@@ -134,11 +155,14 @@ a:active {
   justify-content: center;
   opacity: 0;
   transform: scale(0.8);
+  transition: all 0.3s ease;
+  border: 2px solid #005EB8;
 }
 
 .iptv-icon-box:hover {
   transform: scale(1.05);
   background: #2e2e2e;
+  border-color: #005EB8; /* Accent border on hover */
 }
 
 .iptv-icon-image {
@@ -151,6 +175,7 @@ a:active {
 .iptv-icon-label {
   font-size: 0.9rem;
   font-weight: 700; 
+  color: white; 
 }
 
 /* Sequential Icon Animations */

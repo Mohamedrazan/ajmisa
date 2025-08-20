@@ -1,7 +1,7 @@
 .iptv-container {
   font-family: 'Segoe UI', sans-serif;
   padding: 80px 20px;
-  background: #f7f4fb;
+  background: #ffffff; 
   color: #1a1a1a;
 }
 
@@ -20,7 +20,7 @@
   width: 100%;
   height: auto;
   border-radius: 15px;
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 35px rgba(0, 94, 184, 0.15); /* Blue glow */
 }
 
 /* Content Styling */
@@ -29,7 +29,7 @@
 }
 
 .iptv-content h5 {
-  color: #2d2da8;
+  color: #005EB8; /* Royal Blue Accent */
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
@@ -66,20 +66,16 @@
   margin-bottom: 12px;
   transition: transform 0.3s ease;
 }
-/* 
-.iptv-features li:hover {
-  transform: translateX(8px);
-} */
 
 .icon-purple {
-  color: #2d2da8;
+  color: #005EB8; /* Changed to Blue */
   margin-right: 10px;
   font-size: 18px;
 }
 
 /* Button */
 .iptv-button {
-  background-color: #2d2da8;
+  background: linear-gradient(45deg, #005EB8, #0077cc);
   color: white;
   padding: 14px 28px;
   font-size: 16px;
@@ -88,11 +84,11 @@
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(45, 45, 168, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 94, 184, 0.3);
 }
 
 .iptv-button:hover {
-  background-color: #1a1a9e;
+  background: linear-gradient(45deg, #0077cc, #005EB8);
   transform: translateY(-2px);
 }
 
@@ -110,29 +106,27 @@
   width: 300px;
   border-radius: 16px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
-  background: white;
+  box-shadow: 0 10px 25px rgba(0, 94, 184, 0.1);
+  background: #ffffff;
+  border: 2px solid #e6f0fa; /* Light blue border */
 }
 
 .box:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
-}
-
-.white-box {
-  border: 2px solid #f5deb3;
+  box-shadow: 0 12px 28px rgba(0, 94, 184, 0.2);
 }
 
 .box-icon {
   font-size: 38px;
   margin-bottom: 15px;
-  color: inherit;
+  color: #005EB8; /* Blue icons */
 }
 
 .box h3 {
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 10px;
+  color: #1a1a1a;
 }
 
 .box p {
