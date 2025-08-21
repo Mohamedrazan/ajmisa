@@ -1,14 +1,12 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { FiCheckCircle, FiShield, FiSmartphone, FiLayout, FiCloud, FiHeadphones, FiCpu, FiTrendingUp, FiUsers } from "react-icons/fi";
 import "./IPTVPage.css";
 
 const IPTVPage = () => {
   useEffect(() => {
-    // Animate on scroll
     AOS.init({ duration: 1000, once: true, easing: "ease-in-out" });
-
-    // Scroll to top on page load
     window.scrollTo(0, 0);
   }, []);
 
@@ -18,34 +16,53 @@ const IPTVPage = () => {
 
         {/* Text Section */}
         <div className="iptv-text" data-aos="fade-right">
-          <h1 className="iptv-title">IPTV Hospitality Solution</h1>
+          <h1 className="iptv-title">IPTV Middleware Software Development</h1>
           <p className="iptv-subtitle">
-            IPTV (Internet Protocol Television) is transforming the way hotels entertain, inform,
-            and engage their guests. By delivering TV and multimedia content over a secure IP network,
-            hotels can offer guests a personalized, modern, and interactive in-room experience.
+            IPTV Middleware is the core engine that powers IPTV solutions. It connects content
+            providers, operators, and viewers in one secure and scalable ecosystem, ensuring smooth
+            delivery of television, video-on-demand, and interactive services.
           </p>
 
           <p className="iptv-description" data-aos="fade-up" data-aos-delay="200">
-            From live TV channels and video-on-demand to hotel information portals and interactive services,
-            IPTV brings everything into one sleek, easy-to-use platform. Whether your guests want to watch
-            movies, check the weather, explore hotel amenities, or order room service — IPTV makes it possible,
-            all from the comfort of their room.
+            Our IPTV Middleware Software Development services enable telecoms, ISPs, and hospitality
+            businesses to launch feature-rich IPTV platforms. With centralized management, powerful
+            analytics, flexible integrations, and customizable branding, our solutions are built to
+            deliver efficiency, growth, and outstanding end-user experiences.
           </p>
 
           <ul className="iptv-features">
-            <li data-aos="zoom-in"> Live HD & 4K TV Channels</li>
-            <li data-aos="zoom-in" data-aos-delay="100"> Video on Demand Library</li>
-            <li data-aos="zoom-in" data-aos-delay="200"> Customizable UI & Branding</li>
-            <li data-aos="zoom-in" data-aos-delay="300"> Cloud or On-Premise Deployment</li>
-            <li data-aos="zoom-in" data-aos-delay="400"> 24/7 Technical Support</li>
+            <li data-aos="zoom-in">
+              <FiCheckCircle className="feat-icon" aria-hidden="true" />
+              Centralized Content & Subscriber Management
+            </li>
+            <li data-aos="zoom-in" data-aos-delay="100">
+              <FiShield className="feat-icon" aria-hidden="true" />
+              Secure Authentication & Billing Systems
+            </li>
+            <li data-aos="zoom-in" data-aos-delay="200">
+              <FiSmartphone className="feat-icon" aria-hidden="true" />
+              Multi-device & Multi-platform Support
+            </li>
+            <li data-aos="zoom-in" data-aos-delay="300">
+              <FiLayout className="feat-icon" aria-hidden="true" />
+              Customizable UI & Branding Options
+            </li>
+            <li data-aos="zoom-in" data-aos-delay="400">
+              <FiCloud className="feat-icon" aria-hidden="true" />
+              Cloud-ready & On-premise Deployment
+            </li>
+            <li data-aos="zoom-in" data-aos-delay="500">
+              <FiHeadphones className="feat-icon" aria-hidden="true" />
+              24/7 Monitoring & Technical Support
+            </li>
           </ul>
         </div>
 
         {/* Image Section */}
         <div className="iptv-image" data-aos="fade-left">
           <img
-            src="./maintvwatch2.jpg"
-            alt="IPTV Hospitality"
+            src="./iptvmiddleware.jpg"
+            alt="Abstract visualization of IPTV middleware platform"
             className="iptv-img"
           />
         </div>
@@ -54,29 +71,37 @@ const IPTVPage = () => {
       {/* Additional Info Section */}
       <div className="iptv-extra">
         <div className="extra-box" data-aos="fade-up">
-          <h2>Why Choose IPTV for Hotels?</h2>
+          <div className="extra-head">
+            <FiCpu className="extra-icon" aria-hidden="true" />
+            <h2>What is IPTV Middleware?</h2>
+          </div>
           <p>
-            IPTV hospitality solutions not only entertain guests but also improve
-            operational efficiency. Hotels can promote special offers, upsell
-            services, and gather guest preferences through interactive menus,
-            all while maintaining a premium brand image.
+            Middleware acts as the command center of an IPTV platform. It manages access rights,
+            integrates with CRM and billing systems, controls content delivery, and enables advanced
+            features like EPG, catch-up TV, timeshift, and multi-language support.
           </p>
         </div>
 
         <div className="extra-box" data-aos="fade-up" data-aos-delay="200">
-          <h2>Guest Experience</h2>
+          <div className="extra-head">
+            <FiTrendingUp className="extra-icon" aria-hidden="true" />
+            <h2>Benefits for Service Providers</h2>
+          </div>
           <p>
-            Guests enjoy high-definition channels, access to local attractions,
-            and on-demand movies, all with intuitive navigation. Personalized
-            greetings and language options make every stay feel special.
+            Scale faster, launch new revenue models, and optimize operations through automation and
+            analytics. Monetize via subscriptions, targeted ads, and promotions while maintaining
+            service reliability and SLA compliance.
           </p>
         </div>
 
         <div className="extra-box" data-aos="fade-up" data-aos-delay="400">
-          <h2>Hotel Benefits</h2>
+          <div className="extra-head">
+            <FiUsers className="extra-icon" aria-hidden="true" />
+            <h2>Enhancing User Experience</h2>
+          </div>
           <p>
-            From branding opportunities to increased revenue through upselling
-            and advertising, IPTV turns the TV screen into a powerful communication tool.
+            Deliver an intuitive interface with seamless access to live TV, VOD, and interactive
+            features. Personalization, profiles, and smooth navigation keep users engaged across devices.
           </p>
         </div>
       </div>

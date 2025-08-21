@@ -5,22 +5,40 @@
   padding: 0 20px;
 }
 
+/* Heading */
 .faq-heading {
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 40px;
-  color: #222;
+  color: #005EB8; /* Blue accent */
+  position: relative;
+}
+
+.faq-heading::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #005EB8;
+  margin: 10px auto 0;
+  border-radius: 2px;
 }
 
 /* Each FAQ item */
 .faq-item {
-  border: 1px solid #ddd;
+  border: 1px solid #e0e6ed;
   border-radius: 8px;
   margin-bottom: 15px;
   background-color: #fff;
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.faq-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 94, 184, 0.15);
 }
 
 /* FAQ Question */
@@ -36,20 +54,23 @@
   align-items: center;
   cursor: pointer;
   color: #333;
-  transition: background 0.3s;
+  transition: color 0.3s, background 0.3s;
 }
 
 .faq-question:hover {
-  background-color: #f3f3f3;
+  background-color: #f3f7fb; /* subtle blue-gray hover */
+  color: #005EB8; /* highlight only on hover */
 }
 
 .chevron-icon {
   transition: transform 0.3s;
   font-size: 0.9rem;
+  color: #666;
 }
 
 .rotated {
   transform: rotate(180deg);
+  color: #005EB8; /* blue when open */
 }
 
 /* FAQ Answer */
@@ -58,6 +79,8 @@
   font-size: 0.95rem;
   color: #555;
   line-height: 1.6;
+  background: #fff;
+  border-top: 1px solid #e0e6ed;
 }
 
 /* Responsive */
@@ -68,10 +91,12 @@
 
   .faq-question {
     font-size: 1rem;
+    padding: 16px 20px;
   }
 
   .faq-answer {
     font-size: 0.95rem;
+    padding: 0 20px 16px;
   }
 }
 

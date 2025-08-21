@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Solutions.css";
-import { FaTv, FaLaptop, FaChartLine, FaCloud, FaHeadset,FaCode,FaMobileAlt} from "react-icons/fa";
+import { FaTv, FaLaptop, FaChartLine, FaCloud, FaHeadset,FaCode,FaMobileAlt,FaWhatsapp,FaPlayCircle} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Solutions = () => {
@@ -17,7 +17,6 @@ const Solutions = () => {
     desc: "IPTV streams live and on-demand content over the internet, enhancing in-room entertainment for hotel guests.", 
     link: "/iptv" 
   },
-  // { icon: <FaPlayCircle />, title: "VOD", desc: "VOD lets guests enjoy movies and shows anytime, providing flexible, personalized entertainment right in their rooms.", link: "/vod" },
   { 
     icon: <FaMobileAlt />, 
     title: "Mobile App Development", 
@@ -29,6 +28,12 @@ const Solutions = () => {
     title: "Web Designing", 
     desc: "Professional, responsive, and modern web design solutions to elevate hotel branding and online presence.", 
     link: "/web-design" 
+  },
+  { 
+    icon: <FaWhatsapp />, 
+    title: "WhatsApp Business API", 
+    desc: "Seamlessly connect with guests using WhatsApp Business API for instant booking confirmations, service requests, promotions, and personalized communication.", 
+    link: "/whatsapp-business" 
   },
   { 
     icon: <FaLaptop />, 
@@ -54,6 +59,12 @@ const Solutions = () => {
     desc: "24/7 support ensures uninterrupted IPTV service with expert assistance whenever you need it.", 
     link: "/support" 
   },
+  { icon: <FaPlayCircle />,
+    title: "VOD",
+    desc: "VOD lets guests enjoy movies and shows anytime, providing flexible, personalized entertainment right in their rooms.",
+    link: "/vod"
+  },
+
   
 ];
 
