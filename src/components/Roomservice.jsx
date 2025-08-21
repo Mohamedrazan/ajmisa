@@ -85,18 +85,18 @@ const Roomservice = () => {
 
     return (
         <>
-            {/* Navbar */}
-                 <div className="navbar animate-navbar">
-                   <img src="./macvisionmainlogo.png" alt="Logo" className="logo-image" />
-                   <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+             {/* Navbar */}
+                 <div className="iptv-navbar iptv-animate-navbar">
+                   <img src="./macvisionmainlogo.png" alt="Logo" className="iptv-logo-image" />
+                   <div className="iptv-menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
                      ☰
                    </div>
-                   <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+                   <div className={`iptv-nav-links ${menuOpen ? "open" : ""}`}>
                      {navLinks.map((link, i) => (
                        <Link
                          key={i}
                          to={link.path}
-                         className="nav-link"
+                         className="iptv-nav-link"
                          onClick={() => setMenuOpen(false)}
                        >
                          {link.label}

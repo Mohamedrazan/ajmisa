@@ -21,7 +21,6 @@ import ContactPromo from './components/Contactpromo';
 import IPTVDetails from './components/IPTVDetails';
 import Ourclient from './components/Ourclient';
 import OurServices from './components/Ourservice';
-import Product from './components/Product';
 import Solutions from './components/Solutions';
 import FAQ from './components/FAQ';
 import FAQPage from './components/FAQPage';
@@ -30,7 +29,7 @@ import TermsAndConditions from './components/TermsAndConditions';
 import HelpCenter from './components/HelpCenter';
 import Help from './components/Help';
 import RequestDemo from './components/RequestDemo';
-import TestimonialPage from './components/TestimonialPage';
+// import TestimonialPage from './components/TestimonialPage';
 import IPTVPage from './components/IPTVPage';
 import VODPage from './components/VODPage';
 import DigitalSignagePage from './components/DigitalSignagePage';
@@ -39,10 +38,11 @@ import CloudHybridPage from './components/CloudHybridPage';
 import SupportPage from './components/SupportPage';
 import GetIPTVAccess from './components/GetIPTVAccess';
 import ContactUs from './components/ContactUs';
-import BookDemo from './components/BookDemo';
 import MobileAppDevelopment from './components/MobileAppDevelopment';
 import WebDesigning from './components/WebDesigning';
 import Iptvintro from './components/Iptvintro';
+import Product from './components/Product';
+import SmartMiddleware from './components/SmartMiddleware';
 // import Herosection from './components/Herosection';
 
 function HomePage() {
@@ -57,11 +57,12 @@ function HomePage() {
       <Iptvsection />
 
       <Solutions/>
+      <SmartMiddleware/>
       <ContactPromo/>
 
       <FAQ/>
       {/* <Help/> */}
-      <TestimonialPage/>
+      {/* <TestimonialPage/> */}
 
       <br /><br />
         {/* <BookDemo/> */}
@@ -96,7 +97,8 @@ function App() {
         <Route path="/room-service" element={<Iptvhotel/>} />
         <Route path="/hotel-info" element={<Hotelinfo/>} />
         <Route path="/menu" element={<Roomservice/>} />
-        <Route path="/guest-info" element={<Guestinfo/>} />
+        <Route path="/guest-info" element={<Guestinfo/>} />\
+        <Route path="/products" element={<Product />} />
         <Route path="/client" element={<Ourclient/>} />
         <Route path="/services" element={<OurServices/>} />
         <Route path="/faq" element={<FAQPage/>} />

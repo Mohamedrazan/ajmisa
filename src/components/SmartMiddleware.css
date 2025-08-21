@@ -1,0 +1,137 @@
+/* ==== Wrapper Background ==== */
+.middleware-wrapper {
+  position: relative;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #f7f9fb, #eaeef3);
+  color: #333;
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+/* Decorative Gradient Blobs */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.4;
+  z-index: 0;
+}
+.blob1 {
+  top: -80px;
+  left: -120px;
+  width: 280px;
+  height: 280px;
+  /* background: #00d4ff; */
+}
+.blob2 {
+  bottom: -120px;
+  right: -100px;
+  width: 260px;
+  height: 260px;
+  /* background: #ff6ec7; */
+}
+
+/* ==== Header ==== */
+.middleware-header {
+  text-align: center;
+  margin-bottom: 70px;
+  position: relative;
+  z-index: 1;
+}
+.middleware-header h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #004fa3;
+}
+.middleware-header p {
+  font-size: 20px;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+
+/* ==== Timeline Layout ==== */
+.middleware-timeline {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 40px;
+  max-width: 900px;
+  z-index: 1;
+}
+
+/* Vertical line */
+.middleware-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 60px;
+  width: 4px;
+  height: 100%;
+  background: #ccc;
+  border-radius: 2px;
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+/* Marker */
+.timeline-marker {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #0066cc, #004fa3);
+  border-radius: 50%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  z-index: 2;
+}
+
+/* Card Content (Now Blue Background) */
+.timeline-content {
+  background: linear-gradient(135deg, #0066cc, #004fa3);
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+  color: #fff;
+}
+.timeline-content:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.timeline-content h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.timeline-content p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #e9f2ff;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+  .middleware-timeline::before {
+    left: 40px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline-marker {
+    margin-bottom: 15px;
+  }
+}
