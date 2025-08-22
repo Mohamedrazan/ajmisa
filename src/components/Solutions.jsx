@@ -64,11 +64,7 @@ const Solutions = () => {
     desc: "VOD lets guests enjoy movies and shows anytime, providing flexible, personalized entertainment right in their rooms.",
     link: "/vod"
   },
-
-  
 ];
-
-  
 
   return (
     <section className="solutions-section">
