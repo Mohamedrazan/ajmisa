@@ -46,11 +46,11 @@
 
 .demo-form input:focus,
 .demo-form textarea:focus {
-  border-color: #2d2da8;
+  border-color: #005EB8;
 }
 
 .demo-form button {
-  background-color: #2d2da8;
+  background-color: #005EB8;
   color: white;
   border: none;
   padding: 14px;

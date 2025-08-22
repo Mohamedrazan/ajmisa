@@ -18,7 +18,7 @@ import Roomservice from './components/Roomservice';
 import Guestinfo from './components/Guestinfo';
 import Review from './components/Review';
 import ContactPromo from './components/Contactpromo';
-import IPTVDetails from './components/IPTVDetails';
+// import IPTVDetails from './components/IPTVDetails';
 import Ourclient from './components/Ourclient';
 import OurServices from './components/Ourservice';
 import Solutions from './components/Solutions';
@@ -43,6 +43,8 @@ import WebDesigning from './components/WebDesigning';
 import Iptvintro from './components/Iptvintro';
 import Product from './components/Product';
 import SmartMiddleware from './components/SmartMiddleware';
+import WhatsAppBusinessAPI from './components/WhatsAppBusinessAPI';
+import ImagePage from './components/ImagePage';
 // import Herosection from './components/Herosection';
 
 function HomePage() {
@@ -53,7 +55,8 @@ function HomePage() {
       {/* <Navbar /> */}
       <Mainherosection/>
       <Iptvintro/>
-      <IPTVDetails/>
+      <ImagePage/>
+      {/* <IPTVDetails/> */}
       <Iptvsection />
 
       <Solutions/>
@@ -116,6 +119,7 @@ function App() {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/mobile-app" element={<MobileAppDevelopment />} />
         <Route path="/web-design" element={<WebDesigning />} />
+        <Route path="/whatsapp-business" element={<WhatsAppBusinessAPI />} />
 
       </Routes>
     </Router>

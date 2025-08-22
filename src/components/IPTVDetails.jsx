@@ -2,71 +2,113 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./IPTVDetails.css";
 
-export default function LandingPage() {
+const parts = [
+  { id: "satellite", img: "./satellite.png", text: "SATELLITE TV", className: "satellite" },
+  { id: "panel", img: "/panel.png", text: "MULTI-SWITCH", className: "panel" },
+  { id: "server", img: "/server.png", text: "MACVISION SERVER", className: "server" },
+  { id: "switch", img: "/switch.png", text: "NETWORK SWITCH", className: "switch" },
+  { id: "backend", img: "./dashboard.png", text: "BACKEND", className: "backend" },
+  { id: "frontend", img: "./maintvwatch.png", text: "FRONTEND", className: "frontend" },
+];
+
+const IPTVDetails = () => {
   return (
-    <section className="landing-section">
-      <div className="floating-shapes">
-        <motion.div
-          className="shape shape1"
-          animate={{ y: [0, -15, 0] }}
-          transition={{ repeat: Infinity, duration: 4 }}
-        ></motion.div>
-        <motion.div
-          className="shape shape2"
-          animate={{ x: [0, 15, 0] }}
-          transition={{ repeat: Infinity, duration: 5 }}
-        ></motion.div>
-        <motion.div
-          className="shape shape3"
-          animate={{ y: [0, 20, 0] }}
-          transition={{ repeat: Infinity, duration: 6 }}
-        ></motion.div>
+    <div className="diagram-container">
+      {/* Logo */}
+      <div className="logo-space">
+        <img src="/logo.png" alt="logo" />
       </div>
 
-      <div className="landing-container">
-        {/* Left Image */}
+      {/* Parts */}
+      {parts.map((part, index) => (
         <motion.div
-          className="landing-image"
-          initial={{ opacity: 0, x: -60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
+          key={part.id}
+          className={`part ${part.className}`}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 1, duration: 0.8 }}
         >
-          <img src="./macdesk.jpg" alt="Hero" />
-        </motion.div>
-
-        {/* Right Content */}
-        <motion.div
-          className="landing-content"
-          initial={{ opacity: 0, x: 60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-        >
-          {/* <span className="tag">✨ About Our App</span> */}
-          <h1 className="title">
-            Simple Reports <br /> & Analytics Backdown As It
-          </h1>
-          <p className="description">
-            Experience smooth analytics and reports designed for the hospitality
-            industry. From business insights to guest experience, everything is
-            crafted to look attractive, feel intuitive, and perform powerfully.
-          </p>
-
-          <ul className="checklist">
-            <li> With our Technological and Marketing Solutions</li>
-            <li> Trusted by hotels worldwide</li>
-            <li> Start Your 14 Days Free Trial Today!</li>
-          </ul>
-
-          <motion.a
-            href="#"
-            className="cta-btn"
-            whileHover={{ scale: 1.08 }}
-            whileTap={{ scale: 0.95 }}
+          <motion.img
+            src={part.img}
+            alt={part.text}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: index * 1, duration: 0.8 }}
+          />
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 1 + 0.4, duration: 0.6 }}
           >
-            Discover More →
-          </motion.a>
+            {part.text}
+          </motion.p>
         </motion.div>
-      </div>
-    </section>
+      ))}
+
+      {/* Connecting Lines with slim arrowheads */}
+      <svg className="lines">
+        <defs>
+          <marker
+            id="arrow"
+            markerWidth="12"
+            markerHeight="12"
+            refX="11"
+            refY="3"
+            orient="auto"
+            markerUnits="strokeWidth"
+          >
+            <path d="M0,0 L10,3 L0,6" fill="none" stroke="#000" strokeWidth="1.5" />
+          </marker>
+        </defs>
+
+        {/* satellite → panel */}
+        <motion.line
+          x1="20%" y1="12%" x2="28%" y2="38%"
+          className="line"
+          markerEnd="url(#arrow)"
+          initial={{ strokeDashoffset: 250 }}
+          animate={{ strokeDashoffset: 0 }}
+          transition={{ delay: 2, duration: 1 }}
+        />
+        {/* panel → server */}
+        <motion.line
+          x1="32%" y1="45%" x2="50%" y2="50%"
+          className="line"
+          markerEnd="url(#arrow)"
+          initial={{ strokeDashoffset: 250 }}
+          animate={{ strokeDashoffset: 0 }}
+          transition={{ delay: 3, duration: 1 }}
+        />
+        {/* server → switch */}
+        <motion.line
+          x1="50%" y1="55%" x2="50%" y2="80%"
+          className="line"
+          markerEnd="url(#arrow)"
+          initial={{ strokeDashoffset: 250 }}
+          animate={{ strokeDashoffset: 0 }}
+          transition={{ delay: 4, duration: 1 }}
+        />
+        {/* server → backend */}
+        <motion.line
+          x1="55%" y1="50%" x2="78%" y2="28%"
+          className="line"
+          markerEnd="url(#arrow)"
+          initial={{ strokeDashoffset: 250 }}
+          animate={{ strokeDashoffset: 0 }}
+          transition={{ delay: 5, duration: 1 }}
+        />
+        {/* switch → frontend */}
+        <motion.line
+          x1="50%" y1="82%" x2="78%" y2="82%"
+          className="line"
+          markerEnd="url(#arrow)"
+          initial={{ strokeDashoffset: 250 }}
+          animate={{ strokeDashoffset: 0 }}
+          transition={{ delay: 6, duration: 1 }}
+        />
+      </svg>
+    </div>
   );
-}
+};
+
+export default IPTVDetails;
