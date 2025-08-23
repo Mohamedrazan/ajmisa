@@ -56,7 +56,7 @@ export default function IPTVHero() {
           viewport={{ once: true }}
         >
           <img
-            src="./maintvwatch2.jpg"   // <-- replace with your actual image path
+            src="./maintvwatch2.jpg"   
             alt="IPTV Hospitality"
             className="hero-img-element"
           />

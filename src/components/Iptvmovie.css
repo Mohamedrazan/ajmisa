@@ -1,197 +1,177 @@
-/* MoviePage.css */
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #0d0d0d;
-  color: #ffffff;
-}
-
-.movie-page {
+/* Fullscreen container */
+.iptv-fullscreen {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
+  color: #fff;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-}
-
-.movie-header {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background: #111;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  border-bottom: 1px solid #222;
-  animation: fadeInDown 1s ease;
+  padding: 25px;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
 }
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #00aced;
-  text-transform: uppercase;
-}
-
-.nav-links a {
-  margin-left: 30px;
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #00aced;
-}
-
-.hero {
+/* Header */
+.iptv-header {
   text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(145deg, #111 0%, #1a1a1a 100%);
-  animation: fadeIn 2s ease-in;
+  margin-bottom: 35px;
 }
 
-.hero-title {
+.iptv-header h1 {
   font-size: 3rem;
+  font-weight: bold;
+  color: #005EB8;
+  margin-bottom: 10px;
+}
+
+.iptv-header p {
+  font-size: 1.2rem;
+  color: #ccc;
   margin-bottom: 20px;
 }
 
-.hero-subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  color: #ccc;
-}
-
-.cta-btn {
-  background-color: #00aced;
-  border: none;
-  padding: 14px 30px;
-  font-size: 1rem;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.cta-btn:hover {
-  background-color: white;
-  color: black;
-}
-
-.movie-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 40px;
-  animation: fadeInUp 2s ease;
-}
-
-.movie-card {
-  background: #1c1c1c;
+.iptv-search {
+  padding: 12px 20px;
+  border: 2px solid #005EB8;
   border-radius: 10px;
+  width: 320px;
+  font-size: 1rem;
+  outline: none;
+  background: #111;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.iptv-search:focus {
+  border-color: #fff;
+}
+
+/* Movies Grid */
+.iptv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1350px;
+}
+
+/* Card */
+.iptv-card {
+  background: #111;
+  border-radius: 14px;
   overflow: hidden;
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  text-decoration: none;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-.movie-card:hover {
-  transform: scale(1.05);
+.iptv-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0, 94, 184, 0.6);
 }
 
-.movie-thumbnail {
-  height: 200px;
-  background: #333;
-  background-image: linear-gradient(to top right, #111, #222);
+.iptv-card h3 {
+  margin: 12px;
+  color: #005EB8;
+  font-size: 1.2rem;
 }
 
-.movie-info {
-  padding: 15px;
-}
-
-.movie-info h3 {
-  margin: 0 0 10px 0;
-  font-size: 1.1rem;
-}
-
-.movie-info p {
+.iptv-card p {
+  margin: 0 12px 15px;
   font-size: 0.9rem;
-  color: #999;
-}
-
-.movie-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #111;
-  border-top: 1px solid #222;
   color: #aaa;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .movie-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-links {
-    margin-top: 10px;
-  }
-
-  .hero-title {
-    font-size: 2.2rem;
-  }
-
-  .movie-cards {
-    padding: 20px;
-  }
-}
-
-.movie-thumbnail img {
+/* Poster */
+.iptv-poster {
   width: 100%;
-  height: 250px;
+  height: 330px;
+  overflow: hidden;
+}
+
+.iptv-poster img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 8px;
   transition: transform 0.4s ease;
 }
 
-.movie-card:hover .movie-thumbnail img {
-  transform: scale(1.05);
-  filter: brightness(1.2);
+.iptv-card:hover .iptv-poster img {
+  transform: scale(1.1);
 }
 
+/* Popup Modal */
+.iptv-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
 
-.back-button {
-  background-color: transparent;
-  /* border: 2px solid #91a0a5; */
-  color: #00aced;
-  padding: 6px 16px;
-  /* margin-right: 880px; */
-  font-size: 0.9rem;
-  border-radius: 6px;
+.iptv-modal-content {
+  background: #111;
+  padding: 25px;
+  border-radius: 14px;
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,94,184,0.7);
+  animation: fadeIn 0.3s ease;
+}
+
+.iptv-modal-content h2 {
+  color: #005EB8;
+  margin-bottom: 15px;
+}
+
+.iptv-modal-content iframe {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.iptv-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  color: #fff;
   cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: 0.3s;
 }
 
-.back-button:hover {
-  background-color: transparent;
-  color: white;
+.iptv-close:hover {
+  color: #005EB8;
 }
 
+.iptv-watch-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #005EB8;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
 
+.iptv-watch-btn:hover {
+  background: #0070d9;
+}
 
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
