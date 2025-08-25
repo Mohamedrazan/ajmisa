@@ -18,6 +18,8 @@ import movie11 from "../assets/nun.jpg";
 import movie12 from "../assets/avatar.jpg";
 import movie13 from "../assets/aquaman.jpg";
 import movie14 from "../assets/it.jpg";
+import movie15 from "../assets/showman.jpg";
+
 
 // Movies with Netflix/YT trailers
 const movieData = [
@@ -35,6 +37,7 @@ const movieData = [
   { id: 12, title: "Avatar", image: movie12, link: "https://www.netflix.com/title/70125612", trailer: "https://www.youtube.com/embed/5PSNL1qE6VY" },
   { id: 13, title: "Aquaman", image: movie13, link: "https://www.netflix.com/title/81012335", trailer: "https://www.youtube.com/embed/WDkg3h8PCVU" },
   { id: 14, title: "IT", image: movie14, link: "https://www.netflix.com/title/80170653", trailer: "https://www.youtube.com/embed/xKJmEC5ieOk" },
+  { id: 15,title: "The Greatest Showman",image: movie15,  link: "https://www.netflix.com/title/80193478", trailer: "https://www.youtube.com/embed/4P9WMQStHjE" },
 ];
 
 const navLinks = [
@@ -62,25 +65,48 @@ const IptvMovie = () => {
       exit={{ opacity: 0, y: -50 }}     // 👈 exit animation
       transition={{ duration: 0.8, ease: "easeInOut" }}
     >
-      {/* Navbar */}
-      <div className="iptv-navbar iptv-animate-navbar">
-        <img src="./macvisionmainlogo.png" alt="Logo" className="iptv-logo-image" />
-        <div className="iptv-menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-          ☰
-        </div>
-        <div className={`iptv-nav-links ${menuOpen ? "open" : ""}`}>
-          {navLinks.map((link, i) => (
-            <Link
-              key={i}
-              to={link.path}
-              className="iptv-nav-link"
-              onClick={() => setMenuOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
-      </div>
+       {/* Navbar */}
+            <div className="iptv-navbar iptv-animate-navbar">
+              <img src="./macvisionmainlogo.png" alt="Logo" className="iptv-logo-image" />
+      
+              {/* Hamburger Toggle */}
+              <div className="iptv-menu-toggle" onClick={() => setMenuOpen(true)}>
+                ☰
+              </div>
+      
+              {/* Desktop Nav Links */}
+              <div className="iptv-nav-links-desktop">
+                {navLinks.map((link, i) => (
+                  <Link key={i} to={link.path} className="iptv-nav-link">
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+      
+            {/* Popup Mobile Menu */}
+            {menuOpen && (
+              <div className="iptv-popup-overlay" onClick={() => setMenuOpen(false)}>
+                <div
+                  className="iptv-popup-content"
+                  onClick={(e) => e.stopPropagation()} // Prevent closing on inner click
+                >
+                  <span className="iptv-close-btn" onClick={() => setMenuOpen(false)}>
+                    ×
+                  </span>
+                  {navLinks.map((link, i) => (
+                    <Link
+                      key={i}
+                      to={link.path}
+                      className="iptv-popup-link"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
 
       <div className="iptv-fullscreen">
         {/* Hero Section */}

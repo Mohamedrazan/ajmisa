@@ -42,7 +42,7 @@ export default function Iptvintro() {
             seamless, interactive system.
           </p>
           <div className="iptvIntro-buttons">
-            <Link to="/solutions" className="iptvIntro-btnPrimary" style={{ color: "black" }}>
+            <Link to="/explore-solutions" className="iptvIntro-btnPrimary" style={{ color: "black" }}>
               Explore Solutions
             </Link>
             <Link to="/request-demo" className="iptvIntro-btnSecondary">

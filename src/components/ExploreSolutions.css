@@ -1,0 +1,93 @@
+.exploreSolutionsPage {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: #ffffff;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* HERO */
+.exploreSolutions-hero {
+  background: #005eb8;
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+.exploreSolutions-heroContent h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.exploreSolutions-heroContent p {
+  font-size: 1.1rem;
+  max-width: 750px;
+  margin: auto;
+}
+
+/* CONTENT */
+.exploreSolutions-content {
+  padding: 3rem 8%;
+}
+.exploreSolutions-text {
+  margin-bottom: 2.5rem;
+}
+.exploreSolutions-text h2 {
+  color: #005eb8;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+.exploreSolutions-text p {
+  font-size: 1rem;
+  color: #444;
+}
+.exploreSolutions-text ul {
+  margin-top: 0.8rem;
+  margin-left: 1.2rem;
+  color: #555;
+}
+.exploreSolutions-text ul li {
+  margin-bottom: 0.4rem;
+  list-style-type: disc;
+  font-size: 0.95rem;
+}
+
+/* IMAGE SECTION */
+.exploreSolutions-imageSection {
+  text-align: center;
+  padding: 2rem 0;
+}
+.exploreSolutions-imageWrapper img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* CTA */
+.exploreSolutions-cta {
+  background: #005eb8;
+  color: black;
+  text-align: center;
+  padding: 3.5rem 2rem;
+}
+.exploreSolutions-ctaContent h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.exploreSolutions-ctaContent p {
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+.exploreSolutions-btn {
+  background: white;
+  color: #005eb8;
+  padding: 0.7rem 2rem;
+  font-weight: bold;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.exploreSolutions-btn:hover {
+  background: #f0f0f0;
+}

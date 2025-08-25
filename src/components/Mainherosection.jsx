@@ -27,22 +27,45 @@ export default function Mainherosection() {
       {/* Navbar */}
       <div className="iptv-navbar iptv-animate-navbar">
         <img src="./macvisionmainlogo.png" alt="Logo" className="iptv-logo-image" />
-        <div className="iptv-menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+
+        {/* Hamburger Toggle */}
+        <div className="iptv-menu-toggle" onClick={() => setMenuOpen(true)}>
           ☰
         </div>
-        <div className={`iptv-nav-links ${menuOpen ? "open" : ""}`}>
+
+        {/* Desktop Nav Links */}
+        <div className="iptv-nav-links-desktop">
           {navLinks.map((link, i) => (
-            <Link
-              key={i}
-              to={link.path}
-              className="iptv-nav-link"
-              onClick={() => setMenuOpen(false)}
-            >
+            <Link key={i} to={link.path} className="iptv-nav-link">
               {link.label}
             </Link>
           ))}
         </div>
       </div>
+
+      {/* Popup Mobile Menu */}
+      {menuOpen && (
+        <div className="iptv-popup-overlay" onClick={() => setMenuOpen(false)}>
+          <div
+            className="iptv-popup-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <span className="iptv-close-btn" onClick={() => setMenuOpen(false)}>
+              ×
+            </span>
+            {navLinks.map((link, i) => (
+              <Link
+                key={i}
+                to={link.path}
+                className="iptv-popup-link"
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Hero Section */}
       <div className="iptv-hero-section">
@@ -53,12 +76,12 @@ export default function Mainherosection() {
             <p className="iptv-desc">
               Our IPTV system transforms traditional hotel TV into a personalized guest experience.
               Stream live channels, access movies on demand, order room service, and explore hotel
-              facilities — all from the comfort of the guest room, using an intuitive and engaging interface.
+              facilities — all from the comfort of the guest room, using an intuitive and engaging
+              interface.
             </p>
           </div>
         </div>
       </div>
-
 
       {/* Icon Row */}
       <div className="iptv-icon-row">

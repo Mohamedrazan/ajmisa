@@ -20,25 +20,48 @@ const navLinks = [
   const [menuOpen, setMenuOpen] = useState(false);
   return (
   <>
-    {/* Navbar */}
-        <div className="iptv-navbar iptv-animate-navbar">
-          <img src="./macvisionmainlogo.png" alt="Logo" className="iptv-logo-image" />
-          <div className="iptv-menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-            ☰
+     {/* Navbar */}
+          <div className="iptv-navbar iptv-animate-navbar">
+            <img src="./macvisionmainlogo.png" alt="Logo" className="iptv-logo-image" />
+    
+            {/* Hamburger Toggle */}
+            <div className="iptv-menu-toggle" onClick={() => setMenuOpen(true)}>
+              ☰
+            </div>
+    
+            {/* Desktop Nav Links */}
+            <div className="iptv-nav-links-desktop">
+              {navLinks.map((link, i) => (
+                <Link key={i} to={link.path} className="iptv-nav-link">
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
-          <div className={`iptv-nav-links ${menuOpen ? "open" : ""}`}>
-            {navLinks.map((link, i) => (
-              <Link
-                key={i}
-                to={link.path}
-                className="iptv-nav-link"
-                onClick={() => setMenuOpen(false)}
+    
+          {/* Popup Mobile Menu */}
+          {menuOpen && (
+            <div className="iptv-popup-overlay" onClick={() => setMenuOpen(false)}>
+              <div
+                className="iptv-popup-content"
+                onClick={(e) => e.stopPropagation()} // Prevent closing on inner click
               >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        </div>
+                <span className="iptv-close-btn" onClick={() => setMenuOpen(false)}>
+                  ×
+                </span>
+                {navLinks.map((link, i) => (
+                  <Link
+                    key={i}
+                    to={link.path}
+                    className="iptv-popup-link"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
 
     <div className="room-service-wrapper">
       <h1 className="page-heading">Room Service</h1>

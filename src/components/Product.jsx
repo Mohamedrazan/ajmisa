@@ -66,22 +66,45 @@ export default function Product() {
        {/* Navbar */}
             <div className="iptv-navbar iptv-animate-navbar">
               <img src="./macvisionmainlogo.png" alt="Logo" className="iptv-logo-image" />
-              <div className="iptv-menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+      
+              {/* Hamburger Toggle */}
+              <div className="iptv-menu-toggle" onClick={() => setMenuOpen(true)}>
                 ☰
               </div>
-              <div className={`iptv-nav-links ${menuOpen ? "open" : ""}`}>
+      
+              {/* Desktop Nav Links */}
+              <div className="iptv-nav-links-desktop">
                 {navLinks.map((link, i) => (
-                  <Link
-                    key={i}
-                    to={link.path}
-                    className="iptv-nav-link"
-                    onClick={() => setMenuOpen(false)}
-                  >
+                  <Link key={i} to={link.path} className="iptv-nav-link">
                     {link.label}
                   </Link>
                 ))}
               </div>
             </div>
+      
+            {/* Popup Mobile Menu */}
+            {menuOpen && (
+              <div className="iptv-popup-overlay" onClick={() => setMenuOpen(false)}>
+                <div
+                  className="iptv-popup-content"
+                  onClick={(e) => e.stopPropagation()} // Prevent closing on inner click
+                >
+                  <span className="iptv-close-btn" onClick={() => setMenuOpen(false)}>
+                    ×
+                  </span>
+                  {navLinks.map((link, i) => (
+                    <Link
+                      key={i}
+                      to={link.path}
+                      className="iptv-popup-link"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
 
       {/* Product Section */}
       <div className="product-wrapper">

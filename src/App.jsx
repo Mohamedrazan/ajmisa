@@ -45,6 +45,8 @@ import Product from './components/Product';
 import SmartMiddleware from './components/SmartMiddleware';
 import WhatsAppBusinessAPI from './components/WhatsAppBusinessAPI';
 import ImagePage from './components/ImagePage';
+import QuotePage from './components/QuotePage';
+import ExploreSolutions from './components/ExploreSolutions';
 // import Herosection from './components/Herosection';
 
 function HomePage() {
@@ -100,7 +102,7 @@ function App() {
         <Route path="/room-service" element={<Iptvhotel/>} />
         <Route path="/hotel-info" element={<Hotelinfo/>} />
         <Route path="/menu" element={<Roomservice/>} />
-        <Route path="/guest-info" element={<Guestinfo/>} />\
+        <Route path="/guest-info" element={<Guestinfo/>} />
         <Route path="/products" element={<Product />} />
         <Route path="/client" element={<Ourclient/>} />
         <Route path="/services" element={<OurServices/>} />
@@ -120,6 +122,8 @@ function App() {
         <Route path="/mobile-app" element={<MobileAppDevelopment />} />
         <Route path="/web-design" element={<WebDesigning />} />
         <Route path="/whatsapp-business" element={<WhatsAppBusinessAPI />} />
+        <Route path="/qoute-page" element={<QuotePage />} />
+        <Route path="/explore-solutions" element={<ExploreSolutions />} />
 
       </Routes>
     </Router>
