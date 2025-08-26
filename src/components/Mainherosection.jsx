@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Mainherosection.css";
 
@@ -19,26 +19,70 @@ const icons = [
   { name: "Hotel Guest Info", route: "/guest-info", icon: "./guest.png" },
 ];
 
+const slides = [
+  {
+    image: "./resort.jpg",
+    title: "IPTV Hospitality Solutions",
+    subtitle: "Smart In-Room Experience",
+    desc: "Our IPTV system transforms traditional hotel TV into a personalized guest experience. Guests can stream live channels, access movies on demand, order room service, and explore hotel facilities seamlessly."
+  },
+  {
+    image: "./mainhero1.jpg",
+    title: "Entertainment at Fingertips",
+    subtitle: "Interactive Guest Journey",
+    desc: "Provide your guests with immersive entertainment options. With live TV, VoD, and music playlists, every guest enjoys a personalized, convenient, and luxurious in-room experience."
+  },
+  {
+    image: "./mainhero2.jpg",
+    title: "Seamless Hotel Services",
+    subtitle: "Digital Hotel Assistant",
+    desc: "Enable guests to order food, request room cleaning, and access hotel services with a single click. A smart way to elevate hospitality and improve service delivery."
+  }
+];
+
 export default function Mainherosection() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const touchStartX = useRef(null);
+
+  // Auto-slide
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Swipe handling for mobile
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e) => {
+    if (!touchStartX.current) return;
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX.current - touchEndX;
+
+    if (diff > 50) {
+      // swipe left -> next
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    } else if (diff < -50) {
+      // swipe right -> prev
+      setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    }
+    touchStartX.current = null;
+  };
 
   return (
     <div className="iptv-dashboard">
       {/* Navbar */}
       <div className="iptv-navbar iptv-animate-navbar">
         <img src="./macvisionmainlogo.png" alt="Logo" className="iptv-logo-image" />
-
-        {/* Hamburger Toggle */}
-        <div className="iptv-menu-toggle" onClick={() => setMenuOpen(true)}>
-          ☰
-        </div>
-
-        {/* Desktop Nav Links */}
+        <div className="iptv-menu-toggle" onClick={() => setMenuOpen(true)}>☰</div>
         <div className="iptv-nav-links-desktop">
           {navLinks.map((link, i) => (
-            <Link key={i} to={link.path} className="iptv-nav-link">
-              {link.label}
-            </Link>
+            <Link key={i} to={link.path} className="iptv-nav-link">{link.label}</Link>
           ))}
         </div>
       </div>
@@ -46,20 +90,10 @@ export default function Mainherosection() {
       {/* Popup Mobile Menu */}
       {menuOpen && (
         <div className="iptv-popup-overlay" onClick={() => setMenuOpen(false)}>
-          <div
-            className="iptv-popup-content"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <span className="iptv-close-btn" onClick={() => setMenuOpen(false)}>
-              ×
-            </span>
+          <div className="iptv-popup-content" onClick={(e) => e.stopPropagation()}>
+            <span className="iptv-close-btn" onClick={() => setMenuOpen(false)}>×</span>
             {navLinks.map((link, i) => (
-              <Link
-                key={i}
-                to={link.path}
-                className="iptv-popup-link"
-                onClick={() => setMenuOpen(false)}
-              >
+              <Link key={i} to={link.path} className="iptv-popup-link" onClick={() => setMenuOpen(false)}>
                 {link.label}
               </Link>
             ))}
@@ -67,19 +101,37 @@ export default function Mainherosection() {
         </div>
       )}
 
-      {/* Hero Section */}
-      <div className="iptv-hero-section">
-        <div className="iptv-hero-overlay">
-          <div className="iptv-hero-text iptv-animate-hero">
-            <h2>IPTV Hospitality Solutions</h2>
-            <p className="iptv-welcome">Smart In-Room Experience</p>
-            <p className="iptv-desc">
-              Our IPTV system transforms traditional hotel TV into a personalized guest experience.
-              Stream live channels, access movies on demand, order room service, and explore hotel
-              facilities — all from the comfort of the guest room, using an intuitive and engaging
-              interface.
-            </p>
+      {/* Hero Slider Section */}
+      <div 
+        className="iptv-slider" 
+        onTouchStart={handleTouchStart} 
+        onTouchEnd={handleTouchEnd}
+      >
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className={`iptv-slide ${index === currentSlide ? "active" : ""}`}
+            style={{ backgroundImage: `url(${slide.image})` }}
+          >
+            <div className="iptv-hero-overlay">
+              <div className="iptv-hero-text iptv-animate-hero">
+                <h2 className="slide-title">{slide.title}</h2>
+                <p className="iptv-welcome slide-subtitle">{slide.subtitle}</p>
+                <p className="iptv-desc slide-desc">{slide.desc}</p>
+              </div>
+            </div>
           </div>
+        ))}
+
+        {/* Navigation Dots */}
+        <div className="iptv-slider-dots">
+          {slides.map((_, index) => (
+            <span
+              key={index}
+              className={`dot ${index === currentSlide ? "active" : ""}`}
+              onClick={() => setCurrentSlide(index)}
+            ></span>
+          ))}
         </div>
       </div>
 

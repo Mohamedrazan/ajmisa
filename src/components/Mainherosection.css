@@ -1,3 +1,4 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +27,7 @@ a:active {
   width: 100%;
 }
 
-/* Navbar */
+/* ================= NAVBAR ================= */
 .iptv-navbar {
   background-color: #0a0a0a;
   padding: 1rem 2rem;
@@ -53,12 +54,12 @@ a:active {
   color: #005EB8;
 }
 
-/* Desktop Navbar */
+/* Desktop Navbar Links */
 .iptv-nav-links-desktop {
   display: flex;
   gap: 2rem;
   align-items: center;
-  margin-left: auto; /* Pushes links to right */
+  margin-left: auto;
 }
 
 .iptv-nav-link {
@@ -138,15 +139,11 @@ a:active {
 
 /* Slide-in Animation */
 @keyframes slideIn {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
 }
 
-/* Hero Section */
+/* ================= HERO ================= */
 .iptv-hero-section {
   position: relative;
   height: 400px;
@@ -154,7 +151,7 @@ a:active {
 }
 
 .iptv-hero-overlay {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.2));
+  background: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.3), rgba(0,0,0,0.85));
   height: 100%;
   width: 100%;
   padding: 2rem;
@@ -189,7 +186,7 @@ a:active {
   color: #f0f0f0;
 }
 
-/* Icon Grid */
+/* ================= ICON GRID ================= */
 .iptv-icon-row {
   display: flex;
   flex-wrap: wrap;
@@ -235,7 +232,7 @@ a:active {
   color: white;
 }
 
-/* Sequential Icon Animations */
+/* Sequential Animations */
 .iptv-icon-animate-1 { animation: zoomIn 0.6s ease forwards; animation-delay: 1.4s; }
 .iptv-icon-animate-2 { animation: zoomIn 0.6s ease forwards; animation-delay: 1.55s; }
 .iptv-icon-animate-3 { animation: zoomIn 0.6s ease forwards; animation-delay: 1.7s; }
@@ -243,7 +240,54 @@ a:active {
 .iptv-icon-animate-5 { animation: zoomIn 0.6s ease forwards; animation-delay: 2s; }
 .iptv-icon-animate-6 { animation: zoomIn 0.6s ease forwards; animation-delay: 2.15s; }
 
-/* Animations */
+/* ================= SLIDER ================= */
+.iptv-slider {
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+}
+
+.iptv-slide {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+}
+
+.iptv-slide.active {
+  left: 0;
+  opacity: 1;
+  z-index: 1;
+}
+
+.iptv-slider-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #888;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dot.active {
+  background: #005EB8;
+}
+
+/* ================= ANIMATIONS ================= */
 @keyframes fadeDown {
   from { opacity: 0; transform: translateY(-30px); }
   to { opacity: 1; transform: translateY(0); }
@@ -259,7 +303,7 @@ a:active {
   to { opacity: 1; transform: scale(1); }
 }
 
-/* Responsive */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 992px) {
   .iptv-nav-links-desktop {
     display: none;
@@ -293,5 +337,6 @@ a:active {
     height: 40px;
   }
   .iptv-icon-label {
-    font-size: 0.75rem; }
+    font-size: 0.75rem;
+  }
 }
