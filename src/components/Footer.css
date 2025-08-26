@@ -31,6 +31,21 @@
   margin-bottom: 20px;
 }
 
+/* Extra Logos */
+.footer-extra-logos {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.footer-extra-logos img {
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+  padding: 5px;
+  border-radius: 6px;
+}
+
 /* Address Text */
 .footer-address {
   line-height: 1.6;
@@ -85,7 +100,7 @@
   font-size: 16px;
   font-weight: bold;
   color: #f5deb3;
-  margin: 10px 0 20px;
+  margin: 5px 0;
 }
 
 /* Social Icons */
@@ -138,7 +153,6 @@
   color: #aaa;
 }
 
-/* Links in Bottom */
 .footer-bottom a {
   color: #aaa;
   text-decoration: none;
@@ -147,19 +161,6 @@
 
 .footer-bottom a:hover {
   color: #f5deb3;
-}
-
-/* Payment Logos */
-.footer-payments img {
-  width: 40px;
-  height: auto;
-  margin-left: 12px;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease;
-}
-
-.footer-payments img:hover {
-  filter: grayscale(0%);
 }
 
 /* Responsive - Tablet & Below */
@@ -175,4 +176,25 @@
     gap: 10px;
     align-items: flex-start;
   }
+}
+
+
+
+/* Phone Numbers with Location */
+.footer-phones {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 15px 0 20px;
+}
+
+.phone-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-location {
+  font-size: 13px;
+  color: #bbb;
+  margin-top: -5px;
 }

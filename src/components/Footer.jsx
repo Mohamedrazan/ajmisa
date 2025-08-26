@@ -5,11 +5,6 @@ import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { SiGoogleplay, SiAppstore } from 'react-icons/si';
 
-// Payment icons
-import paypal from '../assets/paypal.png';
-import visa from '../assets/visa.png';
-import mastercard from '../assets/mastercard.png';
-
 const Footer = () => {
   return (
     <footer className="footer-wrapper">
@@ -18,6 +13,17 @@ const Footer = () => {
         {/* Left Section */}
         <div className="footer-column">
           <img src="./ajmisalogo.png" alt="Ajmisa Logo" className="footer-logo" />
+
+          {/* Extra Logos */}
+          <div className="footer-extra-logos">
+            <div className="extra-logo-box">
+              <img src="./macvisionmainlogo.png" alt="Extra Logo 1" />
+            </div>
+            <div className="extra-logo-box">
+              <img src="./newlogo.png" alt="Extra Logo 2" />
+            </div>
+          </div>
+
           <address className="footer-address">
             P.O Box 40637,<br />
             Markaz Hail, Hail Street<br />
@@ -31,23 +37,27 @@ const Footer = () => {
         {/* Middle Section */}
         <div className="footer-column">
           <div className="footer-links">
-            {/* <div>
-              <h4>Quick Menu</h4>
-              <ul>
-                <li>How it works</li>
-                <li>Refund Policy</li>
-                <li>New Products</li>
-                <li>About Us</li>
-              </ul>
-            </div> */}
             <div>
               <h4>Customer Support</h4>
               <ul>
-          <li><Link to="/help-center">Help Center</Link></li>
-          <li><Link to="/terms-conditions">Terms & Conditions</Link></li>
-          <li><Link to="/privacy-policy">Privacy Policy</Link></li>
-          <li><Link to="/faq">FAQ</Link></li>
+                <li><Link to="/help-center">Help Center</Link></li>
+                <li><Link to="/terms-conditions">Terms & Conditions</Link></li>
+                <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+                <li><Link to="/faq">FAQ</Link></li>
               </ul>
+            </div>
+          </div>
+          <br /><br />
+
+          {/* Social icons moved here */}
+          <div className="footer-social-section">
+            <p>Follow Us</p>
+            <br />
+            <div className="footer-social">
+              <FaFacebook />
+              <FaInstagram />
+              <FaTwitter />
+              <FaYoutube />
             </div>
           </div>
         </div>
@@ -55,16 +65,23 @@ const Footer = () => {
         {/* Right Section */}
         <div className="footer-column">
           <h4>Contact</h4>
-          <p>Call Us On:</p>
-          <p className="footer-hotline">+966 553011362</p>
-
-          <p>Follow Us</p>
           <br />
-          <div className="footer-social">
-            <FaFacebook />
-            <FaInstagram />
-            <FaTwitter />
-            <FaYoutube />
+          <p>Call Us On:</p>
+
+          {/* Multiple phone numbers with descriptions */}
+          <div className="footer-phones">
+            <div className="phone-item">
+              <p className="footer-hotline">+966 553011362</p>
+              <span className="phone-location">Saudi Arabia (Branch)</span>
+            </div>
+            <div className="phone-item">
+              <p className="footer-hotline">+940 776106362</p>
+              <span className="phone-location">Sri Lanka (Branch)</span>
+            </div>
+            <div className="phone-item">
+              <p className="footer-hotline">+91 9562666362</p>
+              <span className="phone-location">India (Head Office)</span>
+            </div>
           </div>
 
           <div className="footer-apps">
@@ -74,14 +91,9 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom */}
+      {/* Bottom Bar */}
       <div className="footer-bottom">
-        <p>© 2025 IPTV Live Today. All Rights Reserved.</p>
-        <div className="footer-payments">
-          <img src={paypal} alt="PayPal" />
-          <img src={visa} alt="Visa" />
-          <img src={mastercard} alt="Mastercard" />
-        </div>
+        <p>© {new Date().getFullYear()} Mahincha IT Solutions.</p>
       </div>
     </footer>
   );
