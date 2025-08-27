@@ -1,34 +1,50 @@
-/* ==== Wrapper Background ==== */
+/* ==== Wrapper ==== */
 .middleware-wrapper {
   position: relative;
   padding: 100px 20px;
-  background: linear-gradient(135deg, #f7f9fb, #eaeef3);
-  color: #333;
+  background: linear-gradient(135deg, #ffffff, #f4f9ff);
+  color: #005EB8;
   font-family: "Segoe UI", sans-serif;
   overflow: hidden;
 }
 
-/* Decorative Gradient Blobs */
-.blob {
+/* Background Overlay */
+.background-overlay {
   position: absolute;
-  border-radius: 50%;
-  filter: blur(90px);
-  opacity: 0.4;
+  inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(0, 94, 184, 0.15), transparent 70%),
+              radial-gradient(circle at 70% 80%, rgba(0, 94, 184, 0.1), transparent 70%);
   z-index: 0;
 }
-.blob1 {
-  top: -80px;
-  left: -120px;
-  width: 280px;
-  height: 280px;
-  /* background: #00d4ff; */
+
+/* Wave Effect */
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 220px;
+  background: rgba(0, 94, 184, 0.08);
+  border-radius: 100% 50%;
+  animation: waveAnimation 8s infinite linear;
+  z-index: 0;
 }
-.blob2 {
-  bottom: -120px;
-  right: -100px;
-  width: 260px;
-  height: 260px;
-  /* background: #ff6ec7; */
+.wave1 {
+  bottom: -40px;
+  animation-delay: 0s;
+}
+.wave2 {
+  bottom: -60px;
+  animation-delay: 4s;
+}
+
+@keyframes waveAnimation {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(-360deg);
+  }
 }
 
 /* ==== Header ==== */
@@ -39,14 +55,16 @@
   z-index: 1;
 }
 .middleware-header h2 {
-  font-size: 40px;
+  font-size: 42px;
   font-weight: 700;
-  color: #004fa3;
+  background: linear-gradient(45deg, #005EB8, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .middleware-header p {
   font-size: 20px;
-  opacity: 0.8;
-  margin-top: 10px;
+  color: #333;
+  margin-top: 12px;
 }
 
 /* ==== Timeline Layout ==== */
@@ -58,77 +76,92 @@
   z-index: 1;
 }
 
-/* Vertical line */
-.middleware-timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 60px;
-  width: 4px;
-  height: 100%;
-  background: #ccc;
-  border-radius: 2px;
-}
-
 /* Timeline Item */
 .timeline-item {
   position: relative;
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 60px;
+  align-items: center;
+  margin-bottom: 70px;
 }
 
-/* Marker */
+/* Marker (Icon bubble) */
 .timeline-marker {
   flex-shrink: 0;
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, #0066cc, #004fa3);
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #005EB8, #0074ff);
   border-radius: 50%;
   color: #fff;
-  font-weight: bold;
-  font-size: 18px;
+  font-size: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 30px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  z-index: 2;
+  margin-right: 25px;
+  box-shadow: 0 8px 25px rgba(0, 94, 184, 0.3);
+  animation: pulse 2s infinite;
 }
 
-/* Card Content (Now Blue Background) */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(0, 94, 184, 0.4);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(0, 94, 184, 0.6);
+  }
+}
+
+/* Timeline Card */
 .timeline-content {
-  background: linear-gradient(135deg, #0066cc, #004fa3);
-  border-radius: 16px;
+  background: rgba(0, 94, 184, 0.05);
+  border-left: 5px solid #005EB8;
+  border-radius: 18px;
   padding: 25px 30px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
-  color: #fff;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, background 0.3s ease;
+  position: relative;
 }
 .timeline-content:hover {
   transform: translateY(-8px) scale(1.02);
+  background: rgba(0, 94, 184, 0.12);
+}
+
+.step-number {
+  position: absolute;
+  top: -18px;
+  right: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #005EB8;
+  background: #fff;
+  border: 1px solid #005EB8;
+  padding: 5px 10px;
+  border-radius: 8px;
 }
 
 .timeline-content h4 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #fff;
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #005EB8;
 }
 .timeline-content p {
   font-size: 15px;
   line-height: 1.6;
-  color: #e9f2ff;
+  color: #333;
 }
 
 /* ==== Responsive ==== */
 @media (max-width: 768px) {
-  .middleware-timeline::before {
-    left: 40px;
+  .middleware-timeline {
+    padding-left: 0;
   }
 
   .timeline-item {
     flex-direction: column;
     align-items: flex-start;
+    text-align: left;
   }
 
   .timeline-marker {
