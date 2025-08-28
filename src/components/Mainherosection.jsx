@@ -43,18 +43,17 @@ const slides = [
 export default function Mainherosection() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const touchStartX = useRef(null);
 
   // Auto-slide
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 4000);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
-  // Swipe handling for mobile
+  // Swipe handling
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX;
   };
@@ -65,10 +64,8 @@ export default function Mainherosection() {
     const diff = touchStartX.current - touchEndX;
 
     if (diff > 50) {
-      // swipe left -> next
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     } else if (diff < -50) {
-      // swipe right -> prev
       setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
     }
     touchStartX.current = null;
@@ -101,7 +98,7 @@ export default function Mainherosection() {
         </div>
       )}
 
-      {/* Hero Slider Section */}
+      {/* Hero Slider */}
       <div 
         className="iptv-slider" 
         onTouchStart={handleTouchStart} 
@@ -114,7 +111,7 @@ export default function Mainherosection() {
             style={{ backgroundImage: `url(${slide.image})` }}
           >
             <div className="iptv-hero-overlay">
-              <div className="iptv-hero-text iptv-animate-hero">
+              <div className="iptv-hero-text">
                 <h2 className="slide-title">{slide.title}</h2>
                 <p className="iptv-welcome slide-subtitle">{slide.subtitle}</p>
                 <p className="iptv-desc slide-desc">{slide.desc}</p>
@@ -123,7 +120,7 @@ export default function Mainherosection() {
           </div>
         ))}
 
-        {/* Navigation Dots */}
+        {/* Dots */}
         <div className="iptv-slider-dots">
           {slides.map((_, index) => (
             <span
