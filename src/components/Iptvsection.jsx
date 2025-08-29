@@ -1,9 +1,15 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Iptvsection.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FaCheckCircle, FaTv, FaTabletAlt, FaSatelliteDish } from "react-icons/fa";
+import {
+  FaCheckCircle,
+  FaTv,
+  FaTabletAlt,
+  FaSatelliteDish,
+  FaWifi,
+} from "react-icons/fa";
+import "./Iptvsection.css";
 
 const Iptvsection = () => {
   const navigate = useNavigate();
@@ -18,14 +24,19 @@ const Iptvsection = () => {
 
   return (
     <section className="iptv-wrapper">
-      {/* Hero Section */}
+      {/* HERO */}
       <div className="iptv-hero">
-        <div className="hero-content" data-aos="fade-right">
-          <h5>Smart Entertainment for Hotels</h5>
-          <h1>Premium 4K IPTV Experience</h1>
+        <div className="hero-overlay"></div>
+
+        <div className="hero-content" data-aos="fade-up">
+          <h5>Next-Gen Hospitality</h5>
+          <h1>
+            Redefine <span>Entertainment</span> with 4K IPTV
+          </h1>
           <p>
-            Transform your guest rooms with IPTV solutions designed for seamless
-            streaming on any smart TV platform. No set-top box required!
+            Deliver a premium in-room experience for your guests with IPTV that
+            works seamlessly across Smart TVs and devices. Immersive, modern,
+            and built for the future of hospitality.
           </p>
 
           <ul className="feature-list">
@@ -41,44 +52,58 @@ const Iptvsection = () => {
         </div>
 
         <div className="hero-image" data-aos="zoom-in">
-          <img src="./maintvwatch.jpg" alt="Family watching IPTV" />
+          <img src="./maintvwatch.jpg" alt="IPTV Experience" />
+          <div className="floating-shape shape1"></div>
+          <div className="floating-shape shape2"></div>
         </div>
       </div>
 
-      {/* Features Section */}
+      {/* FEATURES (UNCHANGED) */}
       <div className="features-section">
         <h2 data-aos="fade-up">Why Choose Our IPTV?</h2>
-        <div className="features-grid">
-          <div className="feature-card" data-aos="fade-up" data-aos-delay="100">
-            <FaTv className="card-icon" />
-            <h3>Vast Channel Library</h3>
-            <p>
-              Access movies, sports, local & international channels in crystal-clear 4K.
-            </p>
+        <div className="timeline">
+          <div className="timeline-item" data-aos="fade-right">
+            <FaTv className="timeline-icon" />
+            <div className="timeline-content">
+              <h3>Vast Channel Library</h3>
+              <p>
+                Access global content including movies, sports, and
+                international channels in 4K.
+              </p>
+            </div>
           </div>
 
-          <div className="feature-card" data-aos="fade-up" data-aos-delay="200">
-            <FaTabletAlt className="card-icon" />
-            <h3>Multi-Device Support</h3>
-            <p>
-              Watch anywhere — Smart TVs, mobiles, tablets, Firestick, or desktops.
-            </p>
+          <div className="timeline-item" data-aos="fade-left">
+            <FaTabletAlt className="timeline-icon" />
+            <div className="timeline-content">
+              <h3>Multi-Device Streaming</h3>
+              <p>
+                Guests can enjoy content on TVs, tablets, mobiles, or desktops —
+                anytime, anywhere.
+              </p>
+            </div>
           </div>
 
-          <div className="feature-card" data-aos="fade-up" data-aos-delay="300">
-            <FaSatelliteDish className="card-icon" />
-            <h3>Easy Management</h3>
-            <p>
-              Control, monitor, and manage IPTV usage with a powerful admin dashboard.
-            </p>
+          <div className="timeline-item" data-aos="fade-right">
+            <FaSatelliteDish className="timeline-icon" />
+            <div className="timeline-content">
+              <h3>Admin Dashboard</h3>
+              <p>
+                Manage, monitor, and control IPTV services easily with our
+                intuitive management tools.
+              </p>
+            </div>
           </div>
 
-          <div className="feature-card" data-aos="fade-up" data-aos-delay="100">
-            <FaTv className="card-icon" />
-            <h3>Vast Channel Library</h3>
-            <p>
-              Access movies, sports, local & international channels in crystal-clear 4K.
-            </p>
+          <div className="timeline-item" data-aos="fade-left">
+            <FaWifi className="timeline-icon" />
+            <div className="timeline-content">
+              <h3>Seamless Connectivity</h3>
+              <p>
+                Optimized for stable, fast streaming — ensuring zero downtime
+                and smooth performance.
+              </p>
+            </div>
           </div>
         </div>
       </div>

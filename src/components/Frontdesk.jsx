@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
-import "./ImagePage.css";
+import "./Frontdesk.css";
 
-export default function ImagePage() {
+export default function Frontdesk() {
   const imgRef = useRef(null);
   const textRef = useRef(null);
 

@@ -44,9 +44,10 @@ import Iptvintro from './components/Iptvintro';
 import Product from './components/Product';
 import SmartMiddleware from './components/SmartMiddleware';
 import WhatsAppBusinessAPI from './components/WhatsAppBusinessAPI';
-import ImagePage from './components/ImagePage';
 import QuotePage from './components/QuotePage';
 import ExploreSolutions from './components/ExploreSolutions';
+import IptvBusiness from './components/IptvBusiness';
+import Frontdesk from './components/Frontdesk';
 // import Herosection from './components/Herosection';
 
 function HomePage() {
@@ -56,16 +57,17 @@ function HomePage() {
       {/* <Herosection/> */}
       {/* <Navbar /> */}
       <Mainherosection/>
-      <Iptvintro/>
-      <ImagePage/>
+      <IptvBusiness/>
+      {/* <Iptvintro/> */}
+      {/* <ImagePage/> */}
       {/* <IPTVDetails/> */}
-      <Iptvsection />
+      {/* <Iptvsection /> */}
 
       <Solutions/>
       <SmartMiddleware/>
-      <ContactPromo/>
+      {/* <ContactPromo/> */}
 
-      <FAQ/>
+      {/* <FAQ/> */}
       {/* <Help/> */}
       {/* <TestimonialPage/> */}
 
@@ -124,6 +126,7 @@ function App() {
         <Route path="/whatsapp-business" element={<WhatsAppBusinessAPI />} />
         <Route path="/qoute-page" element={<QuotePage />} />
         <Route path="/explore-solutions" element={<ExploreSolutions />} />
+        <Route path="/frontdesk" element={<Frontdesk />} />
 
       </Routes>
     </Router>
