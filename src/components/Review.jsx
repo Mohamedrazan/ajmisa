@@ -65,7 +65,7 @@ export default function Review() {
         >
             <div className="testimonial-header">
                 <h2 style={{ color: "black" }}>
-                    Thousands of satisfied <br />customers said:
+                    Our satisfied <br />customers said:
                 </h2>
             </div>
             <div className="testimonial-cards">

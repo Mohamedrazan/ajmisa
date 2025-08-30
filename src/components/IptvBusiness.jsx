@@ -34,7 +34,7 @@ const IptvBusiness = () => {
         <div className="hero-grid">
           <div className="hero-copy" data-aos="fade-right">
             <h5 className="eyebrow">Hospitality IPTV Solutions</h5>
-            <h1 className="title">
+            <h1 className="title1">
               Elevate Every <span>Guest Stay</span> with a Premium In-Room
               Experience
             </h1>
@@ -69,12 +69,12 @@ const IptvBusiness = () => {
             <div className="tv-frame">
               {/* Replace with your hero image if you have one */}
               <img src="./maintvwatch.jpg" alt="Hotel room IPTV" />
-              <div className="floating-tag tag-top">
+              {/* <div className="floating-tag tag-top">
                 <FaTv /> 4K Channels & VOD
-              </div>
-              <div className="floating-tag tag-bottom">
+              </div> */}
+              {/* <div className="floating-tag tag-bottom">
                 <FaConciergeBell /> In-Room Upsells
-              </div>
+              </div> */}
             </div>
             <div className="blob blob-1" />
             <div className="blob blob-2" />
@@ -233,8 +233,8 @@ const IptvBusiness = () => {
           <div className="show-visual" data-aos="zoom-in">
             <div className="neo-tv">
               <img src="./maintvwatch2.jpg" alt="In-room IPTV showcase" />
-              <div className="badge b1"><FaPhoneAlt /> One-tap Room Service</div>
-              <div className="badge b2"><FaShieldAlt /> Safe for Families</div>
+              {/* <div className="badge b1"><FaPhoneAlt /> One-tap Room Service</div> */}
+              {/* <div className="badge b2"><FaShieldAlt /> Safe for Families</div> */}
             </div>
           </div>
           <div className="show-copy" data-aos="fade-left">

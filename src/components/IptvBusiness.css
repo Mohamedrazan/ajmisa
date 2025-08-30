@@ -75,13 +75,14 @@
   margin:0 0 10px;
   font-size:12px;
 }
-.title{
+.title1{
   font-size:48px;
   line-height:1.15;
   margin:0 0 14px;
   font-weight:800;
+  color: lightgray;
 }
-.title span{ color:var(--gold); }
+.title1 span{ color:var(--gold); }
 .lead{
   font-size:18px;
   color:#eaf3ff;
