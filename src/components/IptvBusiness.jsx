@@ -153,7 +153,7 @@ const IptvBusiness = () => {
       </section>
 
       {/* EXPERIENCE STRIP */}
-      <section className="experience">
+      {/* <section className="experience">
         <div className="exp-grid">
           <div className="exp-item" data-aos="fade-up">
             <FaRegSmileBeam />
@@ -176,7 +176,7 @@ const IptvBusiness = () => {
             <p>Localized UI and content for international travelers.</p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* MODULES (HOSPITALITY-FOCUSED) */}
       <section className="modules">

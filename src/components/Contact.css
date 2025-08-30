@@ -1,16 +1,26 @@
+/* General Styling */
 .contact-container {
-  color: black;
-  padding: 60px 20px;
+  background: linear-gradient(135deg, #000 70%, #005EB8 100%);
+  color: #fff;
+  padding: 80px 20px;
   min-height: 100vh;
   font-family: 'Segoe UI', sans-serif;
-  background-image: url('../../public/background1.png');
+  text-align: center;
+  animation: fadeInPage 1s ease-in-out;
 }
 
 .contact-title {
-  text-align: center;
   font-size: 3rem;
-  margin-bottom: 40px;
-  animation: fadeIn 1s ease-out;
+  margin-bottom: 15px;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.contact-subtitle {
+  font-size: 1.2rem;
+  color: #bbb;
+  margin-bottom: 50px;
 }
 
 .contact-info {
@@ -18,19 +28,19 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .info-box {
-  background-color: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 94, 184, 0.5);
   padding: 30px;
-  border-radius: 12px;
+  border-radius: 16px;
   width: 280px;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 }
-
 
 .info-box h2 {
   font-size: 1.5rem;
@@ -39,8 +49,8 @@
 }
 
 .info-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 94, 184, 0.6);
 }
 
 .map-container {
@@ -48,9 +58,9 @@
   height: 400px;
   max-width: 900px;
   margin: 0 auto;
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
-  animation: fadeInUp 1s ease-out;
+  border: 2px solid #005EB8;
 }
 
 .map-container iframe {
@@ -59,28 +69,168 @@
   border: none;
 }
 
+/* Footer */
+.footer {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 60px 20px 30px;
+  font-size: 0.95rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-left,
+.footer-links,
+.footer-right {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-left img {
+  width: 160px;
+  margin-bottom: 20px;
+}
+
+.footer-links h4,
+.footer-right h4 {
+  color: #005EB8;
+  margin-bottom: 15px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer-links ul li:hover {
+  color: #005EB8;
+}
+
+.footer-right p {
+  margin: 8px 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 1.4rem;
+  margin: 10px 0 20px;
+}
+
+.social-icons svg {
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons svg:hover {
+  transform: scale(1.2);
+  color: #005EB8;
+}
+
+.app-links a {
+  display: inline-block;
+  margin: 8px 0;
+  padding: 8px 12px;
+  border: 1px solid #005EB8;
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.app-links a:hover {
+  background: #005EB8;
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 30px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+}
+
+.payment-icons img {
+  width: 50px;
+  margin-left: 10px;
+  opacity: 0.9;
+  transition: transform 0.3s;
+}
+
+.payment-icons img:hover {
+  transform: scale(1.1);
+}
+
 /* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
+@keyframes fadeInPage {
+  from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
+.fade-in {
+  animation: fadeInPage 1.2s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 1.2s ease forwards;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .info-box {
-    width: 90%;
-  }
-
   .contact-title {
     font-size: 2.2rem;
   }
-
   .map-container {
     height: 300px;
   }
+}
+
+
+
+
+/* Back to Home Button */
+.back-home-btn {
+  margin-left: 20px;
+  padding: 8px 18px;
+  background: #005EB8;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.back-home-btn:hover {
+  background: #0074e6;
+  transform: scale(1.05);
+}
+
+/* Mobile menu version */
+.back-home-btn.mobile {
+  margin-top: 15px;
+  width: 100%;
+  text-align: center;
 }
