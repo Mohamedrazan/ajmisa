@@ -110,6 +110,7 @@
   will-change: transform, opacity;
 }
 
+/* ==== Card Inner ================================================= */
 .card-inner {
   position: relative;
   height: 100%;
@@ -123,6 +124,26 @@
   grid-template-rows: auto auto 1fr auto;
   gap: 10px;
   overflow: hidden;
+  transition: background 0.6s ease, color 0.6s ease;
+}
+
+/* 🎨 Active card different background */
+.card-inner.active {
+  background: var(--active-color, #ffffff);
+  color: #fff;
+}
+
+.card-inner.active .card-title,
+.card-inner.active .card-desc {
+  color: #fff;
+}
+.card-inner.active .card-btn {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid #fff;
+  color: #fff;
+}
+.card-inner.active .card-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
 }
 
 /* subtle top bar accent */
@@ -152,7 +173,7 @@
   100% { transform: translateX(130%)  skewX(-12deg); }
 }
 
-/* Icon badge */
+/* ==== Icon badge ================================================= */
 .card-icon {
   width: 62px;
   height: 62px;
@@ -163,9 +184,15 @@
   border-radius: 14px;
   background: linear-gradient(180deg, var(--accent), var(--accent-600));
   box-shadow: var(--accent-glow);
+  transition: background 0.6s ease;
 }
 
-/* Title / text */
+.card-inner.active .card-icon {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/* ==== Title / text =============================================== */
 .card-title {
   font-size: 1.05rem;
   font-weight: 700;
@@ -179,7 +206,7 @@
   margin-top: 2px;
 }
 
-/* CTA */
+/* ==== CTA ======================================================== */
 .card-btn {
   justify-self: start;
   display: inline-block;
@@ -261,7 +288,7 @@
 @media (max-width: 820px) {
   .deck { height: 360px; }
   .card { width: min(320px, 92vw); height: 320px; }
-  .nav-btn { display: none; } /* more room on tablets/phones */
+  .nav-btn { display: none; }
 }
 
 @media (max-width: 520px) {
@@ -272,5 +299,4 @@
   .card-desc { font-size: 0.93rem; }
 }
 
-/* Optional: keep your root bg aligned with the section */
 #root { background-color: var(--page); }

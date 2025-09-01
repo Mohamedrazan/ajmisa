@@ -1,10 +1,20 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FiCheckCircle, FiShield, FiSmartphone, FiLayout, FiCloud, FiHeadphones, FiCpu, FiTrendingUp, FiUsers } from "react-icons/fi";
+import {
+  FiCheckCircle,
+  FiCpu,
+  FiCloud,
+  FiShield,
+  FiUsers,
+  FiArrowLeft,
+} from "react-icons/fi";
 import "./IPTVPage.css";
 
 const IPTVPage = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true, easing: "ease-in-out" });
     window.scrollTo(0, 0);
@@ -12,96 +22,114 @@ const IPTVPage = () => {
 
   return (
     <section className="iptv-section">
-      <div className="iptv-container">
+      {/* Back Button (Top Left) */}
+      <button className="back-btn" onClick={() => navigate(-1)}>
+        <FiArrowLeft /> Back
+      </button>
 
-        {/* Text Section */}
+      <div className="iptv-container">
+        {/* Left: Text Section */}
         <div className="iptv-text" data-aos="fade-right">
-          <h1 className="iptv-title">IPTV Middleware Software Development</h1>
+          <h1 className="iptv-title">Enterprise IPTV Middleware Solutions</h1>
           <p className="iptv-subtitle">
-            IPTV Middleware is the core engine that powers IPTV solutions. It connects content
-            providers, operators, and viewers in one secure and scalable ecosystem, ensuring smooth
-            delivery of television, video-on-demand, and interactive services.
+            Empower your business with next-gen IPTV middleware – designed for
+            scalability, security, and exceptional user experience.
           </p>
 
-          <p className="iptv-description" data-aos="fade-up" data-aos-delay="200">
-            Our IPTV Middleware Software Development services enable telecoms, ISPs, and hospitality
-            businesses to launch feature-rich IPTV platforms. With centralized management, powerful
-            analytics, flexible integrations, and customizable branding, our solutions are built to
-            deliver efficiency, growth, and outstanding end-user experiences.
+          <p
+            className="iptv-description"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            Our middleware platform is more than just a bridge between content
+            providers and end users. It’s a powerful ecosystem that integrates
+            <strong>
+              {" "}
+              content delivery, subscriber management, analytics, and
+              monetization
+            </strong>
+            . Built with enterprise-grade security and unmatched flexibility, it
+            enables hotels, ISPs, and service providers to launch IPTV
+            experiences that truly impress.
           </p>
 
           <ul className="iptv-features">
             <li data-aos="zoom-in">
-              <FiCheckCircle className="feat-icon" aria-hidden="true" />
-              Centralized Content & Subscriber Management
+              <FiCheckCircle className="feat-icon" />
+              Centralized subscriber & content control
             </li>
             <li data-aos="zoom-in" data-aos-delay="100">
-              <FiShield className="feat-icon" aria-hidden="true" />
-              Secure Authentication & Billing Systems
+              <FiShield className="feat-icon" />
+              Enterprise-level security & compliance
             </li>
             <li data-aos="zoom-in" data-aos-delay="200">
-              <FiSmartphone className="feat-icon" aria-hidden="true" />
-              Multi-device & Multi-platform Support
+              <FiCloud className="feat-icon" />
+              Hybrid cloud & on-premise deployment
             </li>
             <li data-aos="zoom-in" data-aos-delay="300">
-              <FiLayout className="feat-icon" aria-hidden="true" />
-              Customizable UI & Branding Options
-            </li>
-            <li data-aos="zoom-in" data-aos-delay="400">
-              <FiCloud className="feat-icon" aria-hidden="true" />
-              Cloud-ready & On-premise Deployment
-            </li>
-            <li data-aos="zoom-in" data-aos-delay="500">
-              <FiHeadphones className="feat-icon" aria-hidden="true" />
-              24/7 Monitoring & Technical Support
+              <FiUsers className="feat-icon" />
+              Personalized & multi-device experiences
             </li>
           </ul>
+
+          {/* CTA Buttons */}
+          <div className="iptv-buttons" data-aos="fade-up" data-aos-delay="400">
+            <button className="iptv-btn" onClick={() => navigate("/contact")}>
+              Contact Us
+            </button>
+            <button
+              className="iptv-btn secondary"
+              onClick={() => navigate("/request-demo")}
+            >
+              Book Demo
+            </button>
+          </div>
         </div>
 
-        {/* Image Section */}
+        {/* Right: Image Section */}
         <div className="iptv-image" data-aos="fade-left">
           <img
             src="./iptvmiddleware.jpg"
-            alt="Abstract visualization of IPTV middleware platform"
+            alt="IPTV Middleware Platform"
             className="iptv-img"
           />
+          <div className="blob-shape"></div>
         </div>
       </div>
 
-      {/* Additional Info Section */}
+      {/* Extra Info Section */}
       <div className="iptv-extra">
         <div className="extra-box" data-aos="fade-up">
           <div className="extra-head">
-            <FiCpu className="extra-icon" aria-hidden="true" />
-            <h2>What is IPTV Middleware?</h2>
+            <FiCpu className="extra-icon" />
+            <h2>Core Intelligence</h2>
           </div>
           <p>
-            Middleware acts as the command center of an IPTV platform. It manages access rights,
-            integrates with CRM and billing systems, controls content delivery, and enables advanced
-            features like EPG, catch-up TV, timeshift, and multi-language support.
+            From content scheduling to billing integration, our middleware
+            operates as the central command hub of your IPTV network. It
+            automates workflows and ensures smooth delivery at scale.
           </p>
         </div>
 
         <div className="extra-box" data-aos="fade-up" data-aos-delay="200">
           <div className="extra-head">
-            <FiTrendingUp className="extra-icon" aria-hidden="true" />
-            <h2>Benefits for Service Providers</h2>
+            <FiCloud className="extra-icon" />
+            <h2>Future-Ready Design</h2>
           </div>
           <p>
-            Scale faster, launch new revenue models, and optimize operations through automation and
-            analytics. Monetize via subscriptions, targeted ads, and promotions while maintaining
-            service reliability and SLA compliance.
+            Deploy in the cloud, on-premise, or hybrid models – giving you
+            maximum flexibility and resilience while reducing operational costs.
           </p>
         </div>
 
         <div className="extra-box" data-aos="fade-up" data-aos-delay="400">
           <div className="extra-head">
-            <FiUsers className="extra-icon" aria-hidden="true" />
-            <h2>Enhancing User Experience</h2>
+            <FiUsers className="extra-icon" />
+            <h2>Exceptional Experience</h2>
           </div>
           <p>
-            Deliver an intuitive interface with seamless access to live TV, VOD, and interactive
-            features. Personalization, profiles, and smooth navigation keep users engaged across devices.
+            Deliver an intuitive, personalized viewing journey with seamless
+            access to live TV, VOD, and interactive features across all devices.
           </p>
         </div>
       </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import './Footer.css';
 import { Link } from 'react-router-dom';
 
-import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { SiGoogleplay, SiAppstore } from 'react-icons/si';
 
 const Footer = () => {
@@ -56,7 +56,7 @@ const Footer = () => {
             <div className="footer-social">
               <FaFacebook />
               <FaInstagram />
-              <FaTwitter />
+              <FaLinkedin />
               <FaYoutube />
             </div>
           </div>

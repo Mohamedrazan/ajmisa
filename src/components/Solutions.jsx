@@ -73,6 +73,19 @@ const Solutions = () => {
     },
   ];
 
+  // 🎨 unique colors for each card when active
+  const colors = [
+    "linear-gradient(135deg, #005EB8, #6fb6ff)",
+    "linear-gradient(135deg, #ff6f61, #ffb199)",
+    "linear-gradient(135deg, #6a11cb, #2575fc)",
+    "linear-gradient(135deg, #f7971e, #ffd200)",
+    "linear-gradient(135deg, #00b09b, #96c93d)",
+    "linear-gradient(135deg, #ff512f, #dd2476)",
+    "linear-gradient(135deg, #2c3e50, #4ca1af)",
+    "linear-gradient(135deg, #654ea3, #eaafc8)",
+    "linear-gradient(135deg, #ff416c, #ff4b2b)",
+  ];
+
   // 3D coverflow state
   const [active, setActive] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -136,7 +149,6 @@ const Solutions = () => {
         onMouseMove={onPointerMove}
         onMouseUp={onPointerUp}
         onMouseLeaveCapture={() => {
-          // if dragging out of bounds
           touch.current.dragging = false;
           setIsPaused(false);
         }}
@@ -147,31 +159,30 @@ const Solutions = () => {
 
         <ul className="deck" style={{ "--count": solutions.length }}>
           {solutions.map((s, i) => {
-            // compute relative position (-N..0..+N)
             const offset = ((i - active + solutions.length) % solutions.length);
-            // convert to symmetric range around center
             const half = Math.floor(solutions.length / 2);
             const rel = offset > half ? offset - solutions.length : offset;
+
+            const isActive = rel === 0;
 
             return (
               <li
                 key={i}
                 className="card"
                 style={{
-                  "--rel": rel, // custom property for transforms
+                  "--rel": rel,
                   "--abs": Math.abs(rel),
                   "--z": 100 - Math.abs(rel),
+                  "--active-color": isActive ? colors[i] : "none",
                 }}
               >
-                <div className="card-inner">
+                <div className={`card-inner ${isActive ? "active" : ""}`}>
                   <div className="card-icon">{s.icon}</div>
                   <h3 className="card-title">{s.title}</h3>
                   <p className="card-desc">{s.desc}</p>
                   <Link className="card-btn" to={s.link}>
                     Learn More
                   </Link>
-
-                  {/* subtle shine */}
                   <span className="shine" />
                 </div>
               </li>
