@@ -1,3 +1,6 @@
+body{
+  background-color: white;
+}
 .mad-section {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #005EB8;
@@ -27,7 +30,7 @@
 
 .mad-hero img {
   width: 100%;
-  height: 280px;
+  height: 380px;
   object-fit: cover;
   display: block;
 }
@@ -196,4 +199,29 @@
 @media (max-width: 480px) {
   .mad-hero-overlay h1 { font-size: 1.6rem; }
   .mad-feature { flex: 1 1 100%; }
+}
+
+
+.mad-back-btn-fixed {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 2000;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #0d6efd; /* blue border */
+  border-radius: 6px;
+  background-color: #fff;
+  color: #0d6efd;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mad-back-btn-fixed:hover {
+  background-color: #0d6efd;
+  color: #fff;
 }

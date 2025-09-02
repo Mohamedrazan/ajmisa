@@ -1,10 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { FaLaptopCode, FaPaintBrush, FaPalette, FaMobileAlt, FaServer, FaRocket } from "react-icons/fa";
+import { FiArrowLeft } from "react-icons/fi"; // Back icon
+import { useNavigate } from "react-router-dom";
+
+
 import "./WebDesigning.css";
 
 export default function WebDesigning() {
     const sectionRef = useRef();
     const [visible, setVisible] = useState(false);
+      const navigate = useNavigate();
+    
 
     // Scroll animation
     useEffect(() => {
@@ -26,6 +32,12 @@ export default function WebDesigning() {
     }, []);
 
     return (
+      <>
+      {/* 🔙 Back Button (Fixed to body, top-left of screen) */}
+            <button className="mad-back-btn-fixed" onClick={() => navigate(-1)}>
+              <FiArrowLeft size={18} /> Back
+            </button>
+      
         <section 
           className={`webd-section ${visible ? "fade-in" : "fade-out"}`} 
           ref={sectionRef}
@@ -33,7 +45,8 @@ export default function WebDesigning() {
             {/* Hero Section */}
             <div className="webd-hero">
                 <img
-                    src="https://img.freepik.com/free-vector/web-design-concept-illustration_114360-2111.jpg"
+                    // src="https://img.freepik.com/free-vector/web-design-concept-illustration_114360-2111.jpg"
+                    src='./webdesigning.jpg'
                     alt="Web Designing"
                 />
                 <div className="webd-hero-overlay">
@@ -116,5 +129,6 @@ export default function WebDesigning() {
                 <button className="webd-btn">Get Started</button>
             </div>
         </section>
+      </>
     );
 }

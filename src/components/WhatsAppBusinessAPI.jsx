@@ -1,67 +1,117 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./WhatsAppBusinessAPI.css";
-import { FaWhatsapp, FaCheckCircle, FaComments, FaBell } from "react-icons/fa";
+import {
+  FaWhatsapp,
+  FaCheckCircle,
+  FaComments,
+  FaBell,
+  FaLock,
+} from "react-icons/fa";
+import { FiArrowLeft } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const WhatsAppBusinessAPI = () => {
-        window.scrollTo(0, 0);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    AOS.init({ duration: 1000, once: true });
+  }, []);
 
   return (
-    <div className="whatsapp-container">
-      {/* Hero Section */}
-      <section className="whatsapp-hero">
-        <div className="hero-text">
-          <h1>WhatsApp Business API</h1>
+    <div className="whatsapp-page">
+      {/* Back Button (fixed top-left) */}
+      <button className="back-btn" onClick={() => navigate(-1)}>
+        <FiArrowLeft size={22} /> Back
+      </button>
+
+      <div className="whatsapp-container">
+        {/* Hero Section */}
+        <section className="whatsapp-hero" data-aos="fade-up">
+          <div className="hero-text">
+            <h1>WhatsApp Business API for Hotels</h1>
+            <p>
+              Elevate your hotel’s communication with the world’s most trusted
+              messaging app. From instant reservations to 24/7 guest support,
+              the WhatsApp Business API helps you deliver **personalized,
+              secure, and real-time experiences** directly in your guests’
+              pockets.
+            </p>
+            <div className="hero-buttons">
+              {/* <button className="hero-btn">Get Started</button> */}
+              <button
+                className="hero-btn contact"
+                onClick={() => navigate("/contact")}
+              >
+                Contact Us
+              </button>
+            </div>
+          </div>
+          <div className="hero-icon">
+            <FaWhatsapp className="big-icon" />
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="features" data-aos="fade-up">
+          <h2>Why Hotels Choose WhatsApp Business API</h2>
+          <div className="feature-grid">
+            <div className="feature-card" data-aos="zoom-in">
+              <FaCheckCircle className="feature-icon" />
+              <h3>Instant Confirmations</h3>
+              <p>
+                Send booking confirmations, check-in details, and receipts
+                instantly—right where your guests are most active.
+              </p>
+            </div>
+
+            <div className="feature-card" data-aos="zoom-in" data-aos-delay="200">
+              <FaComments className="feature-icon" />
+              <h3>Two-Way Conversations</h3>
+              <p>
+                Enable real-time chats for room service, housekeeping, or any
+                personalized request without delays.
+              </p>
+            </div>
+
+            <div className="feature-card" data-aos="zoom-in" data-aos-delay="400">
+              <FaBell className="feature-icon" />
+              <h3>Personalized Alerts</h3>
+              <p>
+                Send promotions, loyalty offers, event reminders, and updates
+                that truly matter to your guests.
+              </p>
+            </div>
+
+            <div className="feature-card" data-aos="zoom-in" data-aos-delay="600">
+              <FaLock className="feature-icon" />
+              <h3>Secure & Trusted</h3>
+              <p>
+                End-to-end encryption ensures your guest interactions remain
+                private and secure at all times.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="cta" data-aos="fade-up">
+          <h2>Reinvent Guest Engagement</h2>
           <p>
-            Seamlessly connect with your hotel guests using the WhatsApp Business API. 
-            From instant booking confirmations to personalized promotions, 
-            enhance guest communication like never before.
+            Hotels that adopt WhatsApp Business API see faster responses, higher
+            guest satisfaction, and improved loyalty. Don’t just manage guests —
+            connect with them meaningfully.
           </p>
-          <button className="hero-btn">Get Started</button>
-        </div>
-        <div className="hero-icon">
-          <FaWhatsapp className="big-icon" />
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="features">
-        <h2>Why Choose WhatsApp Business API?</h2>
-        <div className="feature-grid">
-          <div className="feature-card">
-            <FaCheckCircle className="feature-icon" />
-            <h3>Instant Confirmations</h3>
-            <p>Send real-time booking confirmations directly to guests on WhatsApp.</p>
-          </div>
-
-          <div className="feature-card">
-            <FaComments className="feature-icon" />
-            <h3>Two-Way Communication</h3>
-            <p>Enable quick chats for service requests, room service, and concierge support.</p>
-          </div>
-
-          <div className="feature-card">
-            <FaBell className="feature-icon" />
-            <h3>Promotions & Alerts</h3>
-            <p>Deliver personalized offers, reminders, and updates instantly.</p>
-          </div>
-
-          <div className="feature-card">
-            <FaWhatsapp className="feature-icon" />
-            <h3>Trusted & Secure</h3>
-            <p>WhatsApp ensures encrypted, safe communication with your guests.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="cta">
-        <h2>Transform Guest Engagement</h2>
-        <p>
-          With WhatsApp Business API, your hotel can build stronger relationships, 
-          improve response times, and enhance the overall guest experience.
-        </p>
-        <button className="cta-btn">Contact Us</button>
-      </section>
+          <button
+            className="cta-btn"
+            onClick={() => navigate("/request-demo")}
+          >
+            Request Demo
+          </button>
+        </section>
+      </div>
     </div>
   );
 };
