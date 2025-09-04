@@ -1,147 +1,130 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Contact.css";
-
-const navLinks = [
-  { label: "Products", path: "/products" },
-  { label: "Our Services", path: "/services" },
-  { label: "Our Client", path: "/client" },
-  { label: "Certificates", path: "/certificates" },
-  { label: "Contact Us", path: "/contact" },
-];
+import { FiArrowLeft, FiMail, FiPhone, FiMapPin, FiClock } from "react-icons/fi";
 
 export default function Contact() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  // Mailto handler (You can replace with EmailJS or backend API later)
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const mailtoLink = `mailto:zakkiyakhadeeja@gmail.com.com?subject=${encodeURIComponent(
+      formData.subject
+    )}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0A${formData.message}`;
+    window.location.href = mailtoLink;
+  };
+
   return (
-    <>
-      {/* Navbar */}
-      <div className="iptv-navbar iptv-animate-navbar">
-        <img
-          src="./macvisionmainlogo.png"
-          alt="Logo"
-          className="iptv-logo-image"
-        />
+    <div className="contact-page">
+      {/* Back Button */}
+      <button className="back-btn" onClick={() => navigate(-1)}>
+        <FiArrowLeft size={20} /> Back
+      </button>
 
-        {/* Hamburger Toggle (Mobile) */}
-        <div
-          className="iptv-menu-toggle"
-          onClick={() => setMenuOpen(true)}
-        >
-          ☰
+      {/* Title */}
+      <h1 className="contact-title">Contact Us</h1>
+      <p className="contact-subtitle">
+        We’d love to hear from you. Reach out to us for any inquiries,
+        collaborations, or support.
+      </p>
+
+      {/* Contact Info Section */}
+      <div className="contact-info">
+        <div className="info-box">
+          <FiMapPin size={30} className="info-icon" />
+          <h2>Address</h2>
+          <p>
+            P.O Box 40637 <br />
+            Markaz hail, Hail Street <br />
+            Jeddah 21511, Saudi Arabia
+          </p>
         </div>
 
-        {/* Desktop Nav Links */}
-        <div className="iptv-nav-links-desktop">
-          {navLinks.map((link, i) => (
-            <Link key={i} to={link.path} className="iptv-nav-link">
-              {link.label}
-            </Link>
-          ))}
+        <div className="info-box">
+          <FiMail size={30} className="info-icon" />
+          <h2>Email</h2>
+          <p>ajmi@ajmisa.com</p>
+        </div>
 
-          {/* Back to Home Button */}
-          <button
-            className="back-home-btn"
-            onClick={() => navigate("/")}
-          >
-            ⬅ Back to Home
+        <div className="info-box">
+          <FiPhone size={30} className="info-icon" />
+          <h2>Phone</h2>
+          <p>+966 553011362</p>
+        </div>
+
+        <div className="info-box">
+          <FiClock size={30} className="info-icon" />
+          <h2>Business Hours</h2>
+          <p>
+            Mon - Thu: 9:00 AM - 6:00 PM
+            <br />
+            Friday: Closed
+          </p>
+        </div>
+      </div>
+
+      {/* Contact Form */}
+      <div className="form-container">
+        <h2 className="form-title">Send Us a Message</h2>
+        <form onSubmit={handleSubmit} className="contact-form">
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+            value={formData.name}
+            onChange={handleChange}
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            value={formData.email}
+            onChange={handleChange}
+          />
+
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            required
+            value={formData.subject}
+            onChange={handleChange}
+          />
+
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Your Message"
+            required
+            value={formData.message}
+            onChange={handleChange}
+          ></textarea>
+
+          <button type="submit" className="send-btn">
+            Send Message
           </button>
-        </div>
+        </form>
       </div>
-
-      {/* Popup Mobile Menu */}
-      {menuOpen && (
-        <div
-          className="iptv-popup-overlay"
-          onClick={() => setMenuOpen(false)}
-        >
-          <div
-            className="iptv-popup-content"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <span
-              className="iptv-close-btn"
-              onClick={() => setMenuOpen(false)}
-            >
-              ×
-            </span>
-            {navLinks.map((link, i) => (
-              <Link
-                key={i}
-                to={link.path}
-                className="iptv-popup-link"
-                onClick={() => setMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
-
-            {/* Back to Home in mobile menu */}
-            <button
-              className="back-home-btn mobile"
-              onClick={() => {
-                setMenuOpen(false);
-                navigate("/");
-              }}
-            >
-              ⬅ Back to Home
-            </button>
-          </div>
-        </div>
-      )}
-
-      {/* Contact Section */}
-      <div className="contact-container">
-        <h1 className="contact-title">Get in Touch</h1>
-        <p className="contact-subtitle">
-          We’re here to help you with all your hospitality IPTV needs.
-        </p>
-
-        {/* Contact Info */}
-        <div className="contact-info">
-          <div className="info-box fade-in">
-            <h2>📍 Address</h2>
-            <p>
-              P.O Box 40637 <br />
-              Markaz hail, Hail Street <br />
-              Jeddah 21511, Saudi Arabia
-            </p>
-          </div>
-          <div className="info-box fade-in">
-            <h2>📧 Email</h2>
-            <p>ajmi@ajmisa.com</p>
-          </div>
-          <div className="info-box fade-in">
-            <h2>📞 Phone</h2>
-            <p>+966 553011362</p>
-          </div>
-          <div className="info-box fade-in">
-            <h2>⏰ Business Hours</h2>
-            <p>
-              Mon - Thu: 9:00 AM - 6:00 PM
-              <br />
-              Friday: Closed
-            </p>
-          </div>
-        </div>
-
-        {/* Map */}
-        <div className="map-container slide-up">
-          <iframe
-            title="Google Map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3711.776422380449!2d39.17136296968173!3d21.516475627227464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3daa8151e7d67%3A0xb88d81b7ee732077!2sHael%2C%20Jeddah%20Saudi%20Arabia!5e0!3m2!1sen!2sin!4v1754022802443!5m2!1sen!2sin"
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </div>
-
-    </>
+    </div>
   );
 }

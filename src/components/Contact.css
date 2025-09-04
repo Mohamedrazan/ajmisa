@@ -1,199 +1,145 @@
-/* General Styling */
-.contact-container {
-  background: linear-gradient(135deg, #000 70%, #005EB8 100%);
+/* Page Container */
+.contact-page {
+  background: #000;
   color: #fff;
-  padding: 80px 20px;
+  padding: 60px 20px;
   min-height: 100vh;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   text-align: center;
   animation: fadeInPage 1s ease-in-out;
+  position: relative;
 }
 
+/* Back Button */
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: transparent;
+  border: none;
+  color: #005EB8;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s, transform 0.2s;
+}
+.back-btn:hover {
+  color: #fff;
+  transform: translateX(-3px);
+}
+
+/* Title + Subtitle */
 .contact-title {
   font-size: 3rem;
+  margin-top: 40px;
   margin-bottom: 15px;
-  color: #fff;
-  letter-spacing: 2px;
   font-weight: bold;
+  color: #fff;
 }
-
 .contact-subtitle {
   font-size: 1.2rem;
   color: #bbb;
   margin-bottom: 50px;
 }
 
+/* Contact Info Section */
 .contact-info {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  margin-bottom: 50px;
+  gap: 25px;
+  margin-bottom: 60px;
 }
-
 .info-box {
-  background: rgba(255, 255, 255, 0.05);
+  background: #0a0a0a;
   border: 1px solid rgba(0, 94, 184, 0.5);
-  padding: 30px;
-  border-radius: 16px;
-  width: 280px;
+  padding: 25px;
+  border-radius: 14px;
+  width: 250px;
   text-align: center;
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
 }
-
-.info-box h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #00aced;
-}
-
 .info-box:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 8px 25px rgba(0, 94, 184, 0.6);
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 94, 184, 0.7);
+}
+.info-box h2 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  color: #005EB8;
+}
+.info-icon {
+  color: #005EB8;
 }
 
-.map-container {
-  width: 100%;
-  height: 400px;
-  max-width: 900px;
+/* Form Section */
+.form-container {
+  max-width: 600px;
   margin: 0 auto;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 2px solid #005EB8;
-}
-
-.map-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* Footer */
-.footer {
   background: #0a0a0a;
+  border: 1px solid rgba(0, 94, 184, 0.5);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 94, 184, 0.4);
+}
+.form-title {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
   color: #fff;
-  padding: 60px 20px 30px;
-  font-size: 0.95rem;
 }
-
-.footer-content {
+.contact-form {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 40px;
-  max-width: 1200px;
-  margin: auto;
+  flex-direction: column;
+  gap: 18px;
 }
-
-.footer-left,
-.footer-links,
-.footer-right {
-  flex: 1;
-  min-width: 250px;
-}
-
-.footer-left img {
-  width: 160px;
-  margin-bottom: 20px;
-}
-
-.footer-links h4,
-.footer-right h4 {
-  color: #005EB8;
-  margin-bottom: 15px;
-}
-
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-links ul li {
-  margin-bottom: 10px;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-.footer-links ul li:hover {
-  color: #005EB8;
-}
-
-.footer-right p {
-  margin: 8px 0;
-}
-
-.social-icons {
-  display: flex;
-  gap: 15px;
-  font-size: 1.4rem;
-  margin: 10px 0 20px;
-}
-
-.social-icons svg {
-  cursor: pointer;
-  transition: transform 0.3s, color 0.3s;
-}
-
-.social-icons svg:hover {
-  transform: scale(1.2);
-  color: #005EB8;
-}
-
-.app-links a {
-  display: inline-block;
-  margin: 8px 0;
-  padding: 8px 12px;
-  border: 1px solid #005EB8;
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
   border-radius: 10px;
+  border: 1px solid #005EB8;
+  background: #111;
   color: #fff;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0074e6;
+  box-shadow: 0 0 8px rgba(0, 116, 230, 0.6);
 }
 
-.app-links a:hover {
+/* Send Button */
+.send-btn {
   background: #005EB8;
   color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.send-btn:hover {
+  background: #0074e6;
+  transform: scale(1.05);
 }
 
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  margin-top: 30px;
-  padding-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  font-size: 0.85rem;
-}
-
-.payment-icons img {
-  width: 50px;
-  margin-left: 10px;
-  opacity: 0.9;
-  transition: transform 0.3s;
-}
-
-.payment-icons img:hover {
-  transform: scale(1.1);
-}
-
-/* Animations */
+/* Animation */
 @keyframes fadeInPage {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.fade-in {
-  animation: fadeInPage 1.2s ease forwards;
-}
-
-.slide-up {
-  animation: slideUp 1.2s ease forwards;
-}
-
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive */
@@ -201,36 +147,10 @@
   .contact-title {
     font-size: 2.2rem;
   }
-  .map-container {
-    height: 300px;
+  .info-box {
+    width: 100%;
   }
-}
-
-
-
-
-/* Back to Home Button */
-.back-home-btn {
-  margin-left: 20px;
-  padding: 8px 18px;
-  background: #005EB8;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 0.95rem;
-  font-weight: 500;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.back-home-btn:hover {
-  background: #0074e6;
-  transform: scale(1.05);
-}
-
-/* Mobile menu version */
-.back-home-btn.mobile {
-  margin-top: 15px;
-  width: 100%;
-  text-align: center;
+  .form-container {
+    padding: 25px;
+  }
 }
