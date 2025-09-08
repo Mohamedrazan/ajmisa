@@ -98,6 +98,7 @@
   width: min(360px, 86vw);
   height: 360px;
   transform-style: preserve-3d;
+  
   transition: transform 700ms cubic-bezier(.2,.8,.25,1), opacity 400ms ease, z-index 200ms;
   opacity: calc(1 - (var(--abs) * 0.12)); /* fade sides slightly */
   z-index: var(--z);
