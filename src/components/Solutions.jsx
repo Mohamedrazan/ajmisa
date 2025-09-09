@@ -20,7 +20,7 @@ const Solutions = () => {
     {
       icon: <FaTv />,
       title: "IPTV Middleware Software Development",
-      desc: "IPTV streams live and on-demand content over the internet, enhancing in-room entertainment for hotel guests.",
+      desc: "Simplifies content delivery and guest management with a platform.",
       link: "/iptv",
     },
     {
