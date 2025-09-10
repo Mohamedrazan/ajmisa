@@ -48,6 +48,7 @@ import QuotePage from './components/QuotePage';
 import ExploreSolutions from './components/ExploreSolutions';
 import IptvBusiness from './components/IptvBusiness';
 import Frontdesk from './components/Frontdesk';
+import IPTVSystem from './components/IPTVSystem';
 // import Herosection from './components/Herosection';
 
 function HomePage() {
@@ -127,6 +128,8 @@ function App() {
         <Route path="/qoute-page" element={<QuotePage />} />
         <Route path="/explore-solutions" element={<ExploreSolutions />} />
         <Route path="/frontdesk" element={<Frontdesk />} />
+                <Route path="/products/iptv" element={<IPTVSystem />} />
+
 
       </Routes>
     </Router>
