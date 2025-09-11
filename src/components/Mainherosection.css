@@ -36,7 +36,7 @@ a:active {
   align-items: center;
   position: relative;
   opacity: 0;
-   position: relative;
+  position: relative;
   z-index: 5000;
 }
 
@@ -54,9 +54,9 @@ a:active {
   display: flex;
   gap: 2rem;
   align-items: center;
-  position: absolute;   /* Position inside navbar */
-  left: 50%;            /* Move to horizontal center */
-  transform: translateX(-50%); /* Perfect center */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .iptv-nav-link {
@@ -92,7 +92,7 @@ a:active {
   font-size: 2rem;
   cursor: pointer;
   color: #005EB8;
-  margin-left: auto; /* Keeps it at the far right */
+  margin-left: auto;
 }
 
 /* Popup Mobile Menu */
@@ -117,7 +117,7 @@ a:active {
   padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.2rem;
   position: relative;
   transform: translateX(100%);
   animation: slideIn 0.3s ease forwards;
@@ -128,6 +128,10 @@ a:active {
   font-weight: 600;
   color: #fff;
   transition: color 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .iptv-popup-link:hover {
@@ -148,14 +152,13 @@ a:active {
   position: relative;
 }
 
-/* Dropdown Container */
-/* Dropdown Container */
+/* Dropdown - Desktop */
 .iptv-dropdown {
   position: absolute;
   top: 110%;
   left: 50%;
   transform: translateX(-50%) translateY(10px);
-  background: rgba(15, 15, 15, 0.85); /* translucent glass */
+  background: rgba(15, 15, 15, 0.85);
   border: 1px solid rgba(0, 94, 184, 0.6);
   border-radius: 12px;
   padding: 0.8rem 0;
@@ -168,11 +171,10 @@ a:active {
   z-index: 6000;
   transition: all 0.35s ease;
   box-shadow: 0 8px 25px rgba(0, 94, 184, 0.3);
-  backdrop-filter: blur(12px); /* glass effect */
+  backdrop-filter: blur(12px);
   overflow: hidden;
 }
 
-/* Small decorative top border glow */
 .iptv-dropdown::before {
   content: "";
   position: absolute;
@@ -181,6 +183,7 @@ a:active {
   width: 100%;
   height: 3px;
   background: linear-gradient(90deg, #005EB8, #00c6ff, #005EB8);
+  background-size: 200% auto;
   animation: glowBar 3s linear infinite;
 }
 
@@ -189,7 +192,6 @@ a:active {
   100% { background-position: 200% 0; }
 }
 
-/* Dropdown Links */
 .iptv-dropdown-link {
   display: flex;
   align-items: center;
@@ -204,16 +206,14 @@ a:active {
   border-radius: 6px;
 }
 
-/* Hover effect */
 .iptv-dropdown-link:hover {
   background: rgba(0, 94, 184, 0.2);
   color: #00c6ff;
-  transform: translateX(6px); /* slide-in on hover */
+  transform: translateX(6px);
 }
 
-/* Add an icon circle */
 .iptv-dropdown-link::before {
-  content: "◆"; /* can replace with icon via react-icons */
+  content: "◆";
   color: #005EB8;
   font-size: 0.7rem;
   transition: transform 0.3s ease, color 0.3s ease;
@@ -224,14 +224,12 @@ a:active {
   color: #00c6ff;
 }
 
-/* Show Dropdown on Hover */
+/* Desktop Hover Show */
 .iptv-nav-item:hover .iptv-dropdown {
   opacity: 1;
   pointer-events: auto;
   transform: translateX(-50%) translateY(0);
 }
-
-/* Animate Links (Staggered Entrance) */
 .iptv-nav-item:hover .iptv-dropdown-link {
   opacity: 1;
   transform: translateY(0);
@@ -240,6 +238,39 @@ a:active {
 .iptv-dropdown-link:nth-child(2) { transition-delay: 0.2s; }
 .iptv-dropdown-link:nth-child(3) { transition-delay: 0.3s; }
 .iptv-dropdown-link:nth-child(4) { transition-delay: 0.4s; }
+
+/* ================= MOBILE DROPDOWN ================= */
+.iptv-popup-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.iptv-popup-dropdown {
+  display: none;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-left: 1rem;
+  padding-left: 0.5rem;
+  border-left: 2px solid #005EB8;
+}
+
+.iptv-popup-item.open .iptv-popup-dropdown {
+  display: flex;
+}
+
+.iptv-popup-dropdown a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ccc;
+  padding: 0.4rem 0;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.iptv-popup-dropdown a:hover {
+  color: #00c6ff;
+  transform: translateX(6px);
+}
 
 /* Slide-in Animation */
 @keyframes slideIn {
@@ -349,7 +380,7 @@ a:active {
   position: relative;
   height: 420px;
   overflow: hidden;
-  background: #000; /* prevents white flash */
+  background: #000;
 }
 
 .iptv-slide {
@@ -372,7 +403,6 @@ a:active {
   z-index: 1;
 }
 
-/* Overlay ensures readable text */
 .iptv-hero-overlay {
   background: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.3), rgba(0,0,0,0.85));
   height: 100%;
@@ -380,13 +410,12 @@ a:active {
   padding: 2rem;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* ✅ Left aligned text */
+  justify-content: flex-start;
 }
 
-/* Text animation */
 .iptv-hero-text {
   max-width: 700px;
-  text-align: left;  /* ✅ Left aligned */
+  text-align: left;
   animation: fadeUp 1.2s ease forwards;
 }
 
@@ -414,7 +443,6 @@ a:active {
   animation-delay: 1s;
 }
 
-/* Dots */
 .iptv-slider-dots {
   position: absolute;
   bottom: 15px;
@@ -480,7 +508,7 @@ a:active {
   }
   .iptv-hero-overlay {
     padding: 1rem;
-    justify-content: flex-start; 
+    justify-content: flex-start;
     text-align: left;
   }
   .iptv-hero-text h2 {
@@ -501,3 +529,4 @@ a:active {
     font-size: 0.75rem;
   }
 }
+

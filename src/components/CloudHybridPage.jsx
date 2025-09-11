@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./CloudHybridPage.css";
-// Import your image here or replace the placeholder div
 import cloudImage from "../assets/cloud.jpg";
 
 const CloudHybridPage = () => {

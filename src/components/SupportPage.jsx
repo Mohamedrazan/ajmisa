@@ -9,9 +9,6 @@ const SupportPage = () => {
       setIsVisible(true);
     }, 200); // Delay for animation
         window.scrollTo(0, 0);
-
-
-        
   }, []);
 
   return (

@@ -55,7 +55,6 @@ const navLinks = [
   },
 ];
 
-
 const icons = [
   { name: "Hotel TV", route: "/tv-channels", icon: "./channel.png" },
   { name: "VoD", route: "/movies", icon: "./movies.png" },
@@ -70,24 +69,25 @@ const slides = [
     image: "./resort.jpg",
     title: "IPTV Hospitality Solutions",
     subtitle: "Smart In-Room Experience",
-    desc: "Our IPTV system transforms traditional hotel TV into a personalized guest experience. Guests can stream live channels, access movies on demand, order room service, and explore hotel facilities seamlessly."
+    desc: "Our IPTV system transforms traditional hotel TV into a personalized guest experience. Guests can stream live channels, access movies on demand, order room service, and explore hotel facilities seamlessly.",
   },
   {
     image: "./mainhero1.jpg",
     title: "Entertainment at Fingertips",
     subtitle: "Interactive Guest Journey",
-    desc: "Provide your guests with immersive entertainment options. With live TV, VoD, and music playlists, every guest enjoys a personalized, convenient, and luxurious in-room experience."
+    desc: "Provide your guests with immersive entertainment options. With live TV, VoD, and music playlists, every guest enjoys a personalized, convenient, and luxurious in-room experience.",
   },
   {
     image: "./mainhero2.jpg",
     title: "Seamless Hotel Services",
     subtitle: "Digital Hotel Assistant",
-    desc: "Enable guests to order food, request room cleaning, and access hotel services with a single click. A smart way to elevate hospitality and improve service delivery."
-  }
+    desc: "Enable guests to order food, request room cleaning, and access hotel services with a single click. A smart way to elevate hospitality and improve service delivery.",
+  },
 ];
 
 export default function Mainherosection() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const touchStartX = useRef(null);
 
@@ -117,73 +117,127 @@ export default function Mainherosection() {
     touchStartX.current = null;
   };
 
+  // Toggle dropdowns in mobile
+  const toggleDropdown = (i) => {
+    setOpenDropdown(openDropdown === i ? null : i);
+  };
+
   return (
     <div className="iptv-dashboard">
       {/* Navbar */}
-   <div className="iptv-navbar iptv-animate-navbar">
-  <img
-    src="./macvisionmainlogo.png"
-    alt="Logo"
-    className="iptv-logo-image"
-  />
+      <div className="iptv-navbar iptv-animate-navbar">
+        <img
+          src="./macvisionmainlogo.png"
+          alt="Logo"
+          className="iptv-logo-image"
+        />
 
-  {/* Mobile Menu Toggle */}
-  <div className="iptv-menu-toggle" onClick={() => setMenuOpen(true)}>☰</div>
+        {/* Mobile Menu Toggle */}
+        <div
+          className="iptv-menu-toggle"
+          onClick={() => setMenuOpen(true)}
+        >
+          ☰
+        </div>
 
-  {/* Desktop Nav Links with Dropdowns */}
-  <div className="iptv-nav-links-desktop">
-    {navLinks.map((link, i) => (
-      <div key={i} className="iptv-nav-item">
-        <Link to={link.path} className="iptv-nav-link">
-          {link.label}
-        </Link>
-
-        {/* Dropdown */}
-        {link.dropdown && (
-          <div className="iptv-dropdown">
-            {link.dropdown.map((drop, j) => (
-              <Link key={j} to={drop.path} className="iptv-dropdown-link">
-                {drop.label}
+        {/* Desktop Nav Links */}
+        <div className="iptv-nav-links-desktop">
+          {navLinks.map((link, i) => (
+            <div key={i} className="iptv-nav-item">
+              <Link to={link.path} className="iptv-nav-link">
+                {link.label}
               </Link>
-            ))}
-          </div>
-        )}
+              {link.dropdown && (
+                <div className="iptv-dropdown">
+                  {link.dropdown.map((drop, j) => (
+                    <Link
+                      key={j}
+                      to={drop.path}
+                      className="iptv-dropdown-link"
+                    >
+                      {drop.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
-    ))}
-  </div>
-</div>
-
 
       {/* Popup Mobile Menu */}
       {menuOpen && (
-        <div className="iptv-popup-overlay" onClick={() => setMenuOpen(false)}>
-          <div className="iptv-popup-content" onClick={(e) => e.stopPropagation()}>
-            <span className="iptv-close-btn" onClick={() => setMenuOpen(false)}>×</span>
+        <div
+          className="iptv-popup-overlay"
+          onClick={() => setMenuOpen(false)}
+        >
+          <div
+            className="iptv-popup-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <span
+              className="iptv-close-btn"
+              onClick={() => setMenuOpen(false)}
+            >
+              ×
+            </span>
             {navLinks.map((link, i) => (
-              <Link key={i} to={link.path} className="iptv-popup-link" onClick={() => setMenuOpen(false)}>
-                {link.label}
-              </Link>
+              <div
+                key={i}
+                className={`iptv-popup-item ${
+                  openDropdown === i ? "open" : ""
+                }`}
+              >
+                <div
+                  className="iptv-popup-link"
+                  onClick={() => toggleDropdown(i)}
+                >
+                  {link.label}
+                  {link.dropdown && (
+                    <span className="dropdown-arrow">
+                      {openDropdown === i ? "▲" : "▼"}
+                    </span>
+                  )}
+                </div>
+                {link.dropdown && (
+                  <div className="iptv-popup-dropdown">
+                    {link.dropdown.map((drop, j) => (
+                      <Link
+                        key={j}
+                        to={drop.path}
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        {drop.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </div>
       )}
 
       {/* Hero Slider */}
-      <div 
-        className="iptv-slider" 
-        onTouchStart={handleTouchStart} 
+      <div
+        className="iptv-slider"
+        onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`iptv-slide ${index === currentSlide ? "active" : ""}`}
+            className={`iptv-slide ${
+              index === currentSlide ? "active" : ""
+            }`}
             style={{ backgroundImage: `url(${slide.image})` }}
           >
             <div className="iptv-hero-overlay">
               <div className="iptv-hero-text">
                 <h2 className="slide-title">{slide.title}</h2>
-                <p className="iptv-welcome slide-subtitle">{slide.subtitle}</p>
+                <p className="iptv-welcome slide-subtitle">
+                  {slide.subtitle}
+                </p>
                 <p className="iptv-desc slide-desc">{slide.desc}</p>
               </div>
             </div>
@@ -195,7 +249,9 @@ export default function Mainherosection() {
           {slides.map((_, index) => (
             <span
               key={index}
-              className={`dot ${index === currentSlide ? "active" : ""}`}
+              className={`dot ${
+                index === currentSlide ? "active" : ""
+              }`}
               onClick={() => setCurrentSlide(index)}
             ></span>
           ))}
@@ -210,7 +266,11 @@ export default function Mainherosection() {
             key={index}
             className={`iptv-icon-box iptv-icon-animate-${index + 1}`}
           >
-            <img src={icon.icon} alt={icon.name} className="iptv-icon-image" />
+            <img
+              src={icon.icon}
+              alt={icon.name}
+              className="iptv-icon-image"
+            />
             <span className="iptv-icon-label">{icon.name}</span>
           </Link>
         ))}

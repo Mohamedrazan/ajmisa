@@ -4,6 +4,28 @@
   color: #222;
   padding: 50px 6%;
   line-height: 1.6;
+  position: relative;
+}
+
+/* Back Button */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #005eb8;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 1000;
+}
+
+.back-button:hover {
+  background: #004a91;
 }
 
 .iptv-hero {

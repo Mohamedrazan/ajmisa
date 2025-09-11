@@ -1,22 +1,30 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./IPTVSystem.css";
-import { Link } from "react-router-dom"; 
-
+import { Link, useNavigate } from "react-router-dom";
 
 export default function IPTVSystem() {
+  const navigate = useNavigate();
+
   return (
     <div className="iptv-page">
+      {/* Back Button */}
+      <button className="back-button" onClick={() => navigate(-1)}>
+        ← Back
+      </button>
+      <br />
+
       {/* Hero Section */}
       <motion.section
         className="iptv-hero"
         initial={{ opacity: 0, y: -60 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-
       >
-        <h1 className="hero-title" style={{color:"white"}}>IPTV System for Hospitality Excellence</h1>
-        <p className="hero-subtitle" style={{color:"white"}}>
+        <h1 className="hero-title" style={{ color: "white" }}>
+          IPTV System for Hospitality Excellence
+        </h1>
+        <p className="hero-subtitle" style={{ color: "white" }}>
           A powerful in-room entertainment and engagement solution that turns
           every screen into a personalized guest experience hub.
         </p>
@@ -106,8 +114,12 @@ export default function IPTVSystem() {
           business.
         </p>
         <div className="cta-buttons">
-          <button className="btn contact">Contact Us</button>
-          <button className="btn demo">Request Demo</button>
+          <Link to="/contact">
+            <button className="btn contact">Contact Us</button>
+          </Link>
+          <Link to="/request-demo">
+            <button className="btn demo">Request Demo</button>
+          </Link>
         </div>
       </motion.section>
     </div>
