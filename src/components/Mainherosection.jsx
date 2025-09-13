@@ -8,7 +8,7 @@ const navLinks = [
     path: "/products",
     dropdown: [
       { label: "IPTV Systems", path: "/products/iptv" },
-      { label: "Website Design", path: "/products/vod" },
+      { label: "Website Design", path: "/products/website" },
       { label: "Mobile app Development", path: "/products/stb" },
       { label: "Whatsapp API", path: "/products/tvs" },
     ],

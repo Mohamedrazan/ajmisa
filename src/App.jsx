@@ -128,7 +128,7 @@ function App() {
         <Route path="/qoute-page" element={<QuotePage />} />
         <Route path="/explore-solutions" element={<ExploreSolutions />} />
         <Route path="/frontdesk" element={<Frontdesk />} />
-                <Route path="/products/iptv" element={<IPTVSystem />} />
+        <Route path="/products/iptv" element={<IPTVSystem />} />
 
 
       </Routes>
