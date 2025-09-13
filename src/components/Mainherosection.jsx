@@ -220,6 +220,7 @@ export default function Mainherosection() {
 
       {/* Hero Slider */}
       <div
+      
         className="iptv-slider"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
